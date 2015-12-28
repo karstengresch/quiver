@@ -1,0 +1,10 @@
+{
+  "title": "Dismiss for Navigation VC",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  // MARK: IB related\n  @IBAction func cancel() {\n    dismissViewControllerAnimated(true, completion: nil)\n  }"
+    }
+  ]
+}

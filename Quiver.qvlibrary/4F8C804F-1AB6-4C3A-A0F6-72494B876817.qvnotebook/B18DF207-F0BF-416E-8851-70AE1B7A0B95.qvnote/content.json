@@ -1,0 +1,14 @@
+{
+  "title": "DataModel Example",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>From Ray Wenderlich 2015, iOS Apprentice #2 (\"Checklist\" example)</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "import Foundation\n\nclass DataModel {\n  var checklists = [Checklist]()\n\n  init() {\n    print(\"Data file path is \\(dataFilePath())\")\n    loadChecklists()\n  }\n\n  // MARK: File related\n  func documentsDirectory() -> String {\n    let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)\n    return paths[0]\n  }\n\n  func dataFilePath() -> String {\n    return (documentsDirectory() as NSString).stringByAppendingPathComponent(\"Checklists.plist\")\n  }\n\n  func saveChecklists() {\n    let data = NSMutableData()\n    let archiver = NSKeyedArchiver(forWritingWithMutableData: data)\n    archiver.encodeObject(checklists, forKey: \"Checklists\")\n    archiver.finishEncoding()\n    data.writeToFile(dataFilePath(), atomically: true)\n  }\n\n  func loadChecklists() {\n    let path = dataFilePath()\n    if NSFileManager.defaultManager().fileExistsAtPath(path) {\n      if let data = NSData(contentsOfFile: path) {\n        let unarchiver = NSKeyedUnarchiver(forReadingWithData: data)\n        checklists = unarchiver.decodeObjectForKey(\"Checklists\") as! [Checklist]\n        unarchiver.finishDecoding()\n      }\n    }\n  }\n\n}"
+    }
+  ]
+}

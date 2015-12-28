@@ -1,0 +1,23 @@
+{
+  "title": "NSCoding",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": " required init?(coder aDecoder: NSCoder) {\n    myVar1 = aDecoder.decodeObjectForKey(\"MyVar1Key\") as! String\n    myItem2s = aDecoder.decodeObjectForKey(\"MyItem2Key\") as! [MyItem2Type]\n    super.init()\n  }\n  \n  func encodeWithCoder(aCoder: NSCoder) {\n    aCoder.encodeObject(myItem1, forKey: \"MyVar1Key\")\n    aCoder.encodeObject(myItem2s, forKey: \"MyItem2Key\")\n  }\n  \n  init(myVar1: String) {\n    self.myVar1 = myVar1\n    super.init()\n  }\n"
+    },
+    {
+      "type": "text",
+      "data": "See also&nbsp;<a href=\"http://swiftandpainless.com/nscoding-and-swift-structs/\">http://swiftandpainless.com/nscoding-and-swift-structs/</a>"
+    },
+    {
+      "type": "text",
+      "data": "<div>Example w/ typed enum:</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "import UIKit\n\nclass CountidonSettings: NSObject, NSCoding {\n  var theme = Theme.Default\n  \n  required init?(coder aDecoder: NSCoder) {\n    // ??? TODO: Check later if this works: theme = aDecoder.decodeObjectForKey(\"CountidonSettingTheme\") as! Theme\n    self.theme = Theme(rawValue: aDecoder.decodeIntegerForKey(\"CountidonSettingTheme\")) ?? .Default\n    super.init()\n  }\n  \n  func encodeWithCoder(aCoder: NSCoder) {\n    aCoder.encodeObject(self.theme.rawValue, forKey: \"CountidonSettingTheme\")\n  }\n  \n  override init() {\n    super.init()\n  }\n}\n\nenum Theme: NSInteger {\n  case Dark = 1, Light, Mixed, Custom, Default\n}"
+    }
+  ]
+}

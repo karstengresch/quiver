@@ -1,0 +1,10 @@
+{
+  "title": "Check Device Orientation (w/ extra UITableView stuff)",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {\n    switch UIDevice.currentDevice().orientation{\n    case .Portrait:\n      print(\"Portrait\")\n     changeTableViewDimensions(true)\n    case .PortraitUpsideDown:\n            print(\"Portrait Upside Down\")\n     changeTableViewDimensions(true)\n    case .LandscapeLeft:\n            print(\"Landscape left\")\n           changeTableViewDimensions(false)\n    case .LandscapeRight:\n                  print(\"Landscape right\")\n           changeTableViewDimensions(false)\n    default:\n      print(\"Unknown orientation\")\n     changeTableViewDimensions(false)\n    }\n    tableView.reloadData()\n  }\n  \n  func changeTableViewDimensions(fromLandscape: Bool) {\n    let screenHeight: CGFloat = fromLandscape ? screenRect.size.height : screenRect.size.width\n    print(\"Screen height: \\(screenHeight)\" )\n    tableView.rowHeight = screenHeight / 2\n  }\n  "
+    }
+  ]
+}
