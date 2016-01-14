@@ -1,0 +1,10 @@
+{
+  "title": "Filter array functionally  ",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  func countUncheckedItems() -> Int {\n    return (checklistItems.filter { !$0.checked }).count\n  }"
+    }
+  ]
+}
