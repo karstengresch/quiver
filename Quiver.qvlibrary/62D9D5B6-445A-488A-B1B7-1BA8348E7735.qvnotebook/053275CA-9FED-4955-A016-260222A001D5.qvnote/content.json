@@ -1,0 +1,14 @@
+{
+  "title": "Redmine API Access w/ RestEasy and JSON-Simple",
+  "cells": [
+    {
+      "type": "code",
+      "language": "java",
+      "data": "  public Optional<Integer> getProjectIdByProjectShortname(String projectShortname) throws Exception\n  {\n    ClientRequest request = new ClientRequest(LabcaseInformation.LABCASE_BASE_URL.concat(\"projects/\").concat(projectShortname).concat(\".json?include=journals&\").concat(\"&key=\").concat(apiKey.orElse(\"YOUR_API_KEY_HERE\")));\n    request.accept(\"application/json\");\n    ClientResponse<String> response = request.get(String.class);\n\n    if (response.getStatus() != 200) {\n      throw new RuntimeException(\"Failed : HTTP error code : \"\n                                     + response.getStatus());\n    }\n\n    JSONParser parser=new JSONParser();\n    Object jsonResponse = parser.parse(response.getEntity());\n    JSONObject resultObject = (JSONObject) jsonResponse;\n    JSONObject projectObject = (JSONObject) resultObject.get(\"project\");\n    Long projectId = (Long) projectObject.get(\"id\");\n\n    return Optional.of(projectId.intValue());\n\n  }"
+    },
+    {
+      "type": "text",
+      "data": "<div>Still bloated, I know.</div>"
+    }
+  ]
+}
