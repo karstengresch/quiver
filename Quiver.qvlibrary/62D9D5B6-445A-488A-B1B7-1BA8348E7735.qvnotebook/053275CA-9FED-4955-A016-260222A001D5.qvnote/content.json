@@ -9,6 +9,10 @@
     {
       "type": "text",
       "data": "<div>Still bloated, I know.</div>"
+    },
+    {
+      "type": "text",
+      "data": "<div>NB - There's a phantastic Java API for RedMine:&nbsp;<a href=\"https://github.com/taskadapter/redmine-java-api\">https://github.com/taskadapter/redmine-java-api</a>&nbsp;Check it out - ways better than fiddling as in the example above.</div>"
     }
   ]
 }
