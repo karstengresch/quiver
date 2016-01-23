@@ -1,0 +1,10 @@
+{
+  "title": "IconPickerViewController w/ protocol",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "\nimport UIKit\n\nprotocol IconPickerViewControllerDelegate: class {\n  func iconPicker(picker: IconPickerViewController, didPickIcon iconName: String)\n}\n\n\nclass IconPickerViewController: UITableViewController {\n  weak var delegate: IconPickerViewControllerDelegate?\n}"
+    }
+  ]
+}
