@@ -8,7 +8,7 @@
     },
     {
       "type": "text",
-      "data": "<div>Will just schedule an event 10 secs after</div>"
+      "data": "<div>Will just schedule an event after 10 secs</div>"
     }
   ]
 }
