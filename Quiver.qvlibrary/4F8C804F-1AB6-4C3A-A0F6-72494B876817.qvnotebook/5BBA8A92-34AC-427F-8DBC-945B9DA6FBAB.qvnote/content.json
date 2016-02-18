@@ -1,0 +1,10 @@
+{
+  "title": "UITableViewCell: Specify Height",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {\r  if indexPath.section == 1 && indexPath.row == 2 \r  { \r    return 311 // fixed height\r  } else {\r      return super.tableView(tableView, heightForRowAtIndexPath: indexPath)\r    } \r}"
+    }
+  ]
+}
