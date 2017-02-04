@@ -1,0 +1,10 @@
+{
+  "title": "Get Documents Directory",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  func documentsDirectory() -> String {\n    let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)\n    return paths[0]\n  }"
+    }
+  ]
+}
