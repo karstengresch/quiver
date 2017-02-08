@@ -1,0 +1,9 @@
+{
+  "title": "IntelliJ: Dependencies not resolved",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "Occurs quite often: You add new dependencies, run tests etc. \n\nSuddenly classes that should be available (jar exists in the local Maven repository and is exported during build) is not available for import etc.\n\nSolution: \n    # Close the project.\n    # Remove the project's *.iml-file.\n    # File->New Project from existing sources.\n    \nAfter the reimport everything should be fine."
+    }
+  ]
+}
