@@ -1,0 +1,14 @@
+{
+  "title": "Copy Dependencies",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "Goal: Put all dependency artifacts (e.g. jars) into the *target* folder, e.g. to share them with colleagues via Telegram."
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<build> \n  <plugins> \n    <plugin> \n    <artifactId>maven-dependency-plugin</artifactId> \n    <executions> \n      <execution> \n        <phase>install</phase> \n          <goals> \n            <goal>copy-dependencies</goal> \n          </goals> \n          <configuration> \n             <outputDirectory>${project.build.directory}/lib</outputDirectory> \n          </configuration> \n        </execution> \n      </executions> \n    </plugin> \n  </plugins> \n</build> "
+    }
+  ]
+}
