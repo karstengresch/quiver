@@ -3,7 +3,7 @@
   "cells": [
     {
       "type": "code",
-      "language": "xml",
+      "language": "swift",
       "data": "let isCharacterUpperCase = CharacterSet.uppercaseLetters.contains(character)"
     }
   ]
