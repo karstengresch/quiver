@@ -1,0 +1,10 @@
+{
+  "title": "OpenShift for Developers",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "# Follow local minishift setup\n# new project\n# EAP 7.0 (not: Base!!!) S2i\n# http://192.168.64.4:32203/gogsadmin/insultapp.git\n"
+    }
+  ]
+}
