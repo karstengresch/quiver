@@ -2,9 +2,80 @@
   "title": "OpenShift for Developers",
   "cells": [
     {
+      "type": "text",
+      "data": "<div>Follow local minishift setup</div><div>new project</div><div>EAP 7.0 (not: Base!!!) S2i</div><div>http://192.168.64.4:32203/gogsadmin/insultapp.git</div><div><br></div><div>Just in case: Servlet Deps</div>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<dependencies>\n\t<dependency>\n\t    <groupId>javax.servlet</groupId>\n\t    <artifactId>javax.servlet-api</artifactId>\n\t    <version>2.5.0</version>\n\t    <scope>provided</scope>\n\t</dependency>\n</dependencies>"
+    },
+    {
+      "type": "text",
+      "data": "<div>Add postgresql-persistent</div>"
+    },
+    {
       "type": "code",
       "language": "sh",
-      "data": "# Follow local minishift setup\n# new project\n# EAP 7.0 (not: Base!!!) S2i\n# http://192.168.64.4:32203/gogsadmin/insultapp.git\n"
+      "data": "oc env dc insults -e POSTGRESQL_USER=insult  -e PGPASSWORD=insult POSTGRESQL_DATABASE=insults"
+    },
+    {
+      "type": "text",
+      "data": "<div>Add SQL. Go to blue circle, click on it, go to Terminal.&nbsp;</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "export TERM=xterm\npsql -h $POSTGRESQL_SERVICE_HOST -p $POSTGRESQL_SERVICE_PORT -U $POSTGRESQL_USER $POSTGRESQL_DATABASE < insults.sql"
+    },
+    {
+      "type": "text",
+      "data": "<div>Add this dependency to pom.xml:</div>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<dependencies>\n\t<dependency>\n\t    <groupId>org.postgresql</groupId>\n\t    <artifactId>postgresql</artifactId>\n\t    <version>9.4-1200-jdbc41</version>\n    </dependency>\n</dependencies>"
+    },
+    {
+      "type": "text",
+      "data": "<div>Change InsultGenerator,java to:</div>"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "data": "package org.openshift;\n\nimport java.sql.Connection;\nimport java.sql.DriverManager;\nimport java.sql.ResultSet;\nimport java.sql.Statement;\n\npublic class InsultGenerator {\n public String generateInsult() {\n  String vowels = \"AEIOU\";\n  String article = \"an\";\n  String theInsult = \"\";\n\n\n  try {\n   String databaseURL = \"jdbc:postgresql://\";\n   databaseURL += System.getenv(\"POSTGRESQL_SERVICE_HOST\");\n   databaseURL += \"/\" + System.getenv(\"POSTGRESQL_DATABASE\");\n\n   String username = System.getenv(\"POSTGRESQL_USER\");\n   String password = System.getenv(\"PGPASSWORD\");\n   Connection connection = DriverManager.getConnection(databaseURL, username,\n   password);\n\n   if (connection != null) {\n    String SQL = \"select a.string AS first, b.string AS second, c.string AS noun\n    from short_adjective a , long_adjective b, noun c ORDER BY random() limit 1\";\n    Statement stmt = connection.createStatement();\n    ResultSet rs = stmt.executeQuery(SQL);\n    while (rs.next()) {\n     if (vowels.indexOf(rs.getString(\"first\").charAt(0)) == -1) {\n      article = \"a\";\n     }\n     theInsult =  String.format(\"Thou art %s %s %s %s!\", article,\n     rs.getString(\"first\"), rs.getString(\"second\"), rs.getString(\"noun\"));\n    }\n    rs.close();\n    connection.close();\n   }\n  } catch (Exception e) {\n   return \"Database connection problem!\";\n  }\n  return theInsult;\n }\n}"
+    },
+    {
+      "type": "text",
+      "data": "<div>Add a REST endpoint:</div>"
+    },
+    {
+      "type": "text",
+      "data": "<div>First, add another dependency in pom.xml</div>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<dependency>\n    <groupId>javax</groupId>\n    <artifactId>javaee-api</artifactId>\n    <version>7.0</version>\n    <scope>provided</scope>\n</dependency>"
+    },
+    {
+      "type": "text",
+      "data": "<div>Next, add a new class <i>InsultResource</i></div>"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "data": "package org.openshift;\n\nimport java.util.HashMap;\nimport javax.enterprise.context.RequestScoped;\nimport javax.ws.rs.GET;\nimport javax.ws.rs.Path;\nimport javax.ws.rs.Produces;\n\n@RequestScoped\n@Path(\"/insult\")\npublic class InsultResource {\n\n  @GET()\n  @Produces(\"application/json\")\n  public HashMap<String,String> getInsult() {\n  HashMap<String, String> theInsult = new HashMap<String, String>();\n  theInsult.put(\"insult\", new InsultGenerator().generateInsult());\n  return theInsult;\n }\n}"
+    },
+    {
+      "type": "text",
+      "data": "<div>Build anew, endpoint should be visible.</div>"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "data": ""
     }
   ]
 }
