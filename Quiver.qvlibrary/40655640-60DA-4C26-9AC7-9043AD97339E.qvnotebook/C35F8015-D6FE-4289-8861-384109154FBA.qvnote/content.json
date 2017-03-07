@@ -1,0 +1,55 @@
+{
+  "title": "Local oc-cluster setup",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>First problem on macOS:</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "minishift start\noc new-app -f https://raw.githubusercontent.com/csrwng/build-origin/master/origin-builder.yaml -p SOURCE_URL=https://github.com/csrwng/origin.git -p SOURCE_REF=docker_version_warning"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "$>oc-cluster up\nUsing default profile\n[INFO] Running a previously created cluster\noc cluster up --public-hostname '127.0.0.1'                 --host-data-dir '/Users/karsten/.oc/profiles/default/data'                 --host-config-dir '/Users/karsten/.oc/profiles/default/config'                 --routing-suffix ''                 --use-existing-config                 --image=registry.access.redhat.com/openshift3/ose\n-- Checking OpenShift client ... OK\n-- Checking Docker client ... OK\n-- Checking Docker version ... FAIL\n   Error: Minor number must not contain leading zeroes \"03\"\n[ERROR] Cluster has not started correctly. Profile configuration will be preserved"
+    },
+    {
+      "type": "text",
+      "data": "Other problem was:"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "   Pulling image registry.access.redhat.com/openshift3/ose:v1.5.0-alpha.3\nFAIL\n   Error: error pulling Docker image registry.access.redhat.com/openshift3/ose:v1.5.0-alpha.3\n   Caused By:\n     Error: API error (404): {\"message\":\"error parsing HTTP 404 response body: invalid character 'F' looking for beginning of value: \\\"File not found.\\\\\\\"\\\"\"}"
+    },
+    {
+      "type": "text",
+      "data": "<div>Solution (1):</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "rm -Rf ~/.oc"
+    },
+    {
+      "type": "text",
+      "data": "<div>Did not really work. Downloaded the stable version from&nbsp;<a href=\"https://download.docker.com/mac/stable/Docker.dmg\">https://download.docker.com/mac/stable/Docker.dmg</a>&nbsp;and changed oc back to 3.4 version.</div><div>Did also not really work: Strange stuff like:</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "MBPKG01:oc-cluster-wrapper karsten$ oc.20170307  login -u system:admin\nLogged into \"https://127.0.0.1:8443\" as \"system:admin\" using existing credentials.\n\nYou have access to the following projects and can switch between them with 'oc.20170307 project <projectname>':\n\n    default\n    kube-system\n  * myproject\n    openshift\n    openshift-infra\n\nUsing project \"myproject\".\nMBPKG01:oc-cluster-wrapper karsten$ oc.20170307  project default\nAlready on project \"myproject\" on server \"https://127.0.0.1:8443\"."
+    },
+    {
+      "type": "text",
+      "data": "<b>Working configuration&nbsp;</b>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc-cluster up --image=\"registry.access.redhat.com/openshift3/ose\" \noc login -u system:admin\noc project default\noc adm policy add-cluster-role-to-user cluster-admin developer\noc adm policy add-cluster-role-to-user cluster-admin admin\ngofabric8 deploy -y\n\n\n \n \n "
+    }
+  ]
+}
