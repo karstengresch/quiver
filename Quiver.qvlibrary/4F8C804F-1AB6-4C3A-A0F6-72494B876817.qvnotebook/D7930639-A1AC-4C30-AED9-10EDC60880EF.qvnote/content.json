@@ -1,0 +1,10 @@
+{
+  "title": "Root UITableViewController",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "import UIKit\n\nclass AllLists10ViewController: UITableViewController {\n\n    override func viewDidLoad() {\n        super.viewDidLoad()\n    }\n\n    override func didReceiveMemoryWarning() {\n        super.didReceiveMemoryWarning()\n    }\n\n    // MARK: - Table view data source\n\n    override func numberOfSections(in tableView: UITableView) -> Int {\n        return 0\n    }\n\n    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {\n        return 3\n    }\n\n\n    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {\n        let cell = makeCell(for: tableView)\n        cell.textLabel!.text = \"List10 \\(indexPath.row)\"\n        return cell\n    }\n  \n  func makeCell(for tableView: UITableView) -> UITableViewCell {\n    \n    let cellIdentifier = \"Cell10\"\n    if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) {\n      return cell\n    } else\n    {\n      return UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)\n    }\n  }\n  \n  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {\n    performSegue(withIdentifier: \"Show Checklist10\", sender: nil)\n  }\n\n}"
+    }
+  ]
+}
