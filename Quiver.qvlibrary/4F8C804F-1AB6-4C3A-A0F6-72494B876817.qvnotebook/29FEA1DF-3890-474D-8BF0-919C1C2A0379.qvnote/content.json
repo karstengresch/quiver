@@ -1,0 +1,10 @@
+{
+  "title": "switch on Optionals",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "    switch(firstChoice, secondChoice) {\n      case(.some, .some): return page\n      case(.none, .none), (.none, .some): firstChoice = (title, page)\n      case(.some, .none): secondChoice = (title, page)\n    }"
+    }
+  ]
+}
