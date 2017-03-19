@@ -1,0 +1,10 @@
+{
+  "title": "Change unpushed commit messages",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git commit --amend -m \"New commit message\""
+    }
+  ]
+}

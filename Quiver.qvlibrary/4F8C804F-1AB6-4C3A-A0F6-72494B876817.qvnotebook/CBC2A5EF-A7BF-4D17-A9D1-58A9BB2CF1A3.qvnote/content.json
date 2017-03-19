@@ -1,0 +1,10 @@
+{
+  "title": "Programmatic View Layout Example (Treehouse Story)",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": " override func viewWillLayoutSubviews() {\n    super.viewWillLayoutSubviews()\n    \n    view.addSubview(artworkView)\n    \n    NSLayoutConstraint.activate([\n      artworkView.topAnchor.constraint(equalTo: view.topAnchor),\n      artworkView.bottomAnchor.constraint(equalTo: view.bottomAnchor),\n      artworkView.rightAnchor.constraint(equalTo: view.rightAnchor),\n      artworkView.leftAnchor.constraint(equalTo: view.leftAnchor)\n      \n      ])\n    \n    view.addSubview(storyLabel)\n\n    NSLayoutConstraint.activate([\n      storyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16.0),\n      storyLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16.0),\n      storyLabel.topAnchor.constraint(equalTo: view.centerYAnchor, constant: -48.0)\n      ])\n    \n    view.addSubview(firstChoiceButton)\n    firstChoiceButton.translatesAutoresizingMaskIntoConstraints = false\n    \n    NSLayoutConstraint.activate([\n      firstChoiceButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),\n      firstChoiceButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80.0)\n      ])\n    \n    view.addSubview(secondChoiceButton)\n    secondChoiceButton.translatesAutoresizingMaskIntoConstraints = false\n    \n    NSLayoutConstraint.activate([\n      secondChoiceButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),\n      secondChoiceButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32.0)\n      \n      ])\n  }\n"
+    }
+  ]
+}
