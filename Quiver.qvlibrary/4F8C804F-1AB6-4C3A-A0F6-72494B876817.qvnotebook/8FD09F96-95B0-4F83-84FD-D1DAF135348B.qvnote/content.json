@@ -7,9 +7,13 @@
       "data": "NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)"
     },
     {
+      "type": "text",
+      "data": "<div>And here the implementation code:</div>"
+    },
+    {
       "type": "code",
       "language": "swift",
-      "data": ""
+      "data": "func keyboardWillShow(_ notification: Notification) {\n    if let userInfo = notification.userInfo, let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {\n      let keyboardFrameRectangle = keyboardFrame.cgRectValue\n      textFieldBottomConstraint.constant = keyboardFrameRectangle.size.height + 10\n\n      UIView.animate(withDuration: 0.8) {\n        self.view.layoutIfNeeded()\n      }\n    }\n  }"
     }
   ]
 }
