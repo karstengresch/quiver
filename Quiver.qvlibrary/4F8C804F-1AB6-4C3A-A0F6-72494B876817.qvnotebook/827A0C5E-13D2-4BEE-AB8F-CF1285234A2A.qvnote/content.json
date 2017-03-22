@@ -1,0 +1,10 @@
+{
+  "title": "Alerts",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "        let alertController = UIAlertController(title: \"Name not provided\", message: \"Please provide a name\", preferredStyle: .alert)\n        let alertAction = UIAlertAction(title: \"OK\", style: .default, handler: nil)\n        alertController.addAction(alertAction)\n        present(alertController, animated: true, completion: nil)"
+    }
+  ]
+}
