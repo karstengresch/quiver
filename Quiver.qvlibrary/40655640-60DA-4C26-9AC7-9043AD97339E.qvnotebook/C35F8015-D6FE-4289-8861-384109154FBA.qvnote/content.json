@@ -44,12 +44,12 @@
     },
     {
       "type": "text",
-      "data": "<b>Working configuration&nbsp;</b>"
+      "data": "<b>\"Working\" configuration&nbsp;</b>"
     },
     {
       "type": "code",
       "language": "sh",
-      "data": "oc-cluster up --image=\"registry.access.redhat.com/openshift3/ose\" \noc login -u system:admin\noc project default\noc adm policy add-cluster-role-to-user cluster-admin developer\noc adm policy add-cluster-role-to-user cluster-admin admin\noc-cluster plugin-install imagestreams\noc-cluster imagestreams xpaas\noc-cluster plugin-install nexus3\n\ngofabric8 deploy -y\n\n\n \n \n "
+      "data": "oc-cluster up _PROFILENAME_ --image=\"registry.access.redhat.com/openshift3/ose\" --version=v3.4.1.7\noc login -u system:admin\noc project default\noc adm policy add-cluster-role-to-user cluster-admin developer\noc adm policy add-cluster-role-to-user cluster-admin admin\noc-cluster plugin-install imagestreams\noc-cluster imagestreams xpaas\n# doesn't come up: oc-cluster plugin-install nexus3\n\n# !needs minishift: gofabric8 deploy -y\n\n\n \n \n "
     }
   ]
 }
