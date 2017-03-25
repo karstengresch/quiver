@@ -49,7 +49,16 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "oc-cluster up _PROFILENAME_ --image=\"registry.access.redhat.com/openshift3/ose\" --version=v3.4.1.7\noc login -u system:admin\noc project default\noc adm policy add-cluster-role-to-user cluster-admin developer\noc adm policy add-cluster-role-to-user cluster-admin admin\noc-cluster plugin-install imagestreams\noc-cluster imagestreams xpaas\n# doesn't come up: oc-cluster plugin-install nexus3\n\n# !needs minishift: gofabric8 deploy -y\n\n\n \n \n "
+      "data": "oc-cluster up _PROFILENAME_ --image=\"registry.access.redhat.com/openshift3/ose\" --version=v3.4.1.10 --\noc login -u system:admin\noc project default\noc adm policy add-cluster-role-to-user cluster-admin developer\noc adm policy add-cluster-role-to-user cluster-admin admin\n# Gogs\noc new-app -f https://raw.githubusercontent.com/OpenShiftDemos/gogs-openshift-docker/master/openshift/gogs-persistent-template.yaml --param=HOSTNAME=127.0.0.1.nip.io\noc-cluster plugin-install imagestreams\noc-cluster imagestreams xpaas\n# doesn't come up: oc-cluster plugin-install nexus3\n\n# !needs minishift: gofabric8 deploy -y\n\n\n \n \n "
+    },
+    {
+      "type": "text",
+      "data": "<div>Trying to set up the coolstore demo from https://github.com/jbossdemocentral/coolstore-microservice</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc login -u developer\noc new-project coolstore\noc process -f openshift/coolstore-template.yaml | oc create -f -\n\n# oc create -f https://raw.githubusercontent.com/jboss-openshift/application-templates/master/jboss-image-streams.json -n openshift\n# openshift/scripts/provision-demo.sh --user developer --minimal"
     }
   ]
 }
