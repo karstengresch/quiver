@@ -1,0 +1,32 @@
+{
+  "title": "Sync the fork",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>See:&nbsp;<a href=\"https://help.github.com/articles/configuring-a-remote-for-a-fork/\">https://help.github.com/articles/configuring-a-remote-for-a-fork/</a><br></div><div>First check your local repo points to the fork:</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git remote -v"
+    },
+    {
+      "type": "text",
+      "data": "<div>Then add the originating repo:</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git"
+    },
+    {
+      "type": "text",
+      "data": "<div>To get the latest version from the master branch of the originating rep, run:</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git pull upstream master"
+    }
+  ]
+}
