@@ -1,0 +1,14 @@
+{
+  "title": "Keyboard Dismiss on 'Done' button through extension",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "extension ViewController: UITextFieldDelegate {\n  func textFieldShouldReturn(_ textField: UITextField) -> Bool {\n    nameTextField.resignFirstResponder()\n    return true\n  }\n}"
+    },
+    {
+      "type": "text",
+      "data": "<div>NB - 'nameTextField' is an outlet.</div>"
+    }
+  ]
+}
