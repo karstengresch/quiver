@@ -1,0 +1,23 @@
+{
+  "title": "Play sounds (low level)",
+  "cells": [
+    {
+      "type": "text",
+      "data": "Uses the reference to use the wav files memory (instead of shifting around). The extension adds sound to the domain class"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "import Foundation\nimport AudioToolbox\n\nextension Story {\n  \n  var soundEffectName: String {\n    switch self {\n      case .droid, .home: return \"HappyEnding\"\n      case .monster: return \"Ominous\"\n      default: return \"PageTurn\"\n    }\n  }\n  \n  var soundEffectUrl: URL {\n    let path = Bundle.main.path(forResource: soundEffectName, ofType: \"wav\")!\n    return URL(fileURLWithPath: path)\n  }\n}\n\nclass SoundsEffectsPlayer {\n  var sound: SystemSoundID = 0\n  \n  func playSound(for story: Story) {\n    let soundUrl = story.soundEffectUrl as CFURL\n    \n    AudioServicesCreateSystemSoundID(soundUrl, &sound)\n    AudioServicesPlaySystemSound(sound)\n  }\n}\n"
+    },
+    {
+      "type": "text",
+      "data": "<div><br></div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": ""
+    }
+  ]
+}
