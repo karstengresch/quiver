@@ -49,11 +49,20 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "oc-cluster up _PROFILENAME_ --image=\"registry.access.redhat.com/openshift3/ose\" --version=v3.4.1.10 --\noc login -u system:admin\noc project default\noc adm policy add-cluster-role-to-user cluster-admin developer\noc adm policy add-cluster-role-to-user cluster-admin admin\n# Gogs\n# from https://github.com/OpenShiftDemos/gogs-openshift-docker\n# oc new-app -f https://raw.githubusercontent.com/OpenShiftDemos/gogs-openshift-docker/master/openshift/gogs-persistent-template.yaml --param=HOSTNAME=gogs.127.0.0.1.nip.io\n# from https://github.com/ibotty/openshift-gogs.git\n# just creates the template - but did not show up at all :|\n# oc create -f gogs.yaml\noc-cluster plugin-install imagestreams\noc-cluster imagestreams xpaas\n# doesn't come up: oc-cluster plugin-install nexus3\n# !needs minishift: gofabric8 deploy -y\n\n\n \n \n "
+      "data": "oc-cluster up _PROFILENAME_ --image=\"registry.access.redhat.com/openshift3/ose\" --version=v3.4.1.10 --public-hostname 192.168.1.27\noc login -u system:admin\noc project default\noc adm policy add-cluster-role-to-user cluster-admin developer\noc adm policy add-cluster-role-to-user cluster-admin admin\n# Gogs\n# from https://github.com/OpenShiftDemos/gogs-openshift-docker\n# oc new-app -f https://raw.githubusercontent.com/OpenShiftDemos/gogs-openshift-docker/master/openshift/gogs-persistent-template.yaml --param=HOSTNAME=gogs.127.0.0.1.nip.io\n# from https://github.com/ibotty/openshift-gogs.git\n# just creates the template - but did not show up at all :|\n# oc create -f gogs.yaml\noc-cluster plugin-install imagestreams\noc-cluster imagestreams xpaas\n# doesn't come up: oc-cluster plugin-install nexus3\n# !needs minishift: gofabric8 deploy -y\n\n\n \n \n "
     },
     {
       "type": "text",
-      "data": "<div>Trying to set up the coolstore demo from https://github.com/jbossdemocentral/coolstore-microservice</div>"
+      "data": "Gogs and Nexus etc. install worked via..."
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "# cd => git clone dir\ngit clone https://github.com/OpenShiftDemos/openshift-cd-demo\ncd openshift-cd-demo\n# Admin permissions as above!\noc login -u developer\noc new-project dev --display-name=\"Tasks - Dev\"\noc new-project stage --display-name=\"Tasks - Stage\"\noc new-project cicd --display-name=\"CI/CD\"\n\noc policy add-role-to-user edit system:serviceaccount:cicd:default -n dev\noc policy add-role-to-user edit system:serviceaccount:cicd:default -n stage\noc process -f cicd-template.yaml -v DEV_PROJECT=dev -v STAGE_PROJECT=stage | oc create -f - -n cicd\n# After that, Gogs and Nexus were up!"
+    },
+    {
+      "type": "text",
+      "data": "<div>Trying to set up the coolstore demo from https://github.com/jbossdemocentral/coolstore-microservice =&gt; Did not work, no Nexus, no Gogs :|</div>"
     },
     {
       "type": "code",
