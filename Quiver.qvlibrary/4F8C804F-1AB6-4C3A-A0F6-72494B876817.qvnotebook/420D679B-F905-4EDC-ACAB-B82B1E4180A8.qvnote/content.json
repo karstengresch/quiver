@@ -1,0 +1,40 @@
+{
+  "title": "Creating TableView Cells",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>There are four ways that you can make table view cells:</div><div><br></div><div>1. Using <b>prototypec cells</b>.This is the simplest and quickest way.You did this in</div><div><br></div><div>ChecklistViewController.</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {\n    \n    print(\"cellForRowAt indexPath: \\(indexPath )\")\n    \n    // from prototype cell\n    let cell = tableView.dequeueReusableCell(withIdentifier: \"Checklist10Item\", for: indexPath)\n\n    let checklist10Item = checklist10Items[indexPath.row]\n    let label = cell.viewWithTag(1000) as! UILabel\n    label.text = checklist10Item.text\n    \n    configureCheckmark(for: cell, with: checklist10Item)\n    \n    return cell\n  }"
+    },
+    {
+      "type": "text",
+      "data": "<div>2. Using <b>static cells</b>. You did this fort he Add/EditItem screen.Static cells are limiited to screens where you know in advance which cells you’ll have. The big advantage with static cells is that you don’t need to provide any of the data source methods (cellForRowAt and so on).</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": "<div>3. Using a <b>nib file</b>. A nib (also known as a XIB) is like a mini storyboard that only contains a single customized UITableViewCell object. This is very similar to using prototype cells, except that you can do it outside of a storyboard.</div>"
+    },
+    {
+      "type": "text",
+      "data": "<div>4. <b>By hand</b>, what you did above. This is how you were supposed to do it in the early days of iOS. Chances are you’ll run across code examples that do it this way, especially from older articles and books. It’s a bit more work but also offers you the most flexibility.<br></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {\n        let cell = makeCell(for: tableView)\n        let checklist = checklist10s[indexPath.row]\n        if let textLabel = cell.textLabel {\n          textLabel.text = checklist.name\n        }\n        cell.accessoryType = .detailDisclosureButton\n        return cell\n    }\n"
+    },
+    {
+      "type": "text",
+      "data": "<div><br></div>"
+    }
+  ]
+}
