@@ -1,0 +1,10 @@
+{
+  "title": "Basic CI/CD Demo",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc-cluster up _PROFILENAME_ --image=\"registry.access.redhat.com/openshift3/ose\" --version=v3.4.1.10 --public-hostname 192.168.1.27\noc login -u system:admin\noc project default\noc adm policy add-cluster-role-to-user cluster-admin developer\noc adm policy add-cluster-role-to-user cluster-admin admin"
+    }
+  ]
+}
