@@ -1,7 +1,9 @@
 {
   "created_at" : 1489960992,
   "tags" : [
-
+    "layout",
+    "programmatic",
+    "view"
   ],
   "title" : "Programmatic View Layout Example (Treehouse Story)",
   "updated_at" : 1489961025,

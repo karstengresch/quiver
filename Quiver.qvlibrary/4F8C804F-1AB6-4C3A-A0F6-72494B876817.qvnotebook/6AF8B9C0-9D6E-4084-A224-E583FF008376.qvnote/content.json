@@ -4,6 +4,24 @@
     {
       "type": "text",
       "data": "<div><img src=\"quiver-image-url/BAB7FD6B2600ED5C94F2E03A0129FB48.jpg\">&nbsp;</div><div>(Ray Wenderlich, iOS Apprentice Ch. 2, iOS 10)<br></div>"
+    },
+    {
+      "type": "text",
+      "data": "<div><b>Example for passing a domain object to a table.</b></div><div><br></div><div>First, get the object from the domain array that's linked to the table (the checklist10 array here, created in init).</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": " override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {\n    let checklist10 = checklist10s[indexPath.row]\n    performSegue(withIdentifier: \"ShowChecklist10\", sender: checklist10)\n  }"
+    },
+    {
+      "type": "text",
+      "data": "<div>Next, pass the single object with the segue (here to the detail view controller):</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {\n    if segue.identifier == \"ShowChecklist10\" {\n      let checklist10ViewController = segue.destination as! Checklist10ViewController\n      checklist10ViewController.checklist10 = sender as! Checklist10\n    }\n  }"
     }
   ]
 }

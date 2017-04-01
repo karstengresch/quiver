@@ -1,7 +1,8 @@
 {
   "created_at" : 1489245347,
   "tags" : [
-
+    "table",
+    "table view"
   ],
   "title" : "Root UITableViewController",
   "updated_at" : 1489245797,
