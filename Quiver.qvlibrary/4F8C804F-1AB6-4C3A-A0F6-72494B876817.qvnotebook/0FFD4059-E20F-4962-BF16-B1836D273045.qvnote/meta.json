@@ -4,7 +4,8 @@
     "2015",
     "device",
     "landscape",
-    "orientation"
+    "orientation",
+    "swift"
   ],
   "title" : "Check Device Orientation (w\/ extra UITableView stuff)",
   "updated_at" : 1451423720,

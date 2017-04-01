@@ -1,7 +1,11 @@
 {
   "created_at" : 1486241910,
   "tags" : [
-
+    "2017",
+    "directory",
+    "filesystem",
+    "path",
+    "swift"
   ],
   "title" : "Get Documents Directory",
   "updated_at" : 1486241922,

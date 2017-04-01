@@ -2,8 +2,11 @@
   "created_at" : 1452803177,
   "tags" : [
     "2016",
+    "array",
+    "filter",
     "functional",
-    "Swift"
+    "Swift",
+    "swift"
   ],
   "title" : "Filter array functionally  ",
   "updated_at" : 1452803239,

@@ -1,7 +1,11 @@
 {
   "created_at" : 1489524475,
   "tags" : [
-
+    "2017",
+    "basic swift",
+    "language",
+    "optional",
+    "swift"
   ],
   "title" : "switch on Optionals",
   "updated_at" : 1489524496,
