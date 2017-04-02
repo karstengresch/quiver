@@ -1,0 +1,10 @@
+{
+  "title": "UITableView: Disallow cell text selection",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {\n    return nil\n  }"
+    }
+  ]
+}
