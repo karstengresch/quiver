@@ -1,5 +1,5 @@
 {
-  "title": "Creating TableView Cells",
+  "title": "UITableView: Creating TableView Cells",
   "cells": [
     {
       "type": "text",

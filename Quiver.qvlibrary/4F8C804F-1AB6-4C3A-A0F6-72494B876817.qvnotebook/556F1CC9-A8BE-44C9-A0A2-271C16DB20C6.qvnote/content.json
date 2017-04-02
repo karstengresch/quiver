@@ -1,0 +1,10 @@
+{
+  "title": "UITableView: Delete Rows",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {\n    checklist10s.remove(at: indexPath.row)\n    let indexPaths = [indexPath]\n    tableView.deleteRows(at: indexPaths, with: .automatic)\n  }"
+    }
+  ]
+}
