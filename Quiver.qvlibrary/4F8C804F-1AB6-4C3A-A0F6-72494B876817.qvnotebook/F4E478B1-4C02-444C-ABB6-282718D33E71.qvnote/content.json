@@ -1,0 +1,14 @@
+{
+  "title": "UITextField: En/Disable Done Button Based on Input",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {\n    let oldText = textField.text! as NSString\n    let newText = oldText.replacingCharacters(in: range, with: string) as NSString\n    doneBarButton.isEnabled = (newText.length > 0)\n    return true\n  }"
+    },
+    {
+      "type": "text",
+      "data": "<div>NB - controller class must be of type&nbsp;<span style=\"font-family: Menlo; font-size: 12px;\">UITextFieldDelegate</span></div>"
+    }
+  ]
+}
