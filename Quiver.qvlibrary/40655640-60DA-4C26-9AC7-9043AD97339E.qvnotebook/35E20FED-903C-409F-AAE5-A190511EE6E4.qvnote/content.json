@@ -3,12 +3,21 @@
   "cells": [
     {
       "type": "text",
-      "data": "<b>Java s2i</b>"
+      "data": "<b>Java s2i</b>&nbsp;(documentation:&nbsp;<a href=\"https://developers.redhat.com/blog/2017/02/23/getting-started-with-openshift-java-s2i/\">https://developers.redhat.com/blog/2017/02/23/getting-started-with-openshift-java-s2i/</a>)"
     },
     {
       "type": "code",
       "language": "sh",
       "data": "oc import-image my-redhat-openjdk-18/openjdk18-openshift --from=registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift --confirm"
+    },
+    {
+      "type": "text",
+      "data": "<div>Imagestream definition from:&nbsp;<a href=\"https://gist.githubusercontent.com/tqvarnst/3ca512b01b7b7c1a1da0532939350e23/raw/3869a54c7dd960965f0e66907cdc3eba6d160cad/openjdk-s2i-imagestream.json\">https://gist.githubusercontent.com/tqvarnst/3ca512b01b7b7c1a1da0532939350e23/raw/3869a54c7dd960965f0e66907cdc3eba6d160cad/openjdk-s2i-imagestream.json</a></div>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "{\n    \"kind\": \"ImageStream\",\n    \"apiVersion\": \"v1\",\n    \"metadata\": {\n        \"name\": \"redhat-openjdk18-openshift\"\n    },\n    \"spec\": {\n        \"dockerImageRepository\": \"registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift\",\n        \"tags\": [\n            {\n                \"name\": \"1.0\",\n                \"annotations\": {\n                    \"description\": \"OpenJDK S2I images.\",\n                    \"iconClass\": \"icon-jboss\",\n                    \"tags\": \"builder,java,xpaas\",\n                    \"supports\":\"java:8,xpaas:1.0\",\n                    \"sampleRepo\": \"https://github.com/jboss-openshift/openshift-quickstarts\",\n                    \"sampleContextDir\": \"undertow-servlet\",\n                    \"version\": \"1.0\"\n                }\n            }\n        ]\n    }\n}"
     }
   ]
 }

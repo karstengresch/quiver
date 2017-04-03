@@ -1,0 +1,14 @@
+{
+  "title": "Hawkular Setup  ",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc create -f https://raw.githubusercontent.com/jboss-dockerfiles/hawkular-apm/master/openshift-templates/hawkular-apm-server-deployment.yml"
+    },
+    {
+      "type": "text",
+      "data": "<div><span style=\"font-size: 17px;\">(https://blog.openshift.com/performance-metrics-apm-spring-boot-microservices-openshift)</span></div><hr>"
+    }
+  ]
+}
