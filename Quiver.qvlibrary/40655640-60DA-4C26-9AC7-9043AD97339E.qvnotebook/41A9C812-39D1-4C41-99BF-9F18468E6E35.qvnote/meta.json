@@ -1,7 +1,8 @@
 {
   "created_at" : 1488555402,
   "tags" : [
-
+    "2017",
+    "openshift"
   ],
   "title" : "Local minishift Setup",
   "updated_at" : 1488836189,

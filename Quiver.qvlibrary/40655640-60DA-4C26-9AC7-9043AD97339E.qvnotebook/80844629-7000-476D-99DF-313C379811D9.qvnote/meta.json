@@ -1,7 +1,8 @@
 {
   "created_at" : 1490948285,
   "tags" : [
-
+    "2017",
+    "openshift"
   ],
   "title" : "Basic CI\/CD Demo",
   "updated_at" : 1490948318,
