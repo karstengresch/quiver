@@ -1,0 +1,36 @@
+{
+  "title": "Troubleshooting",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div><b>ImageStreams not availabe</b></div><div>Recreating the ImageStreams (from&nbsp;<a href=\"https://github.com/OpenShiftDemos/openshift-cd-demo/blob/ocp-3.3/docs/oc-cluster.md\">https://github.com/OpenShiftDemos/openshift-cd-demo/blob/ocp-3.3/docs/oc-cluster.md</a>)</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc login -u system:admin\noc delete is --all -n openshift\noc create -f https://raw.githubusercontent.com/openshift/origin/master/examples/image-streams/image-streams-rhel7.json -n openshift\noc create -f https://raw.githubusercontent.com/jboss-openshift/application-templates/master/jboss-image-streams.json -n openshift"
+    },
+    {
+      "type": "text",
+      "data": "<div>Projects cannot communicate with each other</div><div>(from:&nbsp;<a href=\"https://docs.openshift.com/container-platform/3.3/admin_guide/managing_pods.html#admin-guide-pod-network\">https://docs.openshift.com/container-platform/3.3/admin_guide/managing_pods.html#admin-guide-pod-network</a>)</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc adm pod-network make-projects-global <project1>"
+    },
+    {
+      "type": "text",
+      "data": "<div>To fix</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "Removing network isolation for project \"cicd\" failed, error: netnamespaces \"cicd\" not found"
+    },
+    {
+      "type": "text",
+      "data": "<div>Status as of now -&nbsp;2017-04-04 - needs further investigagion, complex.</div>"
+    }
+  ]
+}
