@@ -58,7 +58,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "# cd => git clone dir\ngit clone https://github.com/OpenShiftDemos/openshift-cd-demo\ncd openshift-cd-demo\n# Admin permissions as above!\noc login -u developer\noc new-project dev --display-name=\"Tasks - Dev\"\noc new-project stage --display-name=\"Tasks - Stage\"\noc new-project cicd --display-name=\"CI/CD\"\n\noc policy add-role-to-user edit system:serviceaccount:cicd:default -n dev\noc policy add-role-to-user edit system:serviceaccount:cicd:default -n stage\noc process -f cicd-template.yaml -v DEV_PROJECT=dev -v STAGE_PROJECT=stage | oc create -f - -n cicd\n# After that, Gogs and Nexus were up!"
+      "data": "# cd => git clone dir\ngit clone https://github.com/OpenShiftDemos/openshift-cd-demo\ncd openshift-cd-demo\n# Admin permissions as above!\noc login -u developer\noc new-project dev --display-name=\"Tasks - Dev\"\noc new-project stage --display-name=\"Tasks - Stage\"\noc new-project cicd --display-name=\"CI/CD\"\n\noc policy add-role-to-user edit system:serviceaccount:cicd:default -n dev\noc policy add-role-to-user edit system:serviceaccount:cicd:default -n stage\n# IIRC this was done in the video at \noc policy add-role-to-user edit system:serviceaccount:cicd:default -n cicd\noc process -f cicd-template.yaml -v DEV_PROJECT=dev -v STAGE_PROJECT=stage | oc create -f - -n cicd\n# After that, Gogs and Nexus were up!\n# Gogs: gogs/password\n# Nexus: admin/admin123\n# Jenkins: admin/admin123 - actually OpenShift SSO was used!"
     },
     {
       "type": "text",
