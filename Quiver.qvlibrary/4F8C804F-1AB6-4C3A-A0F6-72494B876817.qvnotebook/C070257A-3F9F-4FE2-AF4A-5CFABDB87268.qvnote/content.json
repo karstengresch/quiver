@@ -4,11 +4,11 @@
     {
       "type": "code",
       "language": "swift",
-      "data": " override func prepare(for segue: UIStoryboardSegue, sender: Any?) {\n    if segue.identifier == \"ShowChecklist10\" {\n      let checklist10ViewController = segue.destination as! Checklist10ViewController\n      checklist10ViewController.checklist10 = (sender as! Checklist10)\n    } else if segue.identifier == \"AddChecklist10\" {\n      let navigationController = segue.destination as! UINavigationController\n      let controller = navigationController.topViewController as! ListDetailViewController\n      controller.delegate = self\n      controller.checklist10ToEdit = nil\n    }\n  }"
+      "data": "  override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {\n    let navigationController = storyboard!.instantiateViewController(withIdentifier: \"ListDetailViewController\") as! UINavigationController\n\n    let controller = navigationController.topViewController as! ListDetailViewController\n    controller.delegate = self\n\n    let checklist10 = checklist10s[indexPath.row]\n\n    controller.checklist10ToEdit = checklist10\n\n    present(navigationController, animated: true, completion: nil)\n  }\n"
     },
     {
       "type": "text",
-      "data": "<div>\n\t\t\n\t\n\t\n\t\t<div class=\"page\" title=\"Page 169\">\n\t\t\t<img src=\"quiver-image-url/13D66AB71145341E84A381CAE7BE6840.png\" alt=\"page169image1336\" width=\"374.000000\" height=\"183.000000\">\n\t\t</div></div><div class=\"page\" title=\"Page 169\">You must enter the ID manually!</div>"
+      "data": "<div>\n\t\t\n\t\n\t\n\t\t<div class=\"page\" title=\"Page 169\">\n\t\t\t<img src=\"quiver-image-url/13D66AB71145341E84A381CAE7BE6840.png\" alt=\"page169image1336\" width=\"374.000000\" height=\"183.000000\">\n\t\t</div></div><div class=\"page\" title=\"Page 169\">You must enter the ID manually to the <b>NavigationController</b>&nbsp;(here:&nbsp;<code>ListDetailViewController</code>)!</div>"
     }
   ]
 }
