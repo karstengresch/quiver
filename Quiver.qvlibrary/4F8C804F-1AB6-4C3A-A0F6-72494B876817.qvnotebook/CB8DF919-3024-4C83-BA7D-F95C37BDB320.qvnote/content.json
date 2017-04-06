@@ -1,0 +1,32 @@
+{
+  "title": "Arrays",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>Create an empty array</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "var checklistItems: [ChecklistItem] = []"
+    },
+    {
+      "type": "text",
+      "data": "<div>is the same as</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "var checklistItems = [ChecklistItem]()"
+    },
+    {
+      "type": "text",
+      "data": "<div>is the same as</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "var checklistItems: [ChecklistItem] = [ChecklistItem]()"
+    }
+  ]
+}
