@@ -1,0 +1,10 @@
+{
+  "title": "UITableView: Create Subview based on tapped accessory button",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": " override func prepare(for segue: UIStoryboardSegue, sender: Any?) {\n    if segue.identifier == \"ShowChecklist10\" {\n      let checklist10ViewController = segue.destination as! Checklist10ViewController\n      checklist10ViewController.checklist10 = (sender as! Checklist10)\n    } else if segue.identifier == \"AddChecklist10\" {\n      let navigationController = segue.destination as! UINavigationController\n      let controller = navigationController.topViewController as! ListDetailViewController\n      controller.delegate = self\n      controller.checklist10ToEdit = nil\n    }\n  }"
+    }
+  ]
+}
