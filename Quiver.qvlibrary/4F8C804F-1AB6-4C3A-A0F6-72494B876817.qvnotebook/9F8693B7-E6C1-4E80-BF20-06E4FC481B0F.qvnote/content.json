@@ -1,0 +1,46 @@
+{
+  "title": "Optionals",
+  "cells": [
+    {
+      "type": "text",
+      "data": "Declaration"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "var window: UIWindow?"
+    },
+    {
+      "type": "text",
+      "data": "<div>Unwrapping</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "if let w = window {\r  // if window is not nil, w is the real UIWindow object\r  let navigationController = w.rootViewController\r}"
+    },
+    {
+      "type": "text",
+      "data": "<div>Optional chaining for the above</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "let navigationController = window?.rootViewController"
+    },
+    {
+      "type": "text",
+      "data": "<div>Force unwrapping</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "let navigationController = window!.rootViewController"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": ""
+    }
+  ]
+}
