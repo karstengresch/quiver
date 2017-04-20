@@ -1,0 +1,14 @@
+{
+  "title": "EAP Params",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div><b>Port Offset</b></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "-Djboss.socket.binding.port-offset=100"
+    }
+  ]
+}
