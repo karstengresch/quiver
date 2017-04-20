@@ -1,0 +1,14 @@
+{
+  "title": "Computed Properties",
+  "cells": [
+    {
+      "type": "text",
+      "data": "Combined with UserDefaults usage."
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  var indexOfSelectedChecklist10: Int {\n    get {\n      return UserDefaults.standard.integer(forKey: \"Checklist10Index\")\n    }\n    set {\n      UserDefaults.standard.set(newValue, forKey: \"Checklist10Index\")\n    }\n  }"
+    }
+  ]
+}
