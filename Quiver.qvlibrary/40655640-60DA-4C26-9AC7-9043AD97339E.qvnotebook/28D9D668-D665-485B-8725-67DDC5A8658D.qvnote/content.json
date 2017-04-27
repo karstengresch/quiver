@@ -1,0 +1,10 @@
+{
+  "title": "Andi: Offline OCP",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "minishift/minishift-centos-iso\n\n./minishift/cache/oc->here are the versions\n\nreplace current oc w/ OCP oc\n\nminishift addons\n\nminishift addons install\n\ndocs.openshift.org host folders\n\nconsole.engint.openshift.com\n\nopenshift config set \n=> multitenant plugin\n\n"
+    }
+  ]
+}
