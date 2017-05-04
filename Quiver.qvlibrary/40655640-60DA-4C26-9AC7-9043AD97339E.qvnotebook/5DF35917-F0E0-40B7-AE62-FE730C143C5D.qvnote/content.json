@@ -1,0 +1,68 @@
+{
+  "title": "OpenShift Fuse Financial Example",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc login -u system:admin\noc project openshift\noc create -f https://raw.githubusercontent.com/jboss-fuse/application-templates/master/fis-image-streams.json"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc login -u developer\noc new-project fisdemo\noc create -f https://raw.githubusercontent.com/jboss-openshift/application-templates/master/amq/amq62-basic.json"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc new-app --template=mysql-ephemeral --param=MYSQL_PASSWORD=password --param=MYSQL_USER=dbuser --param=MYSQL_DATABASE=sampledb\noc new-app --template=amq62-basic --param=MQ_USERNAME=admin --param=MQ_PASSWORD=admin"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git clone https://github.com/YOUR_RPEO/fuse-financial-cicd.git"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "cd fisdemoaccount\nmvn fabric8:deploy -Dmysql-service-username=dbuser -Dmysql-service-password=password"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "cd ..\ncd fisdemoblockchain\nmvn fabric8:deploy"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc process -f fisdemo-template.json | oc create -f -"
+    },
+    {
+      "type": "text",
+      "data": "<div>Result: Jenkins did not come up due to volume creation problems (sic).</div>"
+    },
+    {
+      "type": "text",
+      "data": "<div>FIS Enablement</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc login -u system:admin\nBASEURL=https://raw.githubusercontent.com/jboss-fuse/application-templates/GA\noc replace --force -n openshift -f ${BASEURL}/fis-image-streams.json\nBASEURL=https://raw.githubusercontent.com/jboss-fuse/application-templates/GA\noc replace --force -n openshift -f ${BASEURL}/quickstarts/karaf2-camel-amq-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/karaf2-camel-log-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/karaf2-camel-rest-sql-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/karaf2-cxf-rest-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/spring-boot-camel-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/spring-boot-camel-amq-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/spring-boot-camel-config-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/spring-boot-camel-drools-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/spring-boot-camel-infinispan-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/spring-boot-camel-rest-sql-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/spring-boot-camel-teiid-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/spring-boot-camel-xml-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/spring-boot-cxf-jaxrs-template.json\noc replace --force -n openshift -f ${BASEURL}/quickstarts/spring-boot-cxf-jaxws-template.json\n"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": ""
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": ""
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": ""
+    }
+  ]
+}
