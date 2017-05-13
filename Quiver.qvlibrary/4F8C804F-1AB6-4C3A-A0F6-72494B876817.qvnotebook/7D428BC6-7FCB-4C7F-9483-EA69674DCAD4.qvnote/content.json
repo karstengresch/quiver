@@ -1,10 +1,10 @@
 {
-  "title": "Dismiss for Navigation VC",
+  "title": "Navigation View Controller: Dismiss",
   "cells": [
     {
       "type": "code",
       "language": "swift",
-      "data": "  // MARK: IB related\n  @IBAction func cancel() {\n    dismissViewControllerAnimated(true, completion: nil)\n  }"
+      "data": "  // MARK: IB related\n  @IBAction func cancel() {\n    dismiss(animated: true, completion: nil)\n  }"
     }
   ]
 }
