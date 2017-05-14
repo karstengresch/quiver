@@ -1,6 +1,10 @@
 {
-  "title": "Local Notification",
+  "title": "Notifications",
   "cells": [
+    {
+      "type": "text",
+      "data": "<h3><b>Local Notification</b></h3>"
+    },
     {
       "type": "code",
       "language": "swift",
@@ -9,6 +13,15 @@
     {
       "type": "text",
       "data": "<div>Will just schedule an event after 10 secs</div>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>User Notification (in AppDelegate)</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "import UIKit\nimport UserNotifications\n\n(...)\n\nfunc application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {\n// (...)\n  let userNotificationCenter = UNUserNotificationCenter.current()\n      userNotificationCenter.requestAuthorization(options: [.alert, .sound]) {\n        granted, error in\n        if granted {\n          print(\"Permission granted.\")\n        } else {\n          print(\"Permission denied.\")\n        }\n      }\n  return true\n}"
     }
   ]
 }
