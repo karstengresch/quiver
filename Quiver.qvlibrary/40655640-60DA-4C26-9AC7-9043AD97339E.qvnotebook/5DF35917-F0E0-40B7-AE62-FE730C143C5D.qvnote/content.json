@@ -19,7 +19,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "git clone https://github.com/YOUR_RPEO/fuse-financial-cicd.git"
+      "data": "git clone https://github.com/karstengresch/fuse-financial-cicd.git"
     },
     {
       "type": "code",
