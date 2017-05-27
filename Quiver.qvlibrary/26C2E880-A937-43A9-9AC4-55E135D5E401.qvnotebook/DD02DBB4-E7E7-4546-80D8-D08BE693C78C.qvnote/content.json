@@ -1,0 +1,32 @@
+{
+  "title": "Change Commit Date",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div><span style=\"font-weight: bold;\">Q: How do I specify a commit date?</span></div><div>A: --date=&lt;date_format, see&nbsp;<a href=\"https://www.kernel.org/pub/software/scm/git/docs/git-commit.html\" style=\"color: rgb(128, 187, 255);\">https://www.kernel.org/pub/software/scm/git/docs/git-commit.html</a>, \"Date Formats\"</div><div>NB - not working for past date before Unix time (1970) w/</div><div>But seems to work w/ plumbing commands:</div><div><a href=\"http://article.gmane.org/gmane.comp.version-control.git/152497/\" style=\"color: rgb(128, 187, 255);\">http://article.gmane.org/gmane.comp.version-control.git/152497/</a></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git cat-file -p HEAD > tmp.txt\n    # at this point, edit the file to replace the timestamp\ngit hash-object -t commit -w tmp.txt\n#=> 2ee8fcc02658e23219143f5bcfe6f9a4615745f9\ngit update-ref -m 'commit: foo' refs/heads/master 2ee8fcc02658e23219143f5bcfe6f9a4615745f9"
+    },
+    {
+      "type": "text",
+      "data": "<div>Alternate approach (set this before your commit):<br></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "export GIT_AUTHOR_DATE='2017-01-20T20:23:32'"
+    },
+    {
+      "type": "text",
+      "data": "<div>then reset it<br></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "export GIT_AUTHOR_DATE="
+    }
+  ]
+}
