@@ -1,0 +1,23 @@
+{
+  "title": "print()",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>General usage</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "print(\"Here is a String \\(thisWouldBeAvariable)\")"
+    },
+    {
+      "type": "text",
+      "data": "<div>Debug log method signature</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "print(\"\\()\")"
+    }
+  ]
+}
