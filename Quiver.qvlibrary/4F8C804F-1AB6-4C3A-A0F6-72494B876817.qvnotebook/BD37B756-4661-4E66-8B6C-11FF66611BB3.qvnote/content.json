@@ -8,7 +8,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": "    let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: nil)\n    UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)\n    \n    let date = NSDate(timeIntervalSinceNow: 10)\n    \n    let localNotification = UILocalNotification()\n    localNotification.fireDate = date\n    localNotification.timeZone = NSTimeZone.defaultTimeZone()\n    localNotification.alertBody = \"Dummy notification\"\n    localNotification.soundName = UILocalNotificationDefaultSoundName\n    UIApplication.sharedApplication().scheduleLocalNotification(localNotification)"
+      "data": "  import UserNotifications\n  // this part in a method...\n    let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: nil)\n    UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)\n    \n    let date = NSDate(timeIntervalSinceNow: 10)\n    \n    let localNotification = UILocalNotification()\n    localNotification.fireDate = date\n    localNotification.timeZone = NSTimeZone.defaultTimeZone()\n    localNotification.alertBody = \"Dummy notification\"\n    localNotification.soundName = UILocalNotificationDefaultSoundName\n    UIApplication.sharedApplication().scheduleLocalNotification(localNotification)"
     },
     {
       "type": "text",
