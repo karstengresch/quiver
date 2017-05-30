@@ -1,0 +1,9 @@
+{
+  "title": "000 Challenges",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>001 UISwitch-Cell interaction</div><div><br></div><div>Create a UITableView with one section and two static cells (prototype cells).</div><div><br></div><div>In the first cell put a UISwitch.</div><div><br></div><div>In the second cell put a label and a text field.</div><div><br></div><div>When the switch is disabled, all elements of the other cell should be disabled.</div><div>When the switch is enabled, all elements of the other cell should be enabled.</div>"
+    }
+  ]
+}
