@@ -1,0 +1,14 @@
+{
+  "title": "CoreData",
+  "cells": [
+    {
+      "type": "text",
+      "data": "save example (C in CRUD)"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  func save(name: String) {\n    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {\n      return\n    }\n    \n    let managedContext = appDelegate.persistentContainer.viewContext\n    let entity = NSEntityDescription.entity(forEntityName: \"Person\", in: managedContext)!\n    let person = NSManagedObject(entity: entity, insertInto: managedContext)\n    person.setValue(name, forKeyPath: \"name\")\n    \n    do {\n      try managedContext.save()\n      people.append(person)\n    } catch let error as NSError {\n      print(\"Coud not save. \\(error), \\(error.userInfo)\")\n    }\n  }"
+    }
+  ]
+}
