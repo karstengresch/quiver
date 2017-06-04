@@ -9,6 +9,15 @@
       "type": "code",
       "language": "swift",
       "data": "  func save(name: String) {\n    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {\n      return\n    }\n    \n    let managedContext = appDelegate.persistentContainer.viewContext\n    let entity = NSEntityDescription.entity(forEntityName: \"Person\", in: managedContext)!\n    let person = NSManagedObject(entity: entity, insertInto: managedContext)\n    person.setValue(name, forKeyPath: \"name\")\n    \n    do {\n      try managedContext.save()\n      people.append(person)\n    } catch let error as NSError {\n      print(\"Coud not save. \\(error), \\(error.userInfo)\")\n    }\n  }"
+    },
+    {
+      "type": "text",
+      "data": "<div>fetch example (R in CRUD) -&gt; here for a table to load saved data</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  override func viewWillAppear(_ animated: Bool) {\n    super.viewWillAppear(true)\n    \n    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {\n      return\n    }\n    \n    let managedContext = appDelegate.persistentContainer.viewContext\n    \n    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: \"Person\")\n    \n    do {\n      people =\n      try managedContext.fetch(fetchRequest)\n    } catch let error as NSError {\n      print(\"Coud not fetch. \\(error), \\(error.userInfo)\")\n    }\n  }"
     }
   ]
 }
