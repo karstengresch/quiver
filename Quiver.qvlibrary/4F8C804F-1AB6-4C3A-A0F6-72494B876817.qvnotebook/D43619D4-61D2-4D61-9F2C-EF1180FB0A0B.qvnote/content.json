@@ -18,6 +18,15 @@
       "type": "code",
       "language": "swift",
       "data": "  override func viewWillAppear(_ animated: Bool) {\n    super.viewWillAppear(true)\n    \n    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {\n      return\n    }\n    \n    let managedContext = appDelegate.persistentContainer.viewContext\n    \n    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: \"Person\")\n    \n    do {\n      people =\n      try managedContext.fetch(fetchRequest)\n    } catch let error as NSError {\n      print(\"Coud not fetch. \\(error), \\(error.userInfo)\")\n    }\n  }"
+    },
+    {
+      "type": "text",
+      "data": "<div>Test Code in AppDelegate</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "   let bowtie = NSEntityDescription.insertNewObject(forEntityName: \"Bowtie\", into: self.persistentContainer.viewContext) as! Bowtie\n    bowtie.name = \"My bow tie\"\n    bowtie.lastWorn = NSDate()\n    \n    do {\n      let fetchRequest = NSFetchRequest<Bowtie>(entityName: \"Bowtie\")\n      let bowties =\n        \n        try self.persistentContainer.viewContext.fetch(fetchRequest)\n      \n      let sample = bowties.first\n      print(\"Name: \\(String(describing: sample?.name)), Worn: \\(String(describing: sample?.lastWorn))\")\n          \n      }  catch let error as NSError {\n        print(\"Fetching error \\(error), \\(error.userInfo)\")\n      }"
     }
   ]
 }
