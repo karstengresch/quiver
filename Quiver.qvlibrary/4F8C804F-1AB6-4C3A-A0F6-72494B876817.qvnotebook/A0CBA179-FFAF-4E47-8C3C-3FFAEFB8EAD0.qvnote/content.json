@@ -20,6 +20,10 @@
     {
       "type": "text",
       "data": "<h2>CoreData: @NSManaged Complains</h2>"
+    },
+    {
+      "type": "text",
+      "data": "Select your xcdatamodeld file.<div><br></div><div>Select the entity.</div><div><br></div><div>In Data Model Inspector select:</div><div><img src=\"quiver-image-url/82C31F256752FCFED00154414BA2A3DB.jpg\" width=\"312\" height=\"266\"><br></div><div><br></div><div><br></div>"
     }
   ]
 }
