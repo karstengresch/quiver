@@ -27,6 +27,33 @@
       "type": "code",
       "language": "sh",
       "data": "git pull upstream master"
+    },
+    {
+      "type": "text",
+      "data": "<div>Now fetch the upstream version.</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git fetch upstream"
+    },
+    {
+      "type": "text",
+      "data": "<div><span style=\"color: rgb(51, 51, 51); font-family: helvetica, arial, freesans, clean, sans-serif; font-size: 15px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Check out your fork's local&nbsp;</span><code style=\"padding: 0px 5px 2px; border: 1px solid rgb(221, 221, 221); font-variant-ligatures: normal; font-variant-numeric: inherit; font-stretch: inherit; font-size: 13px; line-height: inherit; font-family: Monaco, 'DejaVu Sans Mono', 'Courier New', monospace; vertical-align: baseline; -webkit-background-clip: padding-box; color: rgb(102, 102, 102); background-clip: padding-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">master</code><span style=\"color: rgb(51, 51, 51); font-family: helvetica, arial, freesans, clean, sans-serif; font-size: 15px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">&nbsp;branch.</span><br></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git checkout master"
+    },
+    {
+      "type": "text",
+      "data": "<div>Finally merge the versions.</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git merge upstream/master"
     }
   ]
 }
