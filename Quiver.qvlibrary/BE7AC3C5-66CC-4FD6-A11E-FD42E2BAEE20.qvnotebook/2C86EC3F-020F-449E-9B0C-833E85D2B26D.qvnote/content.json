@@ -1,0 +1,52 @@
+{
+  "title": "Toolchain",
+  "cells": [
+    {
+      "type": "text",
+      "data": "Compile + run w/o dependencies"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "go run <gofile name>.go"
+    },
+    {
+      "type": "text",
+      "data": "<div>Compile + package dependencies</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "go build <gofile name>.go"
+    },
+    {
+      "type": "text",
+      "data": "<div>Compile + package dependencies and create exec bin</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "go install"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "go get <package name>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "go clean"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "go test"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": ""
+    }
+  ]
+}
