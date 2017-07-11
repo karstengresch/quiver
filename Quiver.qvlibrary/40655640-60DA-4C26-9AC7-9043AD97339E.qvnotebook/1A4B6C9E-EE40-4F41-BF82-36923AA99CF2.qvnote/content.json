@@ -12,25 +12,21 @@
     },
     {
       "type": "text",
-      "data": "<div>Projects cannot communicate with each other</div><div>(from:&nbsp;<a href=\"https://docs.openshift.com/container-platform/3.3/admin_guide/managing_pods.html#admin-guide-pod-network\">https://docs.openshift.com/container-platform/3.3/admin_guide/managing_pods.html#admin-guide-pod-network</a>)</div>"
+      "data": "<div><b>Deleting all objects w/in a project is tedious</b></div>"
     },
     {
       "type": "code",
       "language": "sh",
-      "data": "oc adm pod-network make-projects-global <project1>"
+      "data": "oc delete all --all"
     },
     {
       "type": "text",
-      "data": "<div>To fix</div>"
+      "data": "<b>Image cannot be loaded due to authentication problems</b>"
     },
     {
       "type": "code",
       "language": "sh",
-      "data": "Removing network isolation for project \"cicd\" failed, error: netnamespaces \"cicd\" not found"
-    },
-    {
-      "type": "text",
-      "data": "<div>Status as of now -&nbsp;2017-04-04 - needs further investigagion, complex.</div>"
+      "data": "oc login system:admin\noc project \noc tag --source=docker registry.access.redhat.com/redhat-sso-7/sso71-openshift@sha256:2c551ed9e5bb669eabd875a52779773e1bd9ab89b22cead3505b640139d02774 openshift/redhat-sso71-openshift:1.1 --insecure=true"
     }
   ]
 }
