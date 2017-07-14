@@ -4,7 +4,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "git checkout -- filename"
+      "data": "git checkout -- deleted_file_name"
     }
   ]
 }
