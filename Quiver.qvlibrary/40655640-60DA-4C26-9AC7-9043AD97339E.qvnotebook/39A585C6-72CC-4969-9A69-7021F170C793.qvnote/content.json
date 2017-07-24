@@ -1,0 +1,51 @@
+{
+  "title": "Default Credentials for Various Tools",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2>Gogs</h2>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "gogsadmin / admin123"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "gogsadmin / RedHat$1"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "gogs / password"
+    },
+    {
+      "type": "text",
+      "data": "<h2>Nexus</h2>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "admin / admin123"
+    },
+    {
+      "type": "text",
+      "data": "<h2>SonarQube</h2>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": "<h2>Jenkins</h2>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "admin / admin123"
+    }
+  ]
+}
