@@ -53,7 +53,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": "// 1\rlet fetchRequest1 = NSFetchRequest<Venue>()\rlet entity = NSEntityDescription.entity(forEntityName: \"Venue\", in: managedContext)!\rfetchRequest1.entity = entity\r// 2\rlet fetchRequest2 = NSFetchRequest<Venue>(entityName: \"Venue\")\r// 3\rlet fetchRequest3: NSFetchRequest<Venue> = Venue.fetchRequest()\r// 4\rlet fetchRequest4 = managedObjectModel.fetchRequestTemplate(forName: \"venueFR\")\r// 5\rlet fetchRequest5 = managedObjectModel.fetchRequestFromTemplate(withName: \"venueFR\", substitutionVariables: [\"NAME\" : \"Vivi Bubble Tea\"])"
+      "data": "// 1 Using a generic type. \rlet fetchRequest1 = NSFetchRequest<Venue>()\rlet entity = NSEntityDescription.entity(forEntityName: \"Venue\", in: managedContext)!\rfetchRequest1.entity = entity\r// 2 Convenience initializer\rlet fetchRequest2 = NSFetchRequest<Venue>(entityName: \"Venue\")\r// 3 Using a convenience convenience initializer. Method in Venue+CoreDataProperties.swift\rlet fetchRequest3: NSFetchRequest<Venue> = Venue.fetchRequest()\r// 4 Getting the request from NSManagedObjectModel\rlet fetchRequest4 = managedObjectModel.fetchRequestTemplate(forName: \"venueFR\")\r// 5 Getting the request from NSManagedObjectModel w/ some extra variables\rlet fetchRequest5 = managedObjectModel.fetchRequestFromTemplate(withName: \"venueFR\", substitutionVariables: [\"NAME\" : \"Vivi Bubble Tea\"])"
     }
   ]
 }
