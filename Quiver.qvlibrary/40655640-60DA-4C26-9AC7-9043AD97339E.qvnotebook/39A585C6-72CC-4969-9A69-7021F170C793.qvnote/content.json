@@ -18,7 +18,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "gogs / password"
+      "data": "# cicd demo\ngogs / password"
     },
     {
       "type": "text",
