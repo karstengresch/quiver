@@ -1,5 +1,5 @@
 {
-  "title": "Blue-Green Pipeline Example (https://github.com/wkulhanek/openshift-bluegreen)",
+  "title": "Example: Blue-Green Pipeline (https://github.com/wkulhanek/openshift-bluegreen)",
   "cells": [
     {
       "type": "code",
