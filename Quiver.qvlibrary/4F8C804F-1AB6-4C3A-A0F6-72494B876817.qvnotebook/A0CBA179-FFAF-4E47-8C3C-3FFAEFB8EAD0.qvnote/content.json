@@ -27,7 +27,7 @@
     },
     {
       "type": "text",
-      "data": "<h2>Project (Sub)Folder Renamed</h2>"
+      "data": "<h2>Project (Sub)Folder Renamed -&gt; Files are missing, build fails</h2>"
     },
     {
       "type": "text",
@@ -48,15 +48,15 @@
     },
     {
       "type": "text",
-      "data": "<div>Open&nbsp;</div><div><b>theproject/theproject.xcodeproject/project.pbxproj</b> and&nbsp;</div><div><b>theproject/theproject.xcodeproject/project.xcworkspace/contents.xcworkspacedata</b><br></div>"
+      "data": "<div>Open&nbsp;</div><div><b>theproject/theproject.xcodeproject/project.pbxproj</b> and&nbsp;</div><div><b>theproject/theproject.xcodeproject/project.xcworkspace/contents.xcworkspacedata</b><br></div><div><b><br></b></div><div>Also,&nbsp;</div><div><br></div><div><div>go to &nbsp;<b>theproject</b>.xcodeproj/xcuserdata/&lt;your username&gt;.xcuserdatad/xcschemes/</div><div>and rename&nbsp;</div><div>thepro<b>ejk</b>t.xcscheme to thepro<b>jec</b>t.xcscheme<br></div><div><br></div><div>cd to thepro<b>jec</b>t.xcscheme and rename the occurencies in xcschememanagement.plist as well.</div></div>"
     },
     {
       "type": "text",
-      "data": "<div>With a text editor (e.g. Sublime Text), replace all occurences of \"thepro<b>ejk</b>t\" with \"thepro<b>jec</b>t\".</div>"
+      "data": "<div>With a text editor (e.g. Sublime Text), replace all occurences of \"thepro<b>ejk</b>t\" with \"thepro<b>jec</b>t\".<br></div>"
     },
     {
       "type": "text",
-      "data": "<div>Reopen XCode.</div>"
+      "data": "<div>Reopen XCode. Run clean and build (<span style=\"font-family: 'Lucida Sans'; font-size: 11px; font-weight: bold;\">⇧</span><span style=\"font-family: 'Lucida Sans'; font-size: 11px; font-weight: bold;\">⌘K</span><span style=\"font-family: 'Lucida Sans'; font-size: 11px;\"> then&nbsp;</span><span style=\"font-family: 'Lucida Sans'; font-size: 11px; font-weight: bold;\">⌘B).</span></div><en-clipboard></en-clipboard>"
     }
   ]
 }
