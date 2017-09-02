@@ -48,7 +48,7 @@
     },
     {
       "type": "text",
-      "data": "<div>Open theproject/theproject.xcodeproject/project.pbxproj.<br></div>"
+      "data": "<div>Open&nbsp;</div><div><b>theproject/theproject.xcodeproject/project.pbxproj</b> and&nbsp;</div><div><b>theproject/theproject.xcodeproject/project.xcworkspace/contents.xcworkspacedata</b><br></div>"
     },
     {
       "type": "text",
