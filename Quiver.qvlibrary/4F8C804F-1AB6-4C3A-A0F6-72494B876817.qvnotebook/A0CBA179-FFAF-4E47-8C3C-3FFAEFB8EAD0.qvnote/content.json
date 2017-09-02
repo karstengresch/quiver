@@ -24,6 +24,39 @@
     {
       "type": "text",
       "data": "Select your xcdatamodeld file.<div><br></div><div>Select the entity.</div><div><br></div><div>In Data Model Inspector select:</div><div><img src=\"quiver-image-url/82C31F256752FCFED00154414BA2A3DB.jpg\" width=\"312\" height=\"266\"><br></div><div><br></div><div><br></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h2>Project (Sub)Folder Renamed</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<div>Example: Project folder is named \"theproject\".</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "theproject\n-->theproejkt/AddDelegate.swift etc.\n-->theproject.xcodeproject"
+    },
+    {
+      "type": "text",
+      "data": "<div>You want to rename the erroneously typed subfolder \"thepro<b>ejk</b>t\" to \"thepro<b>jec</b>t\".</div>"
+    },
+    {
+      "type": "text",
+      "data": "<div>First, close XCode.</div>"
+    },
+    {
+      "type": "text",
+      "data": "<div>Open theproject/theproject.xcodeproject/project.pbxproj.<br></div>"
+    },
+    {
+      "type": "text",
+      "data": "<div>With a text editor (e.g. Sublime Text), replace all occurences of \"thepro<b>ejk</b>t\" with \"thepro<b>jec</b>t\".</div>"
+    },
+    {
+      "type": "text",
+      "data": "<div>Reopen XCode.</div>"
     }
   ]
 }
