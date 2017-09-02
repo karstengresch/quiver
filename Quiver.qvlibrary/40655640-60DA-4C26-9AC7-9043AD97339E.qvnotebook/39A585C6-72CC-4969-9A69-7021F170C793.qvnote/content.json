@@ -46,6 +46,15 @@
       "type": "code",
       "language": "sh",
       "data": "admin / admin123"
+    },
+    {
+      "type": "text",
+      "data": "<h2>CloudForms</h2>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "admin / smartvm"
     }
   ]
 }
