@@ -13,6 +13,20 @@
       "type": "code",
       "language": "swift",
       "data": "window!.rootViewController = AppNavigationController(rootViewController: RootViewController())"
+    },
+    {
+      "type": "text",
+      "data": "RootViewController"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "extension RootViewController {\n    \n    fileprivate func prepareSearchButton() {\n        searchButton = IconButton(image: Icon.cm.search)\n        searchButton.addTarget(self, action: #selector(handleSearchButton), for: .touchUpInside)\n    }\n  \n    @objc\n  fileprivate func handleSearchButton() {\n    navigationController?.pushViewController(AppSearchBarController(rootViewController: SearchRootViewController()), animated: true)\n  }\n  \n}"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": ""
     }
   ]
 }
