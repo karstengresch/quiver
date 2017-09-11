@@ -4,6 +4,15 @@
     {
       "type": "text",
       "data": "<div>URLs:</div><div>Architecture:&nbsp;<a href=\"http://www.cosmicmind.com/danieldahan/application-architecture-with-material\">http://www.cosmicmind.com/danieldahan/application-architecture-with-material</a></div><div>GitHub (Material):&nbsp;<a href=\"https://github.com/CosmicMind/Material\">https://github.com/CosmicMind/Material</a></div><div><br></div><div>Is an API for implementing iOS apps following Googles Material Design principles.</div>"
+    },
+    {
+      "type": "text",
+      "data": "<hr><h2>Setup Views</h2><b>AppDelegate</b><div>Setup: Define the main controller (the one that should always stay on top). Add rootViewControllers that will use the main controller.</div><div>E.g.</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "window!.rootViewController = AppNavigationController(rootViewController: RootViewController())"
     }
   ]
 }
