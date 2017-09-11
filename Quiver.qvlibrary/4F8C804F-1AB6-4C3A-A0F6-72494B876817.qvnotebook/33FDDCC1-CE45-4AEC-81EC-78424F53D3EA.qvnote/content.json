@@ -1,0 +1,9 @@
+{
+  "title": "Material Framework (Daniel Dahen aka CosmicMind)",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>URLs:</div><div>Architecture:&nbsp;<a href=\"http://www.cosmicmind.com/danieldahan/application-architecture-with-material\">http://www.cosmicmind.com/danieldahan/application-architecture-with-material</a></div><div>GitHub (Material):&nbsp;<a href=\"https://github.com/CosmicMind/Material\">https://github.com/CosmicMind/Material</a></div><div><br></div><div>Is an API for implementing iOS apps following Googles Material Design principles.</div>"
+    }
+  ]
+}
