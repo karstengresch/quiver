@@ -4,7 +4,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "minishift start --cpus 6 --memory=10240 --iso-url https://github.com/minishift/minishift-centos-iso/releases/download/v1.0.0/minishift-centos7.iso\n# cinishift start --cpus 6 --memory=10240 --skip-registration => cdk!\n# --skip-unregistration\n# --logging --ocp-tag v3.5\n\noc login -u system:admin\noc project default\noc adm policy add-cluster-role-to-user cluster-admin developer\noc adm policy add-cluster-role-to-user cluster-admin admin\n\n# Gogs default creds are either gogsadmin/admin123 or gogsadmin/RedHat$1 (fabric8)\n\n\n"
+      "data": "minishift start --cpus 6 --memory=10240 --skip-registration --ocp-tag v3.5\n# minishift start --cpus 6 --memory=10240 --iso-url https://github.com/minishift/minishift-centos-iso/releases/download/v1.0.0/minishift-centos7.iso\n# minishift start --cpus 6 --memory=10240 --skip-registration => cdk!\n# minishift start --cpus 6 --memory=24960 --skip-registration --metrics --ocp-tag v3.5 --logging --ocp-tag v3.5\n# minishift start --cpus 6 --memory=10240 --skip-registration --ocp-tag v3.5 --ocp-tag v3.5\n\n# minishift stop --skip-unregistration\n# --logging --ocp-tag v3.5\n\noc login -u system:admin\noc project default\noc adm policy add-cluster-role-to-user cluster-admin developer\noc adm policy add-cluster-role-to-user cluster-admin admin\n\n# Gogs default creds are either gogsadmin/admin123 or gogsadmin/RedHat$1 (fabric8)\n\n\n"
     }
   ]
 }
