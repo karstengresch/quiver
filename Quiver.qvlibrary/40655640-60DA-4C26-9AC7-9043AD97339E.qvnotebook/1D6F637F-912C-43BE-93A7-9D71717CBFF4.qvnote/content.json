@@ -1,0 +1,44 @@
+{
+  "title": "JDG Examples",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2>Accessing a JDG Server via REST</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<div>Example taken from:&nbsp;<a href=\"http://www.mastertheboss.com/jboss-frameworks/infinispan/infinispan-restful-interface\">http://www.mastertheboss.com/jboss-frameworks/infinispan/infinispan-restful-interface</a></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Prerequisites</h3>"
+    },
+    {
+      "type": "text",
+      "data": "<div>Get JDG up and running as server application</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "cd <JDG-installation-directory>/bin"
+    },
+    {
+      "type": "text",
+      "data": "<div>First, create a user:</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "./add-user.sh -a -u jdguser -p \"JB0SSr0cks#\" -ro supervisor,reader,writer"
+    },
+    {
+      "type": "text",
+      "data": "<div>Post some information for a given key</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "curl -X POST -i  -u \"jdguser:JB0SSr0cks#\" -H \"Content-type:application/xml\" -d \"<catalog>\n>    <book id=\"book01\">\n>       <author>Heine, Heinrich</author>\n>       <title>Deutschland, ein Wintermärchen</title>\n>       <genre>Poetry</genre>\n>       <price>07.</price>\n>       <publish_date>2000-10-01</publish_date>\n>       <description>Lyrische Reflektionen eines Exildeutschen.</description>\n>    </book>\n> </catalog>\" http://localhost:8080/rest/default/156211"
+    }
+  ]
+}
