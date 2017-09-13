@@ -39,6 +39,19 @@
       "type": "code",
       "language": "sh",
       "data": "curl -X POST -i  -u \"jdguser:JB0SSr0cks#\" -H \"Content-type:application/xml\" -d \"<catalog>\n>    <book id=\"book01\">\n>       <author>Heine, Heinrich</author>\n>       <title>Deutschland, ein Wintermärchen</title>\n>       <genre>Poetry</genre>\n>       <price>07.</price>\n>       <publish_date>2000-10-01</publish_date>\n>       <description>Lyrische Reflektionen eines Exildeutschen.</description>\n>    </book>\n> </catalog>\" http://localhost:8080/rest/default/156211"
+    },
+    {
+      "type": "text",
+      "data": "<div>Retrieve the information:</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "curl -i -u \"jdguser:JB0SSr0cks#\" -H \"Accept:application/xml\" http://localhost:8080/rest/default/156211"
+    },
+    {
+      "type": "text",
+      "data": "<div><br></div>"
     }
   ]
 }
