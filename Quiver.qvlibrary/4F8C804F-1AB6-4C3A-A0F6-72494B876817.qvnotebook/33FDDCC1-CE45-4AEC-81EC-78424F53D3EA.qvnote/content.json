@@ -24,9 +24,22 @@
       "data": "extension RootViewController {\n    \n    fileprivate func prepareSearchButton() {\n        searchButton = IconButton(image: Icon.cm.search)\n        searchButton.addTarget(self, action: #selector(handleSearchButton), for: .touchUpInside)\n    }\n  \n    @objc\n  fileprivate func handleSearchButton() {\n    navigationController?.pushViewController(AppSearchBarController(rootViewController: SearchRootViewController()), animated: true)\n  }\n  \n}"
     },
     {
+      "type": "text",
+      "data": "<div>Transition to Child RootController</div>"
+    },
+    {
       "type": "code",
       "language": "swift",
-      "data": ""
+      "data": "class AppMenuController: MenuController {\n    @objc\n    fileprivate func handleMenuItemClick() {\n        (rootViewController as? ToolbarController)?.transition(to: \"MyNewViewController\")\n    }\n}"
+    },
+    {
+      "type": "text",
+      "data": "<div>Transition to Parent RootController</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "class AppToolbarController: ToolbarController {\n    @objc\n    fileprivate func handleButtonClick() {\n        menuController?.transition(to: \"MyNewViewController\")\n    }\n}"
     }
   ]
 }
