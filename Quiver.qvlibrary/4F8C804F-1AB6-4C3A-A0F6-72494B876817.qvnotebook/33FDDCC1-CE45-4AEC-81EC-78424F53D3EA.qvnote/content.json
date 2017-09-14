@@ -40,6 +40,15 @@
       "type": "code",
       "language": "swift",
       "data": "class AppToolbarController: ToolbarController {\n    @objc\n    fileprivate func handleButtonClick() {\n        menuController?.transition(to: \"MyNewViewController\")\n    }\n}"
+    },
+    {
+      "type": "text",
+      "data": "<div>Simple transition</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": " present(PurpleViewController(), animated: true)"
     }
   ]
 }
