@@ -1,0 +1,10 @@
+{
+  "title": "Graph Database (Daniel Dahan aka CosmicMind) - CoreData Wrapper",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "internal var graph: Graph!\ninternal var packageSearch: Search<Entity>!\n  \ninternal var data: [Entity] \n{\n  let packageItems = packageSearch.sync()\n  if !(packageItems.count > 1) \n  {\n    print(\"Returning empty Entity array!\")\n    return [Entity]()\n  }\n  \n  return packageItems.sorted(by: { (a: Entity, b: Entity) -> Bool in\n    return (a[\"order\"] as! Int) < (b[\"order\"] as! Int)\n  })\n}"
+    }
+  ]
+}
