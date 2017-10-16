@@ -2,7 +2,8 @@
   "created_at" : 1455831649,
   "tags" : [
     "2016",
-    "swift"
+    "swift",
+    "UITableView"
   ],
   "title" : "UITableViewCell: Specify Height",
   "updated_at" : 1455831724,

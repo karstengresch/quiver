@@ -22,6 +22,15 @@
       "type": "code",
       "language": "sh",
       "data": "  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {\n    if segue.identifier == \"ShowChecklist10\" {\n      let checklist10ViewController = segue.destination as! Checklist10ViewController\n      checklist10ViewController.checklist10 = sender as! Checklist10\n    }\n  }"
+    },
+    {
+      "type": "text",
+      "data": "<div><b>Alternative: Segue only (did not work w/ performSegue in didSelectRowAt)</b></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "  // MARK: - Navigation\n  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {\n    if segue.identifier == \"SegueFromPackageToSessions\" {\n      if let sessionsTableViewController = segue.destination as? SessionsTableViewController {\n        if let indexPath = self.tableView.indexPathForSelectedRow {\n          let sessionPackageName = data[indexPath.row][\"name\"] as! String\n          sessionsTableViewController.packageName = sessionPackageName\n        }\n      } else {\n        return\n      }\n    }\n  }"
     }
   ]
 }

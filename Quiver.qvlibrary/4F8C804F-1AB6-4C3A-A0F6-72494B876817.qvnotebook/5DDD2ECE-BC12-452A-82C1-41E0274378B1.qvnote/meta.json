@@ -1,7 +1,8 @@
 {
   "created_at" : 1491159995,
   "tags" : [
-    "2017"
+    "2017",
+    "UITableView"
   ],
   "title" : "UITableView: Disallow cell text selection",
   "updated_at" : 1491160027,

@@ -2,7 +2,8 @@
   "created_at" : 1490879094,
   "tags" : [
     "2017",
-    "swift"
+    "swift",
+    "UITableView"
   ],
   "title" : "UITableView: Creating TableView Cells",
   "updated_at" : 1491162094,

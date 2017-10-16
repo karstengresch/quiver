@@ -1,4 +1,9 @@
 {
   "title": "Undo Stuff",
-  "cells": []
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div><div>Basic rule: you never ever can change a revision directly, you only can create new ones and change the pointer(s)</div><div><br></div><div>git rebase</div><div><br></div><div>git reset</div><div><br></div><div><br></div><div><br></div><div><img src=\"quiver-image-url/8BD1E8B3DB46E01ADF8A29C47CD84CD0.jpg\" id=\"en-media:image/jpeg:8bd1e8b3db46e01adf8a29c47cd84cd0:none:none\" width=\"192\" height=\"37\"></div><div><br></div></div>"
+    }
+  ]
 }
