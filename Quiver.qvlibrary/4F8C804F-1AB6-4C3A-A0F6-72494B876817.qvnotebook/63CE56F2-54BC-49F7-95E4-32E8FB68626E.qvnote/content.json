@@ -1,0 +1,29 @@
+{
+  "title": "Build Stuff",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h1>Cocoapods</h1>"
+    },
+    {
+      "type": "text",
+      "data": "<div><br></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h1>Carthage</h1>"
+    },
+    {
+      "type": "text",
+      "data": "<div><br></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h1>Swift Package Manager</h1>"
+    },
+    {
+      "type": "text",
+      "data": "<div><br></div>"
+    }
+  ]
+}
