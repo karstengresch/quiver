@@ -5,6 +5,24 @@
       "type": "code",
       "language": "swift",
       "data": "  func documentsDirectory() -> String {\n    let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)\n    return paths[0]\n  }"
+    },
+    {
+      "type": "text",
+      "data": "Alternatively (Swift 4 at least)"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "public extension FileManager {\n  static var documentDirectoryURL: URL {\n    return try! FileManager.default.url(\n      for: .documentDirectory,\n      in: .userDomainMask,\n      appropriateFor: nil,\n      create: false\n    )\n  }\n}"
+    },
+    {
+      "type": "text",
+      "data": "and then..."
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "let stringPath =\n  FileManager.documentDirectoryURL\n  .appendingPathComponent(\"string\")\n  .appendingPathExtension(\"txt\").path\n"
     }
   ]
 }

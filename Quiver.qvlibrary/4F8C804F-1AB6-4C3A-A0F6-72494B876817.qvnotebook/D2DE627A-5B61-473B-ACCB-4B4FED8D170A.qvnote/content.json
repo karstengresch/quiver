@@ -1,4 +1,13 @@
 {
-  "title": "Untitled Note",
-  "cells": []
+  "title": "In App Purchases",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<input type=\"checkbox\">Bundle Identifier Setup: Got to&nbsp;<a href=\"https://developer.apple.com/account/ios/identifier/bundle\">https://developer.apple.com/account/ios/identifier/bundle</a>&nbsp;and create new App ID<div><input type=\"checkbox\">&nbsp;Got to&nbsp;<a href=\"https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/da/jumpTo?page=contracts\">https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/da/jumpTo?page=contracts</a>&nbsp;(iTunes Connect).<br><div><br></div></div>"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/0B181EA9BBC45859CA72C4EA629506FE.png\" class=\"wide-image\" alt=\"../Art/1_administration_tasks_2x.png\" width=\"1344\" height=\"378\">"
+    }
+  ]
 }
