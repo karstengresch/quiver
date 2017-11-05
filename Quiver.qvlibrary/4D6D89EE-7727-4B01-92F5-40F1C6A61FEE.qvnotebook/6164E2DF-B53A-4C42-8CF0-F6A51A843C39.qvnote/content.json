@@ -1,0 +1,10 @@
+{
+  "title": "Example: Blue-Green Pipeline (https://github.com/wkulhanek/openshift-bluegreen)",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc new-project xyz-bluegreen --display-name=\"Blue/Green Deployment Pipeline Demo\"\noc new-app jenkins-persistent --param MEMORY_LIMIT=1Gi --param VOLUME_CAPACITY=2Gi\noc new-app openshift/deployment-example:v1 --name=example-green\noc new-app openshift/deployment-example:v2 --name=example-blue\noc set triggers dc/example-green --remove-all\noc set triggers dc/example-blue --remove-all\noc expose svc/example-green --name=example\noc create -f https://raw.githubusercontent.com/wkulhanek/openshift-bluegreen/master/example-pipeline.yaml"
+    }
+  ]
+}

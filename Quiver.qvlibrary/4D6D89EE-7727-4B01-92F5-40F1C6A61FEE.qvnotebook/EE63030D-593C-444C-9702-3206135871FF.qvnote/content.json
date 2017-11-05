@@ -1,0 +1,10 @@
+{
+  "title": "Minishift general",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "minishift config set image-caching true"
+    }
+  ]
+}

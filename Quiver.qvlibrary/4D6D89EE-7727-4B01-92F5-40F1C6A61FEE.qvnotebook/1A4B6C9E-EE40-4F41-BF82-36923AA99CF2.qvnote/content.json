@@ -1,0 +1,32 @@
+{
+  "title": "Troubleshooting",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div><b>ImageStreams not availabe</b></div><div>Recreating the ImageStreams (from&nbsp;<a href=\"https://github.com/OpenShiftDemos/openshift-cd-demo/blob/ocp-3.3/docs/oc-cluster.md\">https://github.com/OpenShiftDemos/openshift-cd-demo/blob/ocp-3.3/docs/oc-cluster.md</a>)</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc login -u system:admin\noc delete is --all -n openshift\noc create -f https://raw.githubusercontent.com/openshift/origin/master/examples/image-streams/image-streams-rhel7.json -n openshift\noc create -f https://raw.githubusercontent.com/jboss-openshift/application-templates/master/jboss-image-streams.json -n openshift"
+    },
+    {
+      "type": "text",
+      "data": "<div><b>Deleting all objects w/in a project is tedious</b></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc delete all --all"
+    },
+    {
+      "type": "text",
+      "data": "<b>Image cannot be loaded due to authentication problems</b>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc login system:admin\noc project \noc tag --source=docker registry.access.redhat.com/redhat-sso-7/sso71-openshift@sha256:2c551ed9e5bb669eabd875a52779773e1bd9ab89b22cead3505b640139d02774 openshift/redhat-sso71-openshift:1.1 --insecure=true"
+    }
+  ]
+}

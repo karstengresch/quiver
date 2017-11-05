@@ -1,0 +1,10 @@
+{
+  "title": "String: Check if Uppercase",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "let isCharacterUpperCase = CharacterSet.uppercaseLetters.contains(character)"
+    }
+  ]
+}
