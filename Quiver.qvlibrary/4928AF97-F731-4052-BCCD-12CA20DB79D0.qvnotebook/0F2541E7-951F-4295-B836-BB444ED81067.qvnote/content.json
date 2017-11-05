@@ -1,0 +1,18 @@
+{
+  "title": "Installation + Setup",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "npm install -g ionic@latest"
+    },
+    {
+      "type": "text",
+      "data": "(you might need to run it twice when upgrading)"
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}
