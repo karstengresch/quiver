@@ -4,11 +4,20 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "npm install -g ionic@latest"
+      "data": "npm install -g cordova ionic@latest"
     },
     {
       "type": "text",
       "data": "(you might need to run it twice when upgrading)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "ionic info"
+    },
+    {
+      "type": "text",
+      "data": ""
     },
     {
       "type": "text",
