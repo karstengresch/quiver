@@ -11,9 +11,35 @@
       "data": "(you might need to run it twice when upgrading)"
     },
     {
+      "type": "text",
+      "data": "Gives information about your current ionic installation"
+    },
+    {
       "type": "code",
       "language": "sh",
       "data": "ionic info"
+    },
+    {
+      "type": "text",
+      "data": "Creates a new project (including project structure and files needed)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "ionic start <nameOfYourNewApp> blank"
+    },
+    {
+      "type": "text",
+      "data": "Compiles and runs locally"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "ionic lab"
+    },
+    {
+      "type": "text",
+      "data": ""
     },
     {
       "type": "text",
