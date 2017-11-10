@@ -1,0 +1,15 @@
+{
+  "title": "FIS Demo (Fuse, 3scale, A-MQ)",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "docker pull registry.access.redhat.com/rhscl/mysql-57-rhel7"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc create -f https://raw.githubusercontent.com/openshift/origin/master/examples/db-templates/mysql-ephemeral-template.json"
+    }
+  ]
+}
