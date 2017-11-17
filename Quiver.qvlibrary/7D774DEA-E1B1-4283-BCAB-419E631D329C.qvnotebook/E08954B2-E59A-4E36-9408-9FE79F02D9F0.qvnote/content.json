@@ -4,7 +4,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "oc new-app datavirt63-extensions-support-s2i -p SOURCE_REPOSITORY_URL=https://github.com/cvanball/jdv-ose-demo,CONTEXT_DIR=vdb,EXTENSIONS_REPOSITORY_URL=https://github.com/cvanball/jdv-ose-demo,EXTENSIONS_DIR=extensions"
+      "data": "oc new-app datavirt63-extensions-support-s2i -p SOURCE_REPOSITORY_URL=https://github.com/cvanball/jdv-ose-demo -p CONTEXT_DIR=vdb -p EXTENSIONS_REPOSITORY_URL=https://github.com/cvanball/jdv-ose-demo -p EXTENSIONS_DIR=extensions"
     }
   ]
 }
