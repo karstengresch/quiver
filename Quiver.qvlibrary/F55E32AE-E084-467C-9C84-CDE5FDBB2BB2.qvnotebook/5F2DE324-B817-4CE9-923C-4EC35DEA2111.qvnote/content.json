@@ -15,7 +15,16 @@
     },
     {
       "type": "text",
-      "data": "<b>Problem:&nbsp;in `to_specs': Could not find 'json'</b>"
+      "data": "<b>Problem:</b>"
+    },
+    {
+      "type": "text",
+      "data": "Run Cocoapods and you get an error description like:"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": " in `to_specs': Could not find 'json'"
     },
     {
       "type": "text",
@@ -25,6 +34,14 @@
       "type": "code",
       "language": "sh",
       "data": "sudo gem install cocoapods"
+    },
+    {
+      "type": "text",
+      "data": "<b>Discussion</b>"
+    },
+    {
+      "type": "text",
+      "data": "Ruby-Cocoapods hickups (either installation or some cached data IIUC)."
     },
     {
       "type": "text",
