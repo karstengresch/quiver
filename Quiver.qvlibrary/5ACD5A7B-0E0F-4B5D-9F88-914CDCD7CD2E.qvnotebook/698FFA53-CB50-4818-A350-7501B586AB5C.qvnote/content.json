@@ -8,6 +8,11 @@
     {
       "type": "code",
       "language": "sh",
+      "data": "minishift addons install --defaults\nminishift addons enable anyuid"
+    },
+    {
+      "type": "code",
+      "language": "sh",
       "data": "minishift addons list\nminishift addons enable che\nminishift addons apply che"
     },
     {
@@ -18,6 +23,11 @@
       "type": "code",
       "language": "sh",
       "data": "STACKS_SCRIPT_URL=https://raw.githubusercontent.com/eclipse/che/master/dockerfiles/init/modules/openshift/files/scripts/replace_stacks.sh\ncurl -fsSL ${STACKS_SCRIPT_URL} -o ./stacks-che.sh\noc project mini-che && bash ./stacks-che.sh"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": ""
     }
   ]
 }
