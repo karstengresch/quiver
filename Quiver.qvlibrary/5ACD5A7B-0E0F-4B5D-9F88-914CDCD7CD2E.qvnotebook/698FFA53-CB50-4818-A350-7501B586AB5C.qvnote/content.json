@@ -3,7 +3,12 @@
   "cells": [
     {
       "type": "text",
-      "data": "<div><a href=\"https://www.eclipse.org/che/\">Eclipse Che</a>&nbsp;is a browser based IDE</div><div><br></div><div>Codenvy</div><div><br></div><div>Transition from Codenvy to Eclipse Che 6:&nbsp;<a href=\"https://che.eclipse.org/multi-user-eclipse-che-kubernetes-6aef521a36f5\">https://che.eclipse.org/multi-user-eclipse-che-kubernetes-6aef521a36f5</a></div><div><br></div><div>Che on Minishift:</div><a href=\"https://github.com/minishift/minishift-addons\">https://github.com/minishift/minishift-addons</a><div><br></div><div><a href=\"https://che.eclipse.org/\">Eclipse Che Blog</a></div><div><br></div><div><a href=\"https://www.eclipse.org/che/docs/devops/runtime-stacks/index.html\">Create your own runtime stack</a><br></div><div><br></div><div><br></div><div><br><div><br></div><div><br></div></div>"
+      "data": "<div><a href=\"https://www.eclipse.org/che/\">Eclipse Che</a>&nbsp;is a browser based IDE</div><div><br></div><div>Codenvy</div><div><br></div><div>Transition from Codenvy to Eclipse Che 6:&nbsp;<a href=\"https://che.eclipse.org/multi-user-eclipse-che-kubernetes-6aef521a36f5\">https://che.eclipse.org/multi-user-eclipse-che-kubernetes-6aef521a36f5</a></div><div><br></div><div>Che on Minishift:</div><a href=\"https://github.com/minishift/minishift-addons\">https://github.com/minishift/minishift-addons</a><div><br></div><div><a href=\"https://che.eclipse.org/\">Eclipse Che Blog</a></div><div><br></div><div><a href=\"https://www.eclipse.org/che/docs/devops/runtime-stacks/index.html\">Create your own runtime stack</a><br></div><div><br></div><div><br></div><div><br></div><div><br><div><br></div><div><br></div></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "minishift addons list\nminishift addons enable che\nminishift addons apply che"
     }
   ]
 }
