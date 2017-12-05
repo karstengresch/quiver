@@ -9,6 +9,10 @@
       "type": "code",
       "language": "sh",
       "data": "minishift addons list\nminishift addons enable che\nminishift addons apply che"
+    },
+    {
+      "type": "text",
+      "data": "Now it comes: You need to setup the images provided for OpenShift."
     }
   ]
 }
