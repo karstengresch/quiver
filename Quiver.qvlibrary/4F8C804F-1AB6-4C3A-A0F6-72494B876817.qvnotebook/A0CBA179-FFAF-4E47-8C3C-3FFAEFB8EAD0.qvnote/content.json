@@ -95,6 +95,14 @@
       "type": "code",
       "language": "sh",
       "data": "/Applications/Xcode.app/Contents/MacOS/Xcode -ShowDVTDebugMenu YES"
+    },
+    {
+      "type": "text",
+      "data": "<h2>Value of tuple type '(key: String, value: String)' has no member 'subscript'</h2>"
+    },
+    {
+      "type": "text",
+      "data": ""
     }
   ]
 }
