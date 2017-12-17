@@ -103,6 +103,22 @@
     {
       "type": "text",
       "data": ""
+    },
+    {
+      "type": "text",
+      "data": "<h2><b>dyld fatal error</b></h2>"
+    },
+    {
+      "type": "text",
+      "data": "Problem: App just crashes in the beginning"
+    },
+    {
+      "type": "text",
+      "data": "Possible solution: Missing library. (E.g. CosmicMind Material needs Motion and you forget Motion)."
+    },
+    {
+      "type": "text",
+      "data": "Hint: Run the app in the simulator + let it crash to get the detailed crashlog easily."
     }
   ]
 }
