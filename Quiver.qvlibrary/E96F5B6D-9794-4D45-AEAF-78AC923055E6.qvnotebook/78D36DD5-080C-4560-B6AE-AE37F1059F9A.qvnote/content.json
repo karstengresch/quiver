@@ -1,9 +1,0 @@
-{
-  "title": "Maven",
-  "cells": [
-    {
-      "type": "text",
-      "data": "<h2><b>Error:&nbsp;<span style=\"color: rgb(36, 39, 41); font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255);\">Could not get the value for parameter encoding for plugin execution default-resources Plugin org.apache.maven.plugins:maven-resources-plugin</span></b></h2><div>The following steps worked for me:<br></div><div><br></div><div><ol><li>Close Eclipse.<br></li><li>Navigate to user home directory. (For example: \"C:\\Users\\YourUserName.m2\")<br></li><li>Delete the \"repository\" folder.<br></li><li>Re-open Eclipse.<br></li><li>Click on the Maven project that has an issue and go to \"Project\" --&gt; \"Clean\".<br></li><li>Right-click on the project and go to \"Maven\" --&gt; \"Update Project...\".<br></li><li>Close Eclipse.<br></li><li>Open Eclipse.<br></li><li>Click on the project folder in the \"Project Explorer\" window (usually on the left).<br></li><li>Hit the \"F5\" key a few times to Refresh your project.<br></li><li>Done!<br></li><li>These steps worked for me. Please let me know if I can help further.<br></li></ol><div><a href=\"https://stackoverflow.com/questions/25787197/error-shown-when-creating-new-maven-project-in-eclipse\">https://stackoverflow.com/questions/25787197/error-shown-when-creating-new-maven-project-in-eclipse</a><br></div></div>"
-    }
-  ]
-}

@@ -4,7 +4,21 @@
       "uuid" : "26C2E880-A937-43A9-9AC4-55E135D5E401"
     },
     {
+      "children" : [
+        {
+          "uuid" : "E96F5B6D-9794-4D45-AEAF-78AC923055E6"
+        },
+        {
+          "uuid" : "62636014-34C4-4247-B085-0D4E671FB274"
+        }
+      ],
+      "uuid" : "62D9D5B6-445A-488A-B1B7-1BA8348E7735"
+    },
+    {
       "uuid" : "BE7AC3C5-66CC-4FD6-A11E-FD42E2BAEE20"
+    },
+    {
+      "uuid" : "7959DC6A-D5E5-4632-9EA0-B905497BE7B1"
     },
     {
       "children" : [
@@ -24,13 +38,10 @@
       "uuid" : "4F8C804F-1AB6-4C3A-A0F6-72494B876817"
     },
     {
-      "uuid" : "62D9D5B6-445A-488A-B1B7-1BA8348E7735"
-    },
-    {
       "uuid" : "A96B3857-7DF6-4DFB-8562-21928BC41CD0"
     },
     {
-      "uuid" : "62636014-34C4-4247-B085-0D4E671FB274"
+      "uuid" : "4928AF97-F731-4052-BCCD-12CA20DB79D0"
     },
     {
       "children" : [
@@ -58,13 +69,7 @@
       "uuid" : "40655640-60DA-4C26-9AC7-9043AD97339E"
     },
     {
-      "uuid" : "E96F5B6D-9794-4D45-AEAF-78AC923055E6"
-    },
-    {
-      "uuid" : "4928AF97-F731-4052-BCCD-12CA20DB79D0"
-    },
-    {
-      "uuid" : "7959DC6A-D5E5-4632-9EA0-B905497BE7B1"
+      "uuid" : "DBB9BEF3-4F7F-4671-A4A5-59B4ABF7034C"
     }
   ],
   "uuid" : "Notebooks"
