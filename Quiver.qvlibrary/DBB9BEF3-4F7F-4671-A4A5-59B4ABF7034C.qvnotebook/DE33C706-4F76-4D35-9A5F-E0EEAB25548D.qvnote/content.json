@@ -1,0 +1,10 @@
+{
+  "title": "Calculate Checksums",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "# MD5 (outdated)\nmd5 /path/to/file\n#or - with clutter -\nopenssl md5 /path/to/file\n\n#SHA1\nshasum /path/to/file\n# expands - as of March 2017 - to\nshasum -a 1 /path/to/file\n# or - with clutter\nopenssl sha1 /path/to/file\n\n# SHA256\nshasum -a 256 /path/to/file\n# or - with clutter -\nopenssl dgst -sha256 /path/to/file\n"
+    }
+  ]
+}
