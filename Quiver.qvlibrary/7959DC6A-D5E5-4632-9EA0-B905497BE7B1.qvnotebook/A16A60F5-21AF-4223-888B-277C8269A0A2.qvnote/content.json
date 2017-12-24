@@ -1,0 +1,9 @@
+{
+  "title": "Setup (incl. installation and environments)",
+  "cells": [
+    {
+      "type": "text",
+      "data": "Best reference found so far (2017-11):&nbsp;<a href=\"http://docs.python-guide.org/en/latest/dev/virtualenvs/#virtualenvironments-ref\">http://docs.python-guide.org/en/latest/dev/virtualenvs/#virtualenvironments-ref</a>&nbsp;(Hitchhiker's Guide)&nbsp;"
+    }
+  ]
+}
