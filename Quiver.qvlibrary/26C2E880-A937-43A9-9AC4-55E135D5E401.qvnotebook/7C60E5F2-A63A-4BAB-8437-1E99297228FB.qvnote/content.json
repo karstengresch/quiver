@@ -6,6 +6,11 @@
       "data": "<h2>Get detailed log for single file</h2>"
     },
     {
+      "type": "code",
+      "language": "sh",
+      "data": "git log --follow filename"
+    },
+    {
       "type": "text",
       "data": ""
     }
