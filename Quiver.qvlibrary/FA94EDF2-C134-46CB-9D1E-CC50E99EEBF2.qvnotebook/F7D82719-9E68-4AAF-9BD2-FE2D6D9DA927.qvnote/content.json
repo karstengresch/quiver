@@ -3,7 +3,11 @@
   "cells": [
     {
       "type": "text",
-      "data": ""
+      "data": "<h3>Navigate back</h3>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px; font-stretch: normal; font-size: 15px; line-height: normal; font-family: Menlo; color: rgb(118, 212, 214); background-color: rgb(42, 42, 50);\"><span style=\"color: rgb(120, 169, 169); background-color: rgb(42, 42, 50);\">self.dismiss(animated: true, completion: nil)</span><br></p>"
     }
   ]
 }
