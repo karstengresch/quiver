@@ -12,6 +12,15 @@
     },
     {
       "type": "text",
+      "data": "<h2>Show all ignored files</h2>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git ls-files --others -i --exclude-standard"
+    },
+    {
+      "type": "text",
       "data": ""
     }
   ]
