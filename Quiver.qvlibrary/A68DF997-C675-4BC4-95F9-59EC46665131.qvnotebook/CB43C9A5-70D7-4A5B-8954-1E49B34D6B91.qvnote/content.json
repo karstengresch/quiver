@@ -21,6 +21,15 @@
     {
       "type": "text",
       "data": ""
+    },
+    {
+      "type": "text",
+      "data": "<h3>Check if String contains specific character</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "let s = \"Hi Folks\"\nif s.rangeOfString(\"Hi\") != nil {\n    print(\"String contains 'Hi'\")\n}"
     }
   ]
 }
