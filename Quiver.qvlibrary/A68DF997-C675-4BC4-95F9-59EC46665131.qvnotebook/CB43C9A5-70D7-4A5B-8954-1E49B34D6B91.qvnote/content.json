@@ -16,11 +16,16 @@
     },
     {
       "type": "text",
-      "data": "<h3>Find last specific character</h3>"
+      "data": "<h3>Filename split</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "let fullFilename = \"thefilename.example\"\nlet index = fullFilename.index(of: \".\") ?? fullFilename.endIndex\nlet prefix = fullFilename[..<index]\nlet suffixIndex = fullFilename.index(index, offsetBy: 1)\nlet suffix = fullFilename[suffixIndex...]\n// If needed, convert the result to a String (long-term \"storage\").\nlet filenameOnly = String(prefix)\nlet suffixOnly = String(suffix)"
     },
     {
       "type": "text",
-      "data": ""
+      "data": "N.B. - there's also String.split. To me, this is much easier to read."
     },
     {
       "type": "text",
