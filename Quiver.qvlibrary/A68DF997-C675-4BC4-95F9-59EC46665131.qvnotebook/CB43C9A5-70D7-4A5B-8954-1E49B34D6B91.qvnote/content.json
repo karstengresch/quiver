@@ -3,7 +3,7 @@
   "cells": [
     {
       "type": "text",
-      "data": "Other hash algorithms"
+      "data": "<h3>Hash algorithms</h3>"
     },
     {
       "type": "code",
@@ -13,6 +13,14 @@
     {
       "type": "text",
       "data": "<div>(from&nbsp;<a href=\"https://useyourloaf.com/blog/swift-hashable/\">https://useyourloaf.com/blog/swift-hashable/</a>)</div>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Find last specific character</h3>"
+    },
+    {
+      "type": "text",
+      "data": ""
     }
   ]
 }
