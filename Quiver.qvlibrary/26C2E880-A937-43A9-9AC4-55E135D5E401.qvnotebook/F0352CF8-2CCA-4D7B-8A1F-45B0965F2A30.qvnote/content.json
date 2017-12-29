@@ -3,7 +3,28 @@
   "cells": [
     {
       "type": "text",
-      "data": "<div><div>Basic rule: you never ever can change a revision directly, you only can create new ones and change the pointer(s)</div><div><br></div><div>git rebase</div><div><br></div><div>git reset</div><div><br></div><div><br></div><div><br></div><div><img src=\"quiver-image-url/8BD1E8B3DB46E01ADF8A29C47CD84CD0.jpg\" id=\"en-media:image/jpeg:8bd1e8b3db46e01adf8a29c47cd84cd0:none:none\" width=\"192\" height=\"37\"></div><div><br></div></div>"
+      "data": "<div>Basic rule: you never ever can change a revision directly, you only can create new ones and change the pointer(s)</div>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>git rebase</h3>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>git reset</h3>"
+    },
+    {
+      "type": "text",
+      "data": "<div><img src=\"quiver-image-url/8BD1E8B3DB46E01ADF8A29C47CD84CD0.jpg\" id=\"en-media:image/jpeg:8bd1e8b3db46e01adf8a29c47cd84cd0:none:none\" width=\"192\" height=\"37\"><br></div><div>Be cautious with remotes:</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git reset --hard <commit-hash>\ngit push -f origin master"
+    },
+    {
+      "type": "text",
+      "data": "Whenever doing so, take into consideration that all changes from other people done in the meantime will be reset as well!"
     }
   ]
 }
