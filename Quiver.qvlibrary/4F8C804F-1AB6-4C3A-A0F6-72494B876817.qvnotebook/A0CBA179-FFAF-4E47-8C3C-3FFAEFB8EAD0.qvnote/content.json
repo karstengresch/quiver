@@ -119,6 +119,15 @@
     {
       "type": "text",
       "data": "Hint: Run the app in the simulator + let it crash to get the detailed crashlog easily."
+    },
+    {
+      "type": "text",
+      "data": "<h3>'NSInternalInconsistencyException', reason: 'unable to dequeue a cell with identifier &lt;your cell identifier&gt; - must register a nib or a class for the identifier or connect a prototype cell in a storyboard'</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "    override func viewDidLoad() {\n        super.viewDidLoad()\n        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: \"<your cell identifier>\")\n    }"
     }
   ]
 }
