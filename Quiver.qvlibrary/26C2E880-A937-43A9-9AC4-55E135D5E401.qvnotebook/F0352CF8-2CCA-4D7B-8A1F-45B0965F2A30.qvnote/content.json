@@ -25,6 +25,15 @@
     {
       "type": "text",
       "data": "Whenever doing so, take into consideration that all changes from other people done in the meantime will be reset as well!"
+    },
+    {
+      "type": "text",
+      "data": "<h3>git revert</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git revert ef61cd55"
     }
   ]
 }
