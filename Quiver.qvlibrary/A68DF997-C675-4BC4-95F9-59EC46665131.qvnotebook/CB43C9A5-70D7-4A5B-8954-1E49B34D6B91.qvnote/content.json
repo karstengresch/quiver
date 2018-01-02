@@ -35,6 +35,15 @@
       "type": "code",
       "language": "sh",
       "data": "let s = \"Hi Folks\"\nif s.rangeOfString(\"Hi\") != nil {\n    print(\"String contains 'Hi'\")\n}"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Substring</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "let theString = \"The String\"\nlet subStringRange = theString.range(of:\"The \")\nlet subStringIndex = subStringRange!.upperBound\nlet subString = String(theString[subStringIndex...])"
     }
   ]
 }
