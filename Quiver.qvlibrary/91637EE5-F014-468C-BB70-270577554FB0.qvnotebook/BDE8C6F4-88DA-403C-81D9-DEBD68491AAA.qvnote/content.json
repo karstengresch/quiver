@@ -21,7 +21,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "@objc func handleTap(tapGesture: UIGestureRecognizer) {\n    Log.debug?.message(\"Link tapped.\")\n\n    let textView = tapGesture.view as! UITextView\n    let tapLocation = tapGesture.location(in: textView)\n    let textPosition = textView.closestPosition(to: tapLocation)\n    let attr: NSDictionary = textView.textStyling(at: textPosition!, in: UITextStorageDirection.forward)! as NSDictionary\n\n    if let url: NSURL = attr[NSAttributedStringKey.link] as? NSURL {\n      // UIApplication.shared.openURL(url as URL)\n      Log.debug?.message(\"Link tapped for url: \\(url)\")\n    }\n  }"
+      "data": "  @objc func handleTap(tapGesture: UIGestureRecognizer) {\n    Log.debug?.message(\"Link tapped.\")\n\n      if let textView = tapGesture.view as? UITextView\n      {\n        let tapLocation = tapGesture.location(in: textView)\n        let textPosition = textView.closestPosition(to: tapLocation)\n        let attr: NSDictionary = textView.textStyling(at: textPosition!, in: UITextStorageDirection.forward)! as NSDictionary\n    \n        if let url: NSURL = attr[NSAttributedStringKey.link] as? NSURL {\n          // \n          Log.debug?.message(\"Link tapped for url: \\(url)\")\n        }\n    }\n  }"
     },
     {
       "type": "text",
