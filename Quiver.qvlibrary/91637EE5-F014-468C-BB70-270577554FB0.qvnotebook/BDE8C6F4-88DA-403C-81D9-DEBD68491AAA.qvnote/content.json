@@ -7,6 +7,19 @@
     },
     {
       "type": "text",
+      "data": "<h3>With UITapGestureRecognizer</h3>"
+    },
+    {
+      "type": "text",
+      "data": "<b>Setup</b> ( viewDidLoad() )"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "let tapRecognizer =  UITapGestureRecognizer(target: self, action: #selector(LearnViewController.handleTap(tapGesture:)))\nself.learnTextView.addGestureRecognizer(tapRecognizer)"
+    },
+    {
+      "type": "text",
       "data": "<b>Very extensive version (from Gist)</b>"
     },
     {
@@ -22,6 +35,15 @@
       "type": "code",
       "language": "sh",
       "data": "  @objc func handleTap(tapGesture: UIGestureRecognizer) {\n    Log.debug?.message(\"Link tapped.\")\n\n      if let textView = tapGesture.view as? UITextView\n      {\n        let tapLocation = tapGesture.location(in: textView)\n        let textPosition = textView.closestPosition(to: tapLocation)\n        let attr: NSDictionary = textView.textStyling(at: textPosition!, in: UITextStorageDirection.forward)! as NSDictionary\n    \n        if let url: NSURL = attr[NSAttributedStringKey.link] as? NSURL {\n          // \n          Log.debug?.message(\"Link tapped for url: \\(url)\")\n        }\n    }\n  }"
+    },
+    {
+      "type": "text",
+      "data": "<h3>With UITextViewDelegate.shouldInteractWith URL</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": " func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {\n    Log.debug?.message(\"shouldInteractWith URL \\(URL)\")\n    \n    // Do something, e.g. extract URL.\n    \n    return true\n  }"
     },
     {
       "type": "text",
