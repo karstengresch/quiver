@@ -44,6 +44,15 @@
       "type": "code",
       "language": "sh",
       "data": "let theString = \"The String\"\nlet subStringRange = theString.range(of:\"The \")\nlet subStringIndex = subStringRange!.upperBound\nlet subString = String(theString[subStringIndex...])"
+    },
+    {
+      "type": "text",
+      "data": "<b>Substring after</b>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "func subString(_ fullString: String, after: String) -> String? {\n  let theString = fullString\n  let subStringRange = theString.range(of: after)\n  if let subStringIndex = subStringRange?.upperBound {\n    let subString = String(theString[subStringIndex...])\n    return subString\n  } else {\n    return nil\n  }\n}"
     }
   ]
 }
