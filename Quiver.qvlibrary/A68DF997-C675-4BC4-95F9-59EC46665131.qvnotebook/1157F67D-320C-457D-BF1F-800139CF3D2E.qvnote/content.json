@@ -1,0 +1,14 @@
+{
+  "title": "Initialization",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<br>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "class OwnViewController: UIViewController, UITextViewDelegate {\n  var initialInformation: String?\n  \n  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {\n    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)\n  }\n  \n  required init?(coder aDecoder: NSCoder) {\n    super.init(coder: aDecoder)\n  }\n  \n  convenience init(initialInformation: String) {\n    self.init()\n    self.initialInformation = initialInformation\n  }\n  \n  \n  override func viewDidLoad() {\n    super.viewDidLoad()\n    // Do stuff\n  }\n  \n}"
+    }
+  ]
+}
