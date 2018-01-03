@@ -9,6 +9,23 @@
       "type": "code",
       "language": "swift",
       "data": "   navigationController?.popViewController(animated: true)"
+    },
+    {
+      "type": "text",
+      "data": "<h2>Navigate to other ViewController</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Storyboard based</h3>"
+    },
+    {
+      "type": "text",
+      "data": "First, create a StoryboardID for your VC"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "let storyboard = UIStoryboard(name: \"Main\", bundle: nil)\nif let myViewController = storyboard.instantiateViewController(withIdentifier: \"MyViewControllerIdentifier\") as? MyViewController\n{\n  myViewController.myViewControllerVariable = externalVariable\n  navigationController?.pushViewController(myViewController, animated: true)\n}"
     }
   ]
 }
