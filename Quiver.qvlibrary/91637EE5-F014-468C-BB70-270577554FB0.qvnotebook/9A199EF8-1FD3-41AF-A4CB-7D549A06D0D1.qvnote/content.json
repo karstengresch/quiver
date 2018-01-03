@@ -1,0 +1,13 @@
+{
+  "title": "Attributed Text",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2>Format Text</h2>"
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}
