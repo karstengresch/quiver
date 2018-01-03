@@ -20,7 +20,7 @@
     },
     {
       "type": "text",
-      "data": "<ol><li>First, create a StoryboardID for your VC.<br></li><li>Embedd the VC in an NavigationController</li></ol>"
+      "data": "<ol><li>First, create a StoryboardID for your VC.<br></li></ol>Embedd the VC in an NavigationController<br>"
     },
     {
       "type": "code",
