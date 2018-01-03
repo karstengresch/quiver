@@ -16,6 +16,10 @@
     },
     {
       "type": "text",
+      "data": "General differenciation:<div><ul><li><code>pushViewController</code>: automatically creates a bidirectional parent-child relationship. W/in a UINavigationController, you get the back button for free</li><li><li><code>present(viewControllerToPresent: UIViewController, animated:, completion:)</code> does <b>not</b> create the relationship. You need to take care of dismissing the child controller on your own.</li></li></ul></div>"
+    },
+    {
+      "type": "text",
       "data": "<h3>Storyboard based</h3>"
     },
     {
