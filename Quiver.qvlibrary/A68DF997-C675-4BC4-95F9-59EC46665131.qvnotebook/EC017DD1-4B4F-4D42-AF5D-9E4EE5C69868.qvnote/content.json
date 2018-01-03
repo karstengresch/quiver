@@ -7,7 +7,7 @@
     },
     {
       "type": "code",
-      "language": "sh",
+      "language": "swift",
       "data": "func countUncheckedChecklist10Items() -> Int {\n    var count = 0\n    \n    for checklist10Item in checklist10Items where !checklist10Item.checked {\n      count += 1\n    }\n    \n    return count\n  }"
     },
     {
@@ -16,7 +16,7 @@
     },
     {
       "type": "code",
-      "language": "sh",
+      "language": "swift",
       "data": "func countUncheckedChecklist10Items() -> Int {\r  return checklist10Items.reduce(0) { count, checklist10Item in count + (checklist10Item.checked ? 0 : 1) }\r}"
     }
   ]

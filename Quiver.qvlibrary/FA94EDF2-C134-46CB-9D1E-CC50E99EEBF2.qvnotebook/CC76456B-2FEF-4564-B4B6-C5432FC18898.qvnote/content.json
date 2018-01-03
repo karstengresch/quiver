@@ -6,8 +6,9 @@
       "data": "<h3>Navigate Back</h3>"
     },
     {
-      "type": "text",
-      "data": "<p style=\"margin: 0px; font-stretch: normal; font-size: 15px; line-height: normal; font-family: Menlo; color: rgb(118, 212, 214); background-color: rgb(42, 42, 50);\"><span style=\"color: #a8d4a9\">&nbsp; &nbsp;</span>navigationController<span style=\"color: #a8d4a9\">?.</span><span style=\"color: #76d6ff\">popViewController</span><span style=\"color: #a8d4a9\">(animated: </span><span style=\"color: #78aad6\">true</span><span style=\"color: #a8d4a9\">)</span></p>"
+      "type": "code",
+      "language": "swift",
+      "data": "   navigationController?.popViewController(animated: true)"
     }
   ]
 }

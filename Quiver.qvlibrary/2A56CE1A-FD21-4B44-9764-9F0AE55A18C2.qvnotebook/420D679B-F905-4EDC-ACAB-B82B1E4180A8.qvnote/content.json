@@ -7,7 +7,7 @@
     },
     {
       "type": "code",
-      "language": "sh",
+      "language": "swift",
       "data": "  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {\n    \n    print(\"cellForRowAt indexPath: \\(indexPath )\")\n    \n    // from prototype cell\n    let cell = tableView.dequeueReusableCell(withIdentifier: \"Checklist10Item\", for: indexPath)\n\n    let checklist10Item = checklist10Items[indexPath.row]\n    let label = cell.viewWithTag(1000) as! UILabel\n    label.text = checklist10Item.text\n    \n    configureCheckmark(for: cell, with: checklist10Item)\n    \n    return cell\n  }"
     },
     {
@@ -16,7 +16,7 @@
     },
     {
       "type": "code",
-      "language": "sh",
+      "language": "swift",
       "data": ""
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "type": "code",
-      "language": "sh",
+      "language": "swift",
       "data": "override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {\n        let cell = makeCell(for: tableView)\n        let checklist = checklist10s[indexPath.row]\n        if let textLabel = cell.textLabel {\n          textLabel.text = checklist.name\n        }\n        cell.accessoryType = .detailDisclosureButton\n        return cell\n    }\n"
     },
     {

@@ -7,7 +7,7 @@
     },
     {
       "type": "code",
-      "language": "sh",
+      "language": "swift",
       "data": "extension String {\n  var djb2hash: Int {\n    let unicodeScalars = self.unicodeScalars.map { $0.value }\n    return unicodeScalars.reduce(5381) {\n      ($0 << 5) &+ $0 &+ Int($1)\n    }\n  }\n\n  var sdbmhash: Int {\n    let unicodeScalars = self.unicodeScalars.map { $0.value }\n    return unicodeScalars.reduce(0) {\n      Int($1) &+ ($0 << 6) &+ ($0 << 16) - $0\n    }\n  }\n}"
     },
     {
@@ -20,7 +20,7 @@
     },
     {
       "type": "code",
-      "language": "sh",
+      "language": "swift",
       "data": "let fullFilename = \"thefilename.example\"\nlet index = fullFilename.index(of: \".\") ?? fullFilename.endIndex\nlet prefix = fullFilename[..<index]\nlet suffixIndex = fullFilename.index(index, offsetBy: 1)\nlet suffix = fullFilename[suffixIndex...]\n// If needed, convert the result to a String (long-term \"storage\").\nlet filenameOnly = String(prefix)\nlet suffixOnly = String(suffix)"
     },
     {
@@ -33,7 +33,7 @@
     },
     {
       "type": "code",
-      "language": "sh",
+      "language": "swift",
       "data": "let s = \"Hi Folks\"\nif s.rangeOfString(\"Hi\") != nil {\n    print(\"String contains 'Hi'\")\n}"
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "type": "code",
-      "language": "sh",
+      "language": "swift",
       "data": "let theString = \"The String\"\nlet subStringRange = theString.range(of:\"The \")\nlet subStringIndex = subStringRange!.upperBound\nlet subString = String(theString[subStringIndex...])"
     },
     {
@@ -51,7 +51,7 @@
     },
     {
       "type": "code",
-      "language": "sh",
+      "language": "swift",
       "data": "func subString(_ fullString: String, after: String) -> String? {\n  let theString = fullString\n  let subStringRange = theString.range(of: after)\n  if let subStringIndex = subStringRange?.upperBound {\n    let subString = String(theString[subStringIndex...])\n    return subString\n  } else {\n    return nil\n  }\n}"
     }
   ]
