@@ -47,7 +47,16 @@
     },
     {
       "type": "text",
-      "data": ""
+      "data": "<h2>Load HTML String</h2>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "let htmlString = \"<html>\" +\n        \"<head>\" +\n        \"<style>\" +\n        \"body {\" +\n        \"background-color: rgb(230, 230, 230);\" +\n        \"font-family: 'Arial';\" +\n        \"text-decoration:none;\" +\n        \"}\" +\n        \"</style>\" +\n        \"</head>\" +\n        \"<body>\" +\n        \"<h1>A title</h1>\" +\n        \"<p>A paragraph</p>\" +\n        \"<b>bold text</b>\" +\n    \"</body></head></html>\"\n\nlet htmlData = NSString(string: htmlString).data(using: String.Encoding.unicode.rawValue)\nlet options = [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html]\nlet attributedString = try! NSAttributedString(data: htmlData!, options: options, documentAttributes: nil)\ntextView.attributedText = attributedString"
+    },
+    {
+      "type": "text",
+      "data": "(Source:&nbsp;<a href=\"https://stackoverflow.com/questions/2454067/display-html-text-in-uitextview\">https://stackoverflow.com/questions/2454067/display-html-text-in-uitextview</a>)"
     }
   ]
 }
