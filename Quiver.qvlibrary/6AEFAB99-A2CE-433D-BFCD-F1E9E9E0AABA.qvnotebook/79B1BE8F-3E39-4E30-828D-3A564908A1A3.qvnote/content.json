@@ -1,0 +1,32 @@
+{
+  "title": "UISearchController",
+  "cells": [
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "let searchController = UISearchController(searchResultsController: nil)"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "extension MasterViewController: UISearchResultsUpdating {\n  // MARK: - UISearchResultsUpdating Delegate\n  func updateSearchResults(for searchController: UISearchController) {\n    // TODO\n  }\n}"
+    },
+    {
+      "type": "text",
+      "data": "Next, set up the search controller in viewDidLoad()"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": " // Setup the Search Controller\n  searchController.searchResultsUpdater = self\n  searchController.obscuresBackgroundDuringPresentation = false\n  searchController.searchBar.placeholder = \"Search Placeholder\"\n  navigationItem.searchController = searchController\n  definesPresentationContext = true"
+    },
+    {
+      "type": "text",
+      "data": "<ol style=\"border: 0px; font-family: &quot;Open Sans&quot;, sans-serif; font-size: 16px; margin: 0px 0px 11px 30px; outline: 0px; padding: 0px; vertical-align: baseline; list-style-position: initial; list-style-image: initial; color: rgb(0, 0, 0);\"><li style=\"border: 0px; font-family: inherit; font-style: inherit; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline;\"><code style=\"border: 0px; font-family: &quot;Droid Sans Mono&quot;, sans-serif; font-size: 14px; font-style: inherit; font-weight: bold; outline: 0px; padding-top: 0px; padding-bottom: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">searchResultsUpdater</code>&nbsp;is a property on&nbsp;<code style=\"border: 0px; font-family: &quot;Droid Sans Mono&quot;, sans-serif; font-size: 14px; font-style: inherit; font-weight: bold; outline: 0px; padding-top: 0px; padding-bottom: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">UISearchController</code>&nbsp;that conforms to the new protocol&nbsp;<code style=\"border: 0px; font-family: &quot;Droid Sans Mono&quot;, sans-serif; font-size: 14px; font-style: inherit; font-weight: bold; outline: 0px; padding-top: 0px; padding-bottom: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">UISearchResultsUpdating</code>. This protocol allows your class to be informed as text changes within the&nbsp;<code style=\"border: 0px; font-family: &quot;Droid Sans Mono&quot;, sans-serif; font-size: 14px; font-style: inherit; font-weight: bold; outline: 0px; padding-top: 0px; padding-bottom: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">UISearchBar</code>.</li><li style=\"border: 0px; font-family: inherit; font-style: inherit; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline;\">By default,&nbsp;<code style=\"border: 0px; font-family: &quot;Droid Sans Mono&quot;, sans-serif; font-size: 14px; font-style: inherit; font-weight: bold; outline: 0px; padding-top: 0px; padding-bottom: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">UISearchController</code>&nbsp;will obscure the view it is presented over. This is useful if you are using another view controller for&nbsp;<code style=\"border: 0px; font-family: &quot;Droid Sans Mono&quot;, sans-serif; font-size: 14px; font-style: inherit; font-weight: bold; outline: 0px; padding-top: 0px; padding-bottom: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">searchResultsController</code>. In this instance, you have set the current view to show the results, so you do not want to obscure your view.</li><li style=\"border: 0px; font-family: inherit; font-style: inherit; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline;\">Set the placeholder to something specific to this app</li><li style=\"border: 0px; font-family: inherit; font-style: inherit; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline;\"><span style=\"border: 0px; font-family: inherit; font-style: inherit; font-weight: bold; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">New for iOS 11</span>, you add the&nbsp;<code style=\"border: 0px; font-family: &quot;Droid Sans Mono&quot;, sans-serif; font-size: 14px; font-style: inherit; font-weight: bold; outline: 0px; padding-top: 0px; padding-bottom: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">searchBar</code>&nbsp;to the&nbsp;<code style=\"border: 0px; font-family: &quot;Droid Sans Mono&quot;, sans-serif; font-size: 14px; font-style: inherit; font-weight: bold; outline: 0px; padding-top: 0px; padding-bottom: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">NavigationItem</code>. This is necessary as Interface Builder is not yet compatible with&nbsp;<code style=\"border: 0px; font-family: &quot;Droid Sans Mono&quot;, sans-serif; font-size: 14px; font-style: inherit; font-weight: bold; outline: 0px; padding-top: 0px; padding-bottom: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">UISearchController</code>.</li><li style=\"border: 0px; font-family: inherit; font-style: inherit; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline;\">Finally, by setting&nbsp;<code style=\"border: 0px; font-family: &quot;Droid Sans Mono&quot;, sans-serif; font-size: 14px; font-style: inherit; font-weight: bold; outline: 0px; padding-top: 0px; padding-bottom: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">definesPresentationContext</code>&nbsp;on your view controller to&nbsp;<code style=\"border: 0px; font-family: &quot;Droid Sans Mono&quot;, sans-serif; font-size: 14px; font-style: inherit; font-weight: bold; outline: 0px; padding-top: 0px; padding-bottom: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">true</code>, you ensure that the search bar does not remain on the screen if the user navigates to another view controller while the&nbsp;<code style=\"border: 0px; font-family: &quot;Droid Sans Mono&quot;, sans-serif; font-size: 14px; font-style: inherit; font-weight: bold; outline: 0px; padding-top: 0px; padding-bottom: 0px; vertical-align: baseline; color: rgb(0, 104, 55);\">UISearchController</code>&nbsp;is active.</li></ol>"
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}
