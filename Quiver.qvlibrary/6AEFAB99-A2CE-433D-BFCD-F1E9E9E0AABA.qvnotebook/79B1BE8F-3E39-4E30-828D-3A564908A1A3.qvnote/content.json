@@ -40,7 +40,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": "// MARK: - Private instance methods\nfunc searchBarIsEmpty() -> Bool {\n  return searchController.searchBar.text?.isEmpty ?? true\n}\n  \nfunc filterContentForSearchText(_ searchText: String, scope: String = \"All\") {\n  filteredDomainObjects = domainObjects.filter({( domainObject : DomainObject) -> Bool in\n    return domainObject.name.lowercased().contains(searchText.lowercased())\n  })\n\n  tableView.reloadData()\n}"
+      "data": "// MARK: - Private instance methods\nfunc searchBarIsEmpty() -> Bool {\n  return searchController.searchBar.text?.isEmpty ?? true\n}\n  \nfunc filterContentForSearchText(_ searchText: String, scope: String = \"All\") {\n  filteredDomainObjects = domainObjects.filter({( domainObject : DomainObject) -> Bool in\n    let doesCategoryMatch = (scope == \"All\") || (domainObject.category == scope) // considering scope bar, see below\n      \n    if searchBarIsEmpty() {\n      return doesCategoryMatch\n    } else {\n      return doesCategoryMatch && domainObject.name.lowercased().contains(searchText.lowercased())\n    }\n  })\n  tableView.reloadData()\n}"
     },
     {
       "type": "text",
