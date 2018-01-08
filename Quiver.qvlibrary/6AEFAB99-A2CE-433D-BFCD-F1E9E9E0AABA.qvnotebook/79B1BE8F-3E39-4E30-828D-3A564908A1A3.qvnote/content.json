@@ -9,7 +9,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": "extension MasterViewController: UISearchResultsUpdating {\n  // MARK: - UISearchResultsUpdating Delegate\n  func updateSearchResults(for searchController: UISearchController) {\n    // TODO\n  }\n}"
+      "data": "extension MasterViewController: UISearchResultsUpdating {\n  // MARK: - UISearchResultsUpdating Delegate\n  func updateSearchResults(for searchController: UISearchController) {\n    filterContentForSearchText(searchController.searchBar.text!) // See later, below\n  }\n}"
     },
     {
       "type": "text",
@@ -28,6 +28,15 @@
       "type": "code",
       "language": "swift",
       "data": "var filteredDomainObjects = [DomainObject]()"
+    },
+    {
+      "type": "text",
+      "data": "The above for the result list."
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "// MARK: - Private instance methods\nfunc searchBarIsEmpty() -> Bool {\n  return searchController.searchBar.text?.isEmpty ?? true\n}\n  \nfunc filterContentForSearchText(_ searchText: String, scope: String = \"All\") {\n  filteredDomainObjects = domainObjects.filter({( domainObject : DomainObject) -> Bool in\n    return domainObject.name.lowercased().contains(searchText.lowercased())\n  })\n\n  tableView.reloadData()\n}"
     }
   ]
 }
