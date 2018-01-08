@@ -62,12 +62,21 @@
     },
     {
       "type": "text",
-      "data": "<i>cellForRowAt indexPath</i> also needs to be adjusted:"
+      "data": "cellForRowAt indexPath also needs to be adjusted:"
     },
     {
       "type": "code",
       "language": "swift",
       "data": "func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {\n  let cell = tableView.dequeueReusableCell(withIdentifier: \"DomainCell\", for: indexPath)\n  let domainObject: DomainObject\n  if isFiltering() {\n    domainObject = filteredDomainObject[indexPath.row]\n  } else {\n    domainObject = domainObjects[indexPath.row]\n  }\n  cell.textLabel!.text = domainObject.shortName\n  cell.detailTextLabel!.text = domainObject.details\n  return cell\n}"
+    },
+    {
+      "type": "text",
+      "data": "When it goes towards showing item details, think of passing the filtered result array!"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": " override func prepare(for segue: UIStoryboardSegue, sender: Any?) {\n    if segue.identifier == \"showDomainDetail\" {\n      if let indexPath = tableView.indexPathForSelectedRow {\n       let domainObject: DomainObject\n        if isFiltering() {\n          domainObject = filteredDomainObject[indexPath.row]\n        } else {\n          domainObject = domainObjects[indexPath.row]\n        }\n        let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController\n        controller.detailCandy = domainObject\n        controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem\n        controller.navigationItem.leftItemsSupplementBackButton = true\n      }\n    }\n  }"
     }
   ]
 }
