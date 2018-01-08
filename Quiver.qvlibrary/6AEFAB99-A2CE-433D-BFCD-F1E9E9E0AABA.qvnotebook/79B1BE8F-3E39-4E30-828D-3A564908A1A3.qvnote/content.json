@@ -18,7 +18,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": " // Setup the Search Controller\n  searchController.searchResultsUpdater = self\n  searchController.obscuresBackgroundDuringPresentation = false\n  searchController.searchBar.placeholder = \"Search Placeholder\"\n  navigationItem.searchController = searchController\n  definesPresentationContext = true"
+      "data": " // Setup the Search Controller\n  searchController.searchResultsUpdater = self\n  searchController.obscuresBackgroundDuringPresentation = false\n  searchController.searchBar.placeholder = \"Search Placeholder\"\n  navigationItem.searchController = searchController\n  definesPresentationContext = true\n  // Setup the Scope Bar\n  searchController.searchBar.scopeButtonTitles = [\"All\", \"Domain1\", \"Domain2\", \"Domain3\"]\n  searchController.searchBar.delegate = self"
     },
     {
       "type": "text",
