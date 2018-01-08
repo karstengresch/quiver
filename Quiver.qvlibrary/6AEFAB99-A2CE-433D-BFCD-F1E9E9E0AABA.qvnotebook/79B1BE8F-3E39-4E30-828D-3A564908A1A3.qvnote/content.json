@@ -9,7 +9,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": "extension MasterViewController: UISearchResultsUpdating {\n  // MARK: - UISearchResultsUpdating Delegate\n  func updateSearchResults(for searchController: UISearchController) {\n    filterContentForSearchText(searchController.searchBar.text!) // See later, below\n  }\n}"
+      "data": "extension MasterViewController: UISearchResultsUpdating {\n    \n    func updateSearchResults(for searchController: UISearchController) {\n      let searchBar = searchController.searchBar\n      let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]\n      filterContentForSearchText(searchController.searchBar.text!, scope: scope)\n  }\n\n}"
     },
     {
       "type": "text",
