@@ -44,7 +44,21 @@
     },
     {
       "type": "text",
-      "data": "<br>"
+      "data": "Indicate that filtering is currently done:"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "func isFiltering() -> Bool {\n  return searchController.isActive && !searchBarIsEmpty()\n}"
+    },
+    {
+      "type": "text",
+      "data": "Now limit the output on the table view to the amount of matches."
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {\n  if isFiltering() {\n    return filteredDomainObjects.count\n  }\n    \n  return domainObjects.count\n}"
     }
   ]
 }
