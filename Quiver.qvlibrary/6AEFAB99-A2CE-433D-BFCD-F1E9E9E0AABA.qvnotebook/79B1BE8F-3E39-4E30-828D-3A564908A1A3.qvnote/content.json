@@ -59,6 +59,15 @@
       "type": "code",
       "language": "swift",
       "data": "func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {\n  if isFiltering() {\n    return filteredDomainObjects.count\n  }\n    \n  return domainObjects.count\n}"
+    },
+    {
+      "type": "text",
+      "data": "<i>cellForRowAt indexPath</i> also needs to be adjusted:"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {\n  let cell = tableView.dequeueReusableCell(withIdentifier: \"DomainCell\", for: indexPath)\n  let domainObject: DomainObject\n  if isFiltering() {\n    domainObject = filteredDomainObject[indexPath.row]\n  } else {\n    domainObject = domainObjects[indexPath.row]\n  }\n  cell.textLabel!.text = domainObject.shortName\n  cell.detailTextLabel!.text = domainObject.details\n  return cell\n}"
     }
   ]
 }
