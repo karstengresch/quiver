@@ -58,7 +58,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": "func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {\n  if isFiltering() {\n    return filteredDomainObjects.count\n  }\n    \n  return domainObjects.count\n}"
+      "data": "func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {\n  if isFiltering() {\n    searchFooter.setIsFilteringToShow(filteredItemCount: filteredDomainObjects.count, of: domainObjects.count)\n    return domainObjects.count\n  }\n    \n  searchFooter.setNotFiltering()\n  return domainObjects.count\n}"
     },
     {
       "type": "text",
