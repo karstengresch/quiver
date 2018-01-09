@@ -4,7 +4,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": "var domainObjects = [DomainObject]()\nlet searchController = UISearchController(searchResultsController: nil)"
+      "data": "@IBOutlet var tableView: UITableView! // We're going to deal w/ UITableView here.\n@IBOutlet var searchFooter: SearchFooter! // For showing a result summary\n\nvar domainObjects = [DomainObject]()\nlet searchController = UISearchController(searchResultsController: nil)"
     },
     {
       "type": "code",
@@ -18,7 +18,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": " // Setup the Search Controller\n  searchController.searchResultsUpdater = self\n  searchController.obscuresBackgroundDuringPresentation = false\n  searchController.searchBar.placeholder = \"Search Placeholder\"\n  navigationItem.searchController = searchController\n  definesPresentationContext = true\n  // Setup the Scope Bar\n  searchController.searchBar.scopeButtonTitles = [\"All\", \"Domain1\", \"Domain2\", \"Domain3\"]\n  searchController.searchBar.delegate = self"
+      "data": " // Setup the Search Controller\n  searchController.searchResultsUpdater = self\n  searchController.obscuresBackgroundDuringPresentation = false\n  searchController.searchBar.placeholder = \"Search Placeholder\"\n  navigationItem.searchController = searchController\n  definesPresentationContext = true\n  // Setup the Scope Bar\n  searchController.searchBar.scopeButtonTitles = [\"All\", \"Domain1\", \"Domain2\", \"Domain3\"]\n  searchController.searchBar.delegate = self\n  // Setup the results\n  tableView.tableFooterView = searchFooter"
     },
     {
       "type": "text",
@@ -86,6 +86,15 @@
       "type": "code",
       "language": "swift",
       "data": "extension MasterViewController: UISearchBarDelegate {\n  // MARK: - UISearchBar Delegate\n  func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {\n    filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])\n  }\n}"
+    },
+    {
+      "type": "text",
+      "data": "For displaying the result amount (especially useful when nothing was found), you can add a separate view:"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "import UIKit\n\nclass SearchResultsView: UIView {\n  \n  let searchResultsLabel: UILabel = UILabel()\n  \n  override public init(frame: CGRect) {\n    super.init(frame: frame)\n    configureView()\n  }\n  \n  required public init?(coder: NSCoder) {\n    super.init(coder: coder)\n    configureView()\n  }\n  \n  func configureView() {\n    self.backgroundColor = UIColor.white\n    self.alpha = 0.0\n    \n    // Configure label\n    searchResultsLabel.textAlignment = .center\n    searchResultsLabel.textColor = UIColor.black\n    addSubview(searchResultsLabel)\n  }\n  \n  override func draw(_ rect: CGRect) {\n    searchResultsLabel.frame = self.bounds\n  }\n  \n  //MARK: - Animation\n  \n  fileprivate func hideFooter() {\n    UIView.animate(withDuration: 0.7) {[unowned self] in\n      self.alpha = 0.0\n    }\n  }\n  \n  fileprivate func showFooter() {\n    UIView.animate(withDuration: 0.7) {[unowned self] in\n      self.alpha = 1.0\n    }\n  }\n}\n\nextension SearchResultsView {\n  //MARK: - Public API\n  \n  public func setNotFiltering() {\n    searchResultsLabel.text = \"\"\n    hideFooter()\n  }\n  \n  public func setIsFilteringToShow(filteredItemCount: Int, of totalItemCount: Int) {\n    if (filteredItemCount == totalItemCount) {\n      setNotFiltering()\n    } else if (filteredItemCount == 0) {\n      searchResultsLabel.text = \"Nothing found.\"\n      showFooter()\n    } else {\n      searchResultsLabel.text = \"Showing \\(filteredItemCount) of \\(totalItemCount)\"\n      showFooter()\n    }\n  }\n\n}"
     }
   ]
 }
