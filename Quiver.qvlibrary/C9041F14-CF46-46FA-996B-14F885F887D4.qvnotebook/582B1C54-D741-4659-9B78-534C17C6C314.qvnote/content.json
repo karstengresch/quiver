@@ -3,7 +3,12 @@
   "cells": [
     {
       "type": "text",
-      "data": ""
+      "data": "<h2>UIColor(hex: \"\") extension</h2>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "// Inspired by https://stackoverflow.com/questions/24263007/how-to-use-hex-colour-values, merging Swift 4 + extension examples\nextension UIColor {\n  \n  convenience init (hex:String) {\n    var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()\n    \n    if (cString.hasPrefix(\"#\")) {\n      cString.remove(at: cString.startIndex)\n    }\n    \n    if ((cString.count) != 6) {\n      self.init(cgColor: UIColor.gray.cgColor)\n    } else { \n      var rgbValue:UInt32 = 0\n      Scanner(string: cString).scanHexInt32(&rgbValue)\n      \n      self.init(\n        red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,\n        green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,\n        blue: CGFloat(rgbValue & 0x0000FF) / 255.0,\n        alpha: CGFloat(1.0)\n      )\n    }\n  }\n}"
     }
   ]
 }
