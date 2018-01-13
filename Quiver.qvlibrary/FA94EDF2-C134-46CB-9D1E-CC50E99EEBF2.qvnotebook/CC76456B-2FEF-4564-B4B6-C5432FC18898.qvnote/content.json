@@ -30,6 +30,18 @@
       "type": "code",
       "language": "swift",
       "data": "let storyboard = UIStoryboard(name: \"Main\", bundle: nil)\nif let myViewController = storyboard.instantiateViewController(withIdentifier: \"MyViewControllerIdentifier\") as? MyViewController\n{\n  myViewController.myViewControllerVariable = externalVariable\n  navigationController?.pushViewController(myViewController, animated: true)\n}"
+    },
+    {
+      "type": "text",
+      "data": "<h2>UINavigationBar</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/81CCD669100F5646E5877BEC8EA81447.jpg\" width=\"467\" height=\"216\">"
+    },
+    {
+      "type": "text",
+      "data": "(from:&nbsp;<a href=\"https://developer.apple.com/documentation/uikit/uinavigationbar\">https://developer.apple.com/documentation/uikit/uinavigationbar</a>)"
     }
   ]
 }
