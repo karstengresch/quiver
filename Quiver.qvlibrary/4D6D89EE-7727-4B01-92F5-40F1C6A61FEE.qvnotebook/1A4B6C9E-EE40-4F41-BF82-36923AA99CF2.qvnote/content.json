@@ -3,7 +3,7 @@
   "cells": [
     {
       "type": "text",
-      "data": "<div><b>ImageStreams not availabe</b></div><div>Recreating the ImageStreams (from&nbsp;<a href=\"https://github.com/OpenShiftDemos/openshift-cd-demo/blob/ocp-3.3/docs/oc-cluster.md\">https://github.com/OpenShiftDemos/openshift-cd-demo/blob/ocp-3.3/docs/oc-cluster.md</a>)</div>"
+      "data": "<h3><b>ImageStreams not availabe</b></h3><div>Recreating the ImageStreams (from&nbsp;<a href=\"https://github.com/OpenShiftDemos/openshift-cd-demo/blob/ocp-3.3/docs/oc-cluster.md\">https://github.com/OpenShiftDemos/openshift-cd-demo/blob/ocp-3.3/docs/oc-cluster.md</a>)</div>"
     },
     {
       "type": "code",
@@ -12,7 +12,7 @@
     },
     {
       "type": "text",
-      "data": "<div><b>Deleting all objects w/in a project is tedious</b></div>"
+      "data": "<h3><b>Deleting all objects w/in a project is tedious</b></h3>"
     },
     {
       "type": "code",
@@ -21,12 +21,25 @@
     },
     {
       "type": "text",
-      "data": "<b>Image cannot be loaded due to authentication problems</b>"
+      "data": "<h3><b>Image cannot be loaded due to authentication problems</b></h3>"
     },
     {
       "type": "code",
       "language": "sh",
       "data": "oc login system:admin\noc project \noc tag --source=docker registry.access.redhat.com/redhat-sso-7/sso71-openshift@sha256:2c551ed9e5bb669eabd875a52779773e1bd9ab89b22cead3505b640139d02774 openshift/redhat-sso71-openshift:1.1 --insecure=true"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Error: unknown flag: --service-catalog</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "export ENABLE_MINISHIFT_EXPERIMENTAL=y"
+    },
+    {
+      "type": "text",
+      "data": ""
     }
   ]
 }
