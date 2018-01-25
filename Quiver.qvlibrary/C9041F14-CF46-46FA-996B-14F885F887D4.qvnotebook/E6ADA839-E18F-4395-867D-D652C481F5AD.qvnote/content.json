@@ -1,0 +1,14 @@
+{
+  "title": "Entire App Stuff",
+  "cells": [
+    {
+      "type": "text",
+      "data": "Refresh all views"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": " private func refreshViews() {\n    let appDelegate = UIApplication.shared.delegate as! AppDelegate\n    // custom method in AppDelegate!\n    appDelegate.prepareTheme()\n    \n    let appWindows = UIApplication.shared.windows\n    \n    for appWindow in appWindows {\n      for subView in appWindow.subviews {\n        subView.removeFromSuperview()\n        appWindow.addSubview(subView)\n      }"
+    }
+  ]
+}
