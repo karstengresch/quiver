@@ -79,6 +79,19 @@
       "type": "code",
       "language": "sh",
       "data": "extension MyWhatever {\n  func replaceImgPath(_ htmlString: String) -> String {\n    var theReturnString = htmlString\n    let result = htmlString.slices(from: \"<img src=\\\"\", to: \"\\\"\")\n    let bundleUrl: String = Bundle.main.bundleURL.absoluteString\n    \n    result.forEach(\n      {\n        let fullTag = \"\".appending(bundleUrl).appending( $0 )\n        theReturnString = theReturnString.replacingOccurrences(of: $0, with: fullTag)\n      }\n    )\n    \n    return theReturnString\n  }\n}\n\n// Source: https://stackoverflow.com/a/46855903/4295602\nextension String {\n  func ranges(of string: String, options: CompareOptions = .literal) -> [Range<Index>] {\n    var result: [Range<Index>] = []\n    var start = startIndex\n    while let range = range(of: string, options: options, range: start..<endIndex) {\n      result.append(range)\n      start = range.lowerBound < range.upperBound ? range.upperBound : index(range.lowerBound, offsetBy: 1, limitedBy: endIndex) ?? endIndex\n    }\n    return result\n  }\n  func slices(from: String, to: String) -> [Substring] {\n    let pattern = \"(?<=\" + from + \").*?(?=\" + to + \")\"\n    return ranges(of: pattern, options: .regularExpression)\n      .map{ self[$0] }\n  }\n}\""
+    },
+    {
+      "type": "text",
+      "data": "<h3>Scroll to start programatically</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "override func viewDidLayoutSubviews() {\n        super.viewDidLayoutSubviews()\n        textView.setContentOffset(CGPoint.zero, animated: false)\n    }"
+    },
+    {
+      "type": "text",
+      "data": "(source:&nbsp;<a href=\"https://stackoverflow.com/a/27769359/4295602\">https://stackoverflow.com/a/27769359/4295602</a>)"
     }
   ]
 }
