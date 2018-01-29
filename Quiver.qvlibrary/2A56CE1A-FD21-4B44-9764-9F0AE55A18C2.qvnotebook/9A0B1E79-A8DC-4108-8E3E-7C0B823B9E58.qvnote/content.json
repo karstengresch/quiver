@@ -1,0 +1,14 @@
+{
+  "title": "Header and Footer",
+  "cells": [
+    {
+      "type": "text",
+      "data": "Layout/Appearance/Color"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){\n    view.tintColor = UIColor.red\n    let header = view as! UITableViewHeaderFooterView\n    header.textLabel?.textColor = UIColor.white\n}"
+    }
+  ]
+}
