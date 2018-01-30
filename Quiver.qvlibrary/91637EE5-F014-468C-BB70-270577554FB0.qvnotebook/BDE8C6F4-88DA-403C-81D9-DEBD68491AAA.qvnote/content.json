@@ -60,6 +60,28 @@
     },
     {
       "type": "text",
+      "data": "<h3>NSMutableAttributedString from HTML\u0003</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "extension NSMutableAttributedString {\n  internal convenience init?(html: String) {\n    guard let data = html.data(using: String.Encoding.utf16, allowLossyConversion: false) else {\n      return nil\n    }\n    \n    guard let attributedString = try?  NSMutableAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil) else {\n      return nil\n    }\n    \n    self.init(attributedString: attributedString)\n  }\n}"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Data extension to NSAttributedString</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "extension Data {\n    var attributedString: NSAttributedString? {\n        do {\n            return try NSAttributedString(data: self, options:[NSAttributedString.DocumentReadingOptionKey.documentType:NSAttributedString.DocumentType.html, NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)\n        } catch let error as NSError {\n            print(error.localizedDescription)\n        }\n        return nil\n    }\n}"
+    },
+    {
+      "type": "text",
+      "data": "Source:&nbsp;<a href=\"https://stackoverflow.com/a/44917604/4295602\">https://stackoverflow.com/a/44917604/4295602</a>"
+    },
+    {
+      "type": "text",
       "data": "<h3>Attach Image</h3>"
     },
     {
