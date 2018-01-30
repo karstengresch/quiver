@@ -8,7 +8,11 @@
     {
       "type": "code",
       "language": "swift",
-      "data": "func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){\n    view.tintColor = UIColor.red\n    let header = view as! UITableViewHeaderFooterView\n    header.textLabel?.textColor = UIColor.white\n}"
+      "data": "func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){\n    let header = view as! UITableViewHeaderFooterView\n    header.tintColor = UIColor.red // NB - view.tintColor would be sufficient\n    header.textLabel?.textColor = UIColor.white // NB - view.tintColor would NOT be sufficient as UIView doesn't have \n}"
+    },
+    {
+      "type": "text",
+      "data": "Same for&nbsp;<div><code>func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int){</code><br></div>"
     }
   ]
 }
