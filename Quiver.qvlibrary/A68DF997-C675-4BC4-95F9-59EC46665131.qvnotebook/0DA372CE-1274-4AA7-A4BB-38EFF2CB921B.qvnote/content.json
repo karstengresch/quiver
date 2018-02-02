@@ -1,0 +1,14 @@
+{
+  "title": "Dictionaries",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3>Recursion Example - Brute Force</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "func memoizedDictionaryFind(_ needle: String, searchDictionary: Dictionary<String, Any>) -> String? {\n\n  var theNeedleDictionary = Dictionary<String, Any>()\n\n    func recurseDictionary(_ needle: String, theDictionary: Dictionary<String, Any>) -> Dictionary<String, Any> {\n      var returnValue = Dictionary<String, Any>()\n      for (key, value) in theDictionary {\n        if value is Dictionary<String, Any> {\n          if key == needle {\n            returnValue = value as! Dictionary<String, Any>\n            theNeedleDictionary = returnValue\n            break\n          } else {\n            returnValue =  recurseDictionary(needle, theDictionary: value as! Dictionary<String, Any>)\n          }\n        }\n    }\n      return returnValue\n    }\n  \n  recurseDictionary(needle, theDictionary: searchDictionary)\n  \n  if let value = theNeedleDictionary[\"value\"] as? String {\n    return value\n  }\n  return nil\n}"
+    }
+  ]
+}
