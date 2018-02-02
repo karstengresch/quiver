@@ -34,6 +34,15 @@
       "type": "code",
       "language": "sh",
       "data": "git revert ef61cd55"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Revert a single for to a specific version</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": ""
     }
   ]
 }
