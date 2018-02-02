@@ -42,7 +42,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": ""
+      "data": "git log -p path/to/file\n# Find the commit hash\ngit checkout 856b4dedb077dbef8a26d90fcf54000132987afd path/to/file\ngit commit"
     }
   ]
 }
