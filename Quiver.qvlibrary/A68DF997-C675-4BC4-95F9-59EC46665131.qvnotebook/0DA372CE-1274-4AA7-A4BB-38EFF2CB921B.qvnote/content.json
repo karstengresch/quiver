@@ -9,6 +9,19 @@
       "type": "code",
       "language": "swift",
       "data": "func memoizedDictionaryFind(_ needle: String, searchDictionary: Dictionary<String, Any>) -> String? {\n\n  var theNeedleDictionary = Dictionary<String, Any>()\n\n    func recurseDictionary(_ needle: String, theDictionary: Dictionary<String, Any>) -> Dictionary<String, Any> {\n      var returnValue = Dictionary<String, Any>()\n      for (key, value) in theDictionary {\n        if value is Dictionary<String, Any> {\n          if key == needle {\n            returnValue = value as! Dictionary<String, Any>\n            theNeedleDictionary = returnValue\n            break\n          } else {\n            returnValue =  recurseDictionary(needle, theDictionary: value as! Dictionary<String, Any>)\n          }\n        }\n    }\n      return returnValue\n    }\n  \n  recurseDictionary(needle, theDictionary: searchDictionary)\n  \n  if let value = theNeedleDictionary[\"value\"] as? String {\n    return value\n  }\n  return nil\n}"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Recursion Example - Clearer</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "extension Dictionary {\n  func findNestedDictionaryBy(key:String, in dictionary:[String:Any] = [:]) -> Any? {\n    guard var currentDictionary = self as? [String : Any]  else { return nil }\n    currentDictionary = !dictionary.isEmpty ? dictionary : currentDictionary\n    \n    if let foundValue = currentDictionary[key] {\n      return foundValue\n    } else {\n      for val in currentDictionary.values {\n        if let innerDictionary = val as? [String:Any], let result = findNestedDictionaryBy(key: key, in: innerDictionary) {\n          return result\n        }\n      }\n      return nil\n    }\n  }\n  \n  func findNestedValueInNestedDictionaryBy(dictionaryKey: String, valueKey: String, in dictionary:[String:Any] = [:]) -> String? {\n    if let theNestedDictionary = dictionary.findNestedDictionaryBy(key: dictionaryKey) as? Dictionary<String, Value> {\n      if let valueString = theNestedDictionary[valueKey] as? String {\n        return valueString\n      }\n    }\n    return nil\n  }\n}"
+    },
+    {
+      "type": "text",
+      "data": "Adopted from Andrea Mugnaini,&nbsp;<a href=\"https://stackoverflow.com/a/48583753/4295602\">https://stackoverflow.com/a/48583753/4295602</a>"
     }
   ]
 }
