@@ -1,0 +1,14 @@
+{
+  "title": "Colors",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3>UIColor to CGColor</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "var cgColor = UIColor.lightGray.cgColor"
+    }
+  ]
+}
