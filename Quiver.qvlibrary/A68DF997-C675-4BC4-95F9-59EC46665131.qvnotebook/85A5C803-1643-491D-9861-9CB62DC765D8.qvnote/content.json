@@ -1,0 +1,23 @@
+{
+  "title": "Core Graphics",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3>View init as per Matt Neuburg <span style=\"font-weight: normal;\">()</span></h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "extension CGRect {\n    init(_ x:CGFloat, _ y:CGFloat, _ w:CGFloat, _ h:CGFloat) {\n        self.init(x:x, y:y, width:w, height:h)\n    }\n}"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Other CG structs label free initializers as per Matt Neuburg</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "extension CGSize {\n    init(_ width:CGFloat, _ height:CGFloat) {\n        self.init(width:width, height:height)\n    }\n}\nextension CGPoint {\n    init(_ x:CGFloat, _ y:CGFloat) {\n        self.init(x:x, y:y)\n    }\n}\nextension CGVector {\n    init (_ dx:CGFloat, _ dy:CGFloat) {\n        self.init(dx:dx, dy:dy)\n    }\n}"
+    }
+  ]
+}
