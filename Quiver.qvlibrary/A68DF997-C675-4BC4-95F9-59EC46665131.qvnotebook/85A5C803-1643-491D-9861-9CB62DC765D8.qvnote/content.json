@@ -18,6 +18,15 @@
       "type": "code",
       "language": "swift",
       "data": "extension CGSize {\n    init(_ width:CGFloat, _ height:CGFloat) {\n        self.init(width:width, height:height)\n    }\n}\nextension CGPoint {\n    init(_ x:CGFloat, _ y:CGFloat) {\n        self.init(x:x, y:y)\n    }\n}\nextension CGVector {\n    init (_ dx:CGFloat, _ dy:CGFloat) {\n        self.init(dx:dx, dy:dy)\n    }\n}"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Create a circle image</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  func drawCircleImage(_ radius: Int, borderColor: UIColor, borderStrokeWidth: Int, fillColor: UIColor) -> UIImage {\n    let size = radius*2\n    let renderer = UIGraphicsImageRenderer(size: CGSize(width: size, height: size))\n    let circleImage = renderer.image { ctx in\n      ctx.cgContext.setFillColor(fillColor.cgColor)\n      ctx.cgContext.setStrokeColor(borderColor.cgColor)\n      ctx.cgContext.setLineWidth(CGFloat(borderStrokeWidth))\n      \n      let rectangle = CGRect(x: 0, y: 0, width: size, height: size)\n      ctx.cgContext.addEllipse(in: rectangle)\n      ctx.cgContext.drawPath(using: .fillStroke)\n    }\n    return circleImage\n  }"
     }
   ]
 }
