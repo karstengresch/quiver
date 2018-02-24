@@ -53,6 +53,15 @@
       "type": "code",
       "language": "swift",
       "data": "func subString(_ fullString: String, after: String) -> String? {\n  let theString = fullString\n  let subStringRange = theString.range(of: after)\n  if let subStringIndex = subStringRange?.upperBound {\n    let subString = String(theString[subStringIndex...])\n    return subString\n  } else {\n    return nil\n  }\n}"
+    },
+    {
+      "type": "text",
+      "data": "<h3>String range</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "func range(_ start:Int, _ count:Int) -> Range<String.Index> {\n    let stringIndex = self.index(start >= 0 ?\n        self.startIndex :\n        self.endIndex, offsetBy: start)\n    let offsetIndex = self.index(stringIndex, offsetBy: count)\n    return stringIndex..<offsetIndex\n}\nfunc nsRange(_ start:Int, _ count:Int) -> NSRange {\n    return NSRange(self.range(start,count), in:self)\n}"
     }
   ]
 }
