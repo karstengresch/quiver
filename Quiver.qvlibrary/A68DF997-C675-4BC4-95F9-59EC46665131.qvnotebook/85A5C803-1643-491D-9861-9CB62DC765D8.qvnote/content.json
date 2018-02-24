@@ -39,7 +39,12 @@
     },
     {
       "type": "text",
-      "data": ""
+      "data": "<h3>CGRect size adjustment</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "extension CGSize {\n    func sizeByDelta(dw:CGFloat, dh:CGFloat) -> CGSize {\n        return CGSize(self.width + dw, self.height + dh)\n    }\n}"
     }
   ]
 }
