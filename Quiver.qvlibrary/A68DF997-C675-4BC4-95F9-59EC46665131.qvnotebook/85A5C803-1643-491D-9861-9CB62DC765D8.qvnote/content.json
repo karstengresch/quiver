@@ -27,6 +27,19 @@
       "type": "code",
       "language": "swift",
       "data": "  func drawCircleImage(_ radius: Int, borderColor: UIColor, borderStrokeWidth: Int, fillColor: UIColor) -> UIImage {\n    let size = radius*2\n    let renderer = UIGraphicsImageRenderer(size: CGSize(width: size, height: size))\n    let circleImage = renderer.image { ctx in\n      ctx.cgContext.setFillColor(fillColor.cgColor)\n      ctx.cgContext.setStrokeColor(borderColor.cgColor)\n      ctx.cgContext.setLineWidth(CGFloat(borderStrokeWidth))\n      \n      let rectangle = CGRect(x: 0, y: 0, width: size, height: size)\n      ctx.cgContext.addEllipse(in: rectangle)\n      ctx.cgContext.drawPath(using: .fillStroke)\n    }\n    return circleImage\n  }"
+    },
+    {
+      "type": "text",
+      "data": "<h3>CGRect - get center</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "extension CGRect {\n    var center : CGPoint {\n        return CGPoint(self.midX, self.midY)\n    }\n}"
+    },
+    {
+      "type": "text",
+      "data": ""
     }
   ]
 }
