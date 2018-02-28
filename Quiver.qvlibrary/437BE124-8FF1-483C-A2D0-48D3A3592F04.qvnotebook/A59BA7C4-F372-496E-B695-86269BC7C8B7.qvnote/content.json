@@ -1,0 +1,13 @@
+{
+  "title": "Build / Library Issues",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3><div><span style=\"font-variant-ligatures: no-common-ligatures\">dyld: Library not loaded: @rpath/AutoInsetter.framework/AutoInsetter<br></span><span style=\"font-variant-ligatures: no-common-ligatures\">&nbsp; Referenced from: .../Frameworks/Tabman.framework/Tabman</span></div>\n\n<h3><span style=\"font-variant-ligatures: no-common-ligatures\">&nbsp; Reason: image not found</span></h3></h3>"
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}
