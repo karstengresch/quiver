@@ -88,6 +88,29 @@
     },
     {
       "uuid" : "DBB9BEF3-4F7F-4671-A4A5-59B4ABF7034C"
+    },
+    {
+      "children" : [
+        {
+          "uuid" : "D8ACE75A-A041-4DA4-8EDE-6DBE85388084"
+        },
+        {
+          "uuid" : "A8FE6467-93A6-427B-B4A0-39A1F9340D60"
+        },
+        {
+          "uuid" : "A70444E4-6B64-481B-853A-150C1124A316"
+        }
+      ],
+      "uuid" : "807E9AA4-BBA0-47AD-B3B0-A3ED852487C1"
+    },
+    {
+      "uuid" : "8315B991-1324-4ED4-B973-3AE7E7AFABD0"
+    },
+    {
+      "uuid" : "906BE29C-C2EC-4C0B-905F-F0E9A9FB6142"
+    },
+    {
+      "uuid" : "6C879615-D7BA-4F1C-A7BF-D9DCD52AD4D6"
     }
   ],
   "uuid" : "Notebooks"
