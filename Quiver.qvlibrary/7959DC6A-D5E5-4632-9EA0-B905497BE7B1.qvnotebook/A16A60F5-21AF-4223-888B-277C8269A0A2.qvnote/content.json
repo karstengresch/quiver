@@ -4,6 +4,19 @@
     {
       "type": "text",
       "data": "Best reference found so far (2017-11):&nbsp;<a href=\"http://docs.python-guide.org/en/latest/dev/virtualenvs/#virtualenvironments-ref\">http://docs.python-guide.org/en/latest/dev/virtualenvs/#virtualenvironments-ref</a>&nbsp;(Hitchhiker's Guide)&nbsp;"
+    },
+    {
+      "type": "text",
+      "data": "<h3>macOS Setup</h3>"
+    },
+    {
+      "type": "text",
+      "data": "When installed w/ brew:"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "brew link python"
     }
   ]
 }
