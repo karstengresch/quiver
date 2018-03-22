@@ -1,0 +1,10 @@
+{
+  "title": "Install Che v. 6 on minishift",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "export LOCAL_PATH=`pwd`\nmkdir -p $LOCAL_PATH/instance/config/openshift/scripts\n# Get the script\ndocker run -ti -v /var/run/docker.sock:/var/run/docker.sock -v ${LOCAL_PATH}:/data eclipse/che init\ncd ${LOCAL_PATH}/instance/config/openshift/scripts\n"
+    }
+  ]
+}
