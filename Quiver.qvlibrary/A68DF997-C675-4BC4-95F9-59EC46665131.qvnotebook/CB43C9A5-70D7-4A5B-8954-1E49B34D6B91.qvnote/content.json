@@ -62,6 +62,15 @@
       "type": "code",
       "language": "swift",
       "data": "func range(_ start:Int, _ count:Int) -> Range<String.Index> {\n    let stringIndex = self.index(start >= 0 ?\n        self.startIndex :\n        self.endIndex, offsetBy: start)\n    let offsetIndex = self.index(stringIndex, offsetBy: count)\n    return stringIndex..<offsetIndex\n}\nfunc nsRange(_ start:Int, _ count:Int) -> NSRange {\n    return NSRange(self.range(start,count), in:self)\n}"
+    },
+    {
+      "type": "text",
+      "data": "<h3>String replace</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": ""
     }
   ]
 }
