@@ -70,7 +70,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": ""
+      "data": "let resultingString = stringToReplace.replacingOccurrences(of: \",\", with: \" \").replacingOccurrences(of: \"\\n\", with: \",,\") // etc."
     }
   ]
 }
