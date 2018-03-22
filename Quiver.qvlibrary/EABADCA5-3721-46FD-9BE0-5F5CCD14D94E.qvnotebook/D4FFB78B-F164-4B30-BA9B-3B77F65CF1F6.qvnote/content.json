@@ -4,7 +4,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "export LOCAL_PATH=`pwd`\nmkdir -p $LOCAL_PATH/instance/config/openshift/scripts\n# Get the script\n# Resulted in \n# docker run -ti -v /var/run/docker.sock:/var/run/docker.sock -v ${LOCAL_PATH}:/data eclipse/che init\n# cd ${LOCAL_PATH}/instance/config/openshift/scripts\n\n# takes a while :|\ngit clone https://github.com/eclipse/che\ncd che/dockerfiles/init/modules/openshift/files/scripts\n\n\nCHE_DEDICATED_KEYCLOAK=false\n"
+      "data": "export LOCAL_PATH=`pwd`\nmkdir -p $LOCAL_PATH/instance/config/openshift/scripts\n# Get the script\n# Resulted in \n# docker run -ti -v /var/run/docker.sock:/var/run/docker.sock -v ${LOCAL_PATH}:/data eclipse/che init\n# cd ${LOCAL_PATH}/instance/config/openshift/scripts\n\n# takes a while :|\ngit clone https://github.com/eclipse/che\ncd che/deploy/openshift/\nCHE_DEDICATED_KEYCLOAK=false\n\n\n\n"
     }
   ]
 }
