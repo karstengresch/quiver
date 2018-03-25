@@ -3,7 +3,12 @@
   "cells": [
     {
       "type": "text",
-      "data": ""
+      "data": "<h3>Get window size</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "let screenHeight = UIScreen.main.bounds.height"
     }
   ]
 }
