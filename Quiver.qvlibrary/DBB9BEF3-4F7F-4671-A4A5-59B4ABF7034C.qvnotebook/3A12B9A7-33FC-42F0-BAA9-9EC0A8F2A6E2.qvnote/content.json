@@ -1,0 +1,22 @@
+{
+  "title": "File System Related",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3>scp (macOS)</h3>"
+    },
+    {
+      "type": "text",
+      "data": "Copies an entire directory to the current path:&nbsp;"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "scp -P 1212 -r myname@myserver.com:/my/files/directory/ ./"
+    },
+    {
+      "type": "text",
+      "data": "You'll be prompted for a password if no further setup has been done."
+    }
+  ]
+}
