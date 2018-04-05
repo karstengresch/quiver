@@ -3,7 +3,11 @@
   "cells": [
     {
       "type": "text",
-      "data": "<h3>scp (macOS)</h3>"
+      "data": "<h2>macOS</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>scp</h3>"
     },
     {
       "type": "text",
@@ -17,6 +21,15 @@
     {
       "type": "text",
       "data": "You'll be prompted for a password if no further setup has been done."
+    },
+    {
+      "type": "text",
+      "data": "<h3>Reset User Permissions</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "diskutil resetUserPermissions / `id -u`"
     }
   ]
 }
