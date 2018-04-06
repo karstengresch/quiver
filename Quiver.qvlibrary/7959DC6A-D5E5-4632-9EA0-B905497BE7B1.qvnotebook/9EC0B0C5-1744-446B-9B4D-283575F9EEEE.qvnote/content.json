@@ -1,0 +1,14 @@
+{
+  "title": "Modules",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3>requests</h3>"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "data": "import requests\n\n\nmessages = []\nfor url in ('google.com', 'fman.io', 'api.github.com', 'api.github.com/search/repositories?q=topic:fman+topic:plugin&per_page=100&page=1'):\n    url_short = url if len(url) < 20 else url[:20] + '...'\n    print('Trying %s' % url_short)\n    try:\n        response = requests.get('https://' + url)\n    except Exception as e:\n        message = '%s raised error %s' % (url_short, e)\n    else:\n        if response.status_code == 200:\n            message = '%s worked - response.text:\\n\\n%s\\n\\n' % (url_short, response.text)\n        else:\n            message = '\\n%s had invalid status %d \\nheaders:\\n%s\\n\\ntext:\\n%s\\n' % (url_short, response.status_code, response.headers, response.text)\n    messages.append(message)\nprint('\\n'.join(messages))"
+    }
+  ]
+}
