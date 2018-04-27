@@ -16,7 +16,7 @@
     },
     {
       "type": "text",
-      "data": "<div><img src=\"quiver-image-url/F81869CB4E612BBA9251EC06BE5F7D0B.jpg\" width=\"544\" height=\"310\"><br></div><img src=\"quiver-image-url/60B192092666F365ED0FADB7DFBC414F.jpg\" width=\"554\" height=\"346\"><div>Manual segues from the view controller icon. Need to be handle w/in code.</div><div><br></div><div>Other from the according sub view.</div><div><div><br></div></div>"
+      "data": "<div><img src=\"quiver-image-url/F81869CB4E612BBA9251EC06BE5F7D0B.jpg\" width=\"544\" height=\"310\"><br></div><img src=\"quiver-image-url/60B192092666F365ED0FADB7DFBC414F.jpg\" width=\"554\" height=\"346\"><div>Manual segues from the view controller icon. Need to be handle w/in code.</div><div><br></div><div>In TVCs/CVCs (having an IndexPath) call it with</div><div><br></div><div><p style=\"margin: 0px; font-stretch: normal; line-height: normal; font-family: Menlo; color: rgb(130, 201, 255); background-color: rgb(40, 43, 53);\"><span style=\"color: #9ce1c3\"></span><code>performSegue(withIdentifier: \"&lt;SegueIdentifierFromStoryboard\", sender: indexPath)</code></p></div><div><br></div><div>Other (\"automatic\") &nbsp;from the according sub view.</div><div><br></div><div><br></div><div><div><br></div></div>"
     },
     {
       "type": "text",
