@@ -25,7 +25,20 @@
     {
       "type": "code",
       "language": "swift",
-      "data": "  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {\n    \n    if segue.identifier == \"SegueIdentifierFromStoryboard\" {\n      if let segueDestination = segue.destination as? MySubViewController, let index = collectionView.indexPathsForSelectedItems?.first {\n        segueDestination.selection = myData[index.row]\n      }\n    }\n  }\n"
+      "data": "  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {\n    \n    if segue.identifier == \"SegueIdentifierFromStoryboard\" {\n      if let segueDestination = segue.destination as? MySubViewController, let index = collectionView.indexPathsForSelectedItems?.first {\n        segueDestination.selection = myData[index.row]\n      }\n    }\n  }\n  \n  // (Table|Collection)ViewDelegate\n  func (table|collection)View(_ (table|collection)View: UI(Table|Collection)View, didSelect(Row|Item)At indexPath: IndexPath) {\n    // Nothing to do here\n  }\n"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Manual Segue - Call from VC</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {\n    \n    if segue.identifier == \"SegueIdentifierFromStoryboard\" {\n      if let segueDestination = segue.destination as? MySubViewController, let index = sender as? IndexPath {\n        segueDestination.selection = collectionData[index.row]\n      }\n    }\n  }\n  \n  // (Table|Collection)ViewDelegate\n  func (table|collection)View(_ (table|collection)View: UI(Table|Collection)View, didSelect(Row|Item)At indexPath: IndexPath) {\n    performSegue(withIdentifier: \"SegueIdentifierFromStoryboard\", sender: indexPath)\n  }\n"
+    },
+    {
+      "type": "text",
+      "data": "NB - difference lies in declaring the index item."
     },
     {
       "type": "text",
