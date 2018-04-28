@@ -1,0 +1,14 @@
+{
+  "title": "Item Manipulation",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3>Inserting an item</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  @IBAction func addItem() {\n    let newItemText = \"\\(collectionData.count + 1) 👩\"\n    collectionData.append(newItemText)\n    let index = IndexPath(row: collectionData.count - 1, section: 0)\n    collectionView.insertItems(at: [index])\n  }"
+    }
+  ]
+}
