@@ -9,6 +9,19 @@
       "type": "code",
       "language": "swift",
       "data": "  @IBAction func addItem() {\n    let newItemText = \"\\(collectionData.count + 1) 👩\"\n    collectionData.append(newItemText)\n    let index = IndexPath(row: collectionData.count - 1, section: 0)\n    collectionView.insertItems(at: [index])\n  }"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Inserting multiple items</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  @IBAction func addItem() {\n    collectionView.performBatchUpdates({\n      for _ in 0..<4 {\n            let newItemText = \"\\(collectionData.count + 1) 👩️\"\n            collectionData.append(newItemText)\n            let index = IndexPath(row: collectionData.count - 1, section: 0)\n            collectionView.insertItems(at: [index])\n      }\n      }, completion: nil)\n  }"
+    },
+    {
+      "type": "text",
+      "data": "=&gt;Insertion handled for all items at a time. Think of batch updates agains databases."
     }
   ]
 }
