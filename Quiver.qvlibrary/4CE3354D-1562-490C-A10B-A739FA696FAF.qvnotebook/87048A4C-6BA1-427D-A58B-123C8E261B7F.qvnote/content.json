@@ -17,7 +17,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": " @objc func refresh() {\n    anotherMethodDoingGreatStuff()\n    collectionView.refreshControl?.endRefreshing()\n  }"
+      "data": " @objc func refresh() {\n    anotherMethodDoingGreatStuff;g()\n    collectionView.refreshControl?.endRefreshing()\n  }"
     }
   ]
 }

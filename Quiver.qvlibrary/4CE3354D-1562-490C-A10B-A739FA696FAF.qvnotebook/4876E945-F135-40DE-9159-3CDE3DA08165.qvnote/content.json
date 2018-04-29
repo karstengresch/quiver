@@ -25,6 +25,14 @@
     },
     {
       "type": "text",
+      "data": "<h3>Deleting Items</h3>"
+    },
+    {
+      "type": "text",
+      "data": "Main difference to UITableView: No built-in editing visualization. Subclassing UICollectionViewCell needed."
+    },
+    {
+      "type": "text",
       "data": ""
     }
   ]
