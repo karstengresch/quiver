@@ -31,6 +31,10 @@
     },
     {
       "type": "text",
+      "data": "<img src=\"quiver-image-url/B5CA03C04CC179C398EF16C268E9C22C.jpg\" width=\"539\" height=\"437\">"
+    },
+    {
+      "type": "text",
       "data": "(Source:&nbsp;<a href=\"https://videos.raywenderlich.com/courses/100-beginning-auto-layout\">https://videos.raywenderlich.com/courses/100-beginning-auto-layout</a>)"
     }
   ]
