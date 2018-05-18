@@ -40,6 +40,14 @@
     {
       "type": "text",
       "data": "(Source:&nbsp;<a href=\"https://videos.raywenderlich.com/courses/100-beginning-auto-layout\">https://videos.raywenderlich.com/courses/100-beginning-auto-layout</a>)"
+    },
+    {
+      "type": "text",
+      "data": "<h2>Distribution</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/C1303B57CE65DF8C07C475B7DCEC9693.jpg\" width=\"461\" height=\"394\">"
     }
   ]
 }
