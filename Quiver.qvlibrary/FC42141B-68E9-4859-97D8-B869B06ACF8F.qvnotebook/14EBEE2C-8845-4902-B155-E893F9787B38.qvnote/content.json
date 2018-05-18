@@ -1,0 +1,13 @@
+{
+  "title": "Intrinsic Content Size",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2>Hugging + Compression</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/224F6D28569D0002925DE845E64DE990.jpg\" width=\"522\" height=\"361\">"
+    }
+  ]
+}
