@@ -63,6 +63,10 @@
     },
     {
       "type": "text",
+      "data": "Source for all:&nbsp;<a href=\"https://videos.raywenderlich.com/courses/100-beginning-auto-layout\">https://videos.raywenderlich.com/courses/100-beginning-auto-layout</a>"
+    },
+    {
+      "type": "text",
       "data": "<h2>Constraints</h2>"
     },
     {
@@ -72,6 +76,10 @@
     {
       "type": "text",
       "data": "<img src=\"quiver-image-url/F1D2C815A2A653B6BEB3E6D129BC52AB.jpg\" width=\"532\" height=\"429\">"
+    },
+    {
+      "type": "text",
+      "data": "Source:&nbsp;<a href=\"https://videos.raywenderlich.com/courses/100-beginning-auto-layout\">https://videos.raywenderlich.com/courses/100-beginning-auto-layout</a>"
     }
   ]
 }
