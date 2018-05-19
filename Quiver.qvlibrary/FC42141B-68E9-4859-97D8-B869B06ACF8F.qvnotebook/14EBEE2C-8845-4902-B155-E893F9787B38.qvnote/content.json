@@ -67,6 +67,10 @@
     },
     {
       "type": "text",
+      "data": "Basic Idea: Determine<div>x and y position</div><div>AND</div><div>height and width</div><div><br></div><div>of a view.</div>"
+    },
+    {
+      "type": "text",
       "data": "<img src=\"quiver-image-url/F1D2C815A2A653B6BEB3E6D129BC52AB.jpg\" width=\"532\" height=\"429\">"
     }
   ]
