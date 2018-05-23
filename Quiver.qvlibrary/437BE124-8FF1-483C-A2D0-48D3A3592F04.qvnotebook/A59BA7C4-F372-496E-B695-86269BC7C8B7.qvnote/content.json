@@ -7,7 +7,7 @@
     },
     {
       "type": "text",
-      "data": "Means: The library \"AutoInsetter\" which is used by Tabman could not be loaded.<div><br></div><div>When using Carthage, add the lib (3-step approach).</div><div><br></div><div>Further troubleshooting:&nbsp;<a href=\"https://stackoverflow.com/a/43197278/4295602\">https://stackoverflow.com/a/43197278/4295602</a></div>"
+      "data": "Means: The library \"AutoInsetter\" which is used by Tabman could not be loaded.<div><br></div><div>When using <b>Carthage</b>, add the lib (3-step approach).</div><div><br></div><div>Further troubleshooting:&nbsp;<a href=\"https://stackoverflow.com/a/43197278/4295602\">https://stackoverflow.com/a/43197278/4295602</a></div>"
     }
   ]
 }
