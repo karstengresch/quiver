@@ -13,6 +13,10 @@
       "type": "code",
       "language": "sh",
       "data": "    func setupPurchases(_ completion: @escaping (Bool) -> Void) {\n        // Check if we can make payments\n      if SKPaymentQueue.canMakePayments() {\n        completion(true)\n        return\n      }\n      \n      completion(false)\n    }"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/43C8DC90FEC510AAAAB90364E71B3C7B.jpg\" width=\"397\" height=\"513\">"
     }
   ]
 }
