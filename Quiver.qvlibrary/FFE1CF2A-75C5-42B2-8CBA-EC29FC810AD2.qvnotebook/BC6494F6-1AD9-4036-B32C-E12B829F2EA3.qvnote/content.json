@@ -45,6 +45,22 @@
     },
     {
       "type": "text",
+      "data": "<h2>Best Practices</h2>"
+    },
+    {
+      "type": "text",
+      "data": "When creating the product IDs, put in the type (Consumable/Non Consumable, Auto Renewing/Non Auto Renewing). Examples:<div><br></div><div></div><code>com.mycompany.myapp.consumable.gems</code><div><code>com.mycompany.myapp.nonconsumable.feature</code><div><br></div><div>etc.</div></div>"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
       "data": ""
     }
   ]
