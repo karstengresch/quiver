@@ -41,6 +41,10 @@
     },
     {
       "type": "text",
+      "data": "In the response JSON, you'll get a&nbsp;<span style=\"font-family: Menlo; font-size: 11px;\">latest_receipt&nbsp;</span>entry w/ B64 data.<br>"
+    },
+    {
+      "type": "text",
       "data": ""
     }
   ]
