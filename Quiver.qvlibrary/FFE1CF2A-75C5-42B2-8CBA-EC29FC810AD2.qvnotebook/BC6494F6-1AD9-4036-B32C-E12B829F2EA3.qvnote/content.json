@@ -32,7 +32,12 @@
     },
     {
       "type": "text",
-      "data": "Auto renewing purchases need the shared secret (as password) -&gt;&nbsp;<a href=\"https://appstoreconnect.apple.com\">https://appstoreconnect.apple.com</a>&nbsp;-&gt; My Apps -&gt; &lt;App Name&gt; -&gt; Features -&gt; In App Purchases -&gt; &nbsp;"
+      "data": "Auto renewing purchases need the shared secret (as password) -&gt;&nbsp;<a href=\"https://appstoreconnect.apple.com\">https://appstoreconnect.apple.com</a>&nbsp;-&gt; <i>My Apps</i> -&gt; &lt;App Name&gt; -&gt; <i>Features</i> -&gt; <i>In App Purchases</i> -&gt; <i>App-Specific Shared Secret</i>."
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "    let receiptData: NSString = receipt.base64EncodedString(options: .init(rawValue: 0)) as NSString\n    let dict:NSDictionary = [\"receipt-data\" : receiptData, \"password\" : kSharedSecret]\n    let jsonData = try! JSONSerialization.data(withJSONObject: dict, options: .init(rawValue: 0))\n    \n    let request = NSMutableURLRequest(url: URL(string: \"https://sandbox.itunes.apple.com/verifyReceipt\")!)\n    request.httpMethod = \"POST\"\n    request.httpBody = jsonData"
     },
     {
       "type": "text",
