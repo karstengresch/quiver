@@ -56,6 +56,9 @@
           "uuid" : "F55E32AE-E084-467C-9C84-CDE5FDBB2BB2"
         },
         {
+          "uuid" : "FFE1CF2A-75C5-42B2-8CBA-EC29FC810AD2"
+        },
+        {
           "uuid" : "437BE124-8FF1-483C-A2D0-48D3A3592F04"
         }
       ],
@@ -123,9 +126,6 @@
     },
     {
       "uuid" : "A85D9BD9-1874-4DA8-A388-8829B2917286"
-    },
-    {
-      "uuid" : "FFE1CF2A-75C5-42B2-8CBA-EC29FC810AD2"
     }
   ],
   "uuid" : "Notebooks"
