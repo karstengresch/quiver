@@ -3,7 +3,16 @@
   "cells": [
     {
       "type": "text",
-      "data": ""
+      "data": "<h3>Create an array of tuples</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "typealias mytuple = (num1: Int, num2: Int)\n\nvar fun: [mytuple] = [mytuple]()\n// Or just: var fun = [mytuple]())\nfun.append((1,2))\nfun.append((3,4))\n\nprintln(fun)\n// [(1, 2), (3, 4)]\n\n"
+    },
+    {
+      "type": "text",
+      "data": "Source:&nbsp;<a href=\"https://stackoverflow.com/a/24539753/4295602\">https://stackoverflow.com/a/24539753/4295602</a>"
     }
   ]
 }
