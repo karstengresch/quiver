@@ -27,6 +27,19 @@
       "type": "code",
       "language": "swift",
       "data": "var checklistItems: [ChecklistItem] = [ChecklistItem]()"
+    },
+    {
+      "type": "text",
+      "data": "Convert Array to NSSet"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": " let products = NSSet(array: identifiers) as! Set<String>"
+    },
+    {
+      "type": "text",
+      "data": ""
     }
   ]
 }
