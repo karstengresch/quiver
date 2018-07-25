@@ -3,6 +3,10 @@
   "cells": [
     {
       "type": "text",
+      "data": "<b>Caveat</b>: Tuples cannot conform to Hashable. You can't use them as Dictionary keys or as elements of a Set."
+    },
+    {
+      "type": "text",
       "data": "<h3>Create an array of tuples</h3>"
     },
     {
