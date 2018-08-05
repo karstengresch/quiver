@@ -8,6 +8,19 @@
     {
       "type": "text",
       "data": "<div>==</div><div><b>Value</b> equality</div><div><br></div><div>===</div><div><b>Object</b> equality</div>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Coalesce Operator</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "return userDefaults.object(forKey: DefaultsKeys.keyInitialStartDate) as? Date ?? nil"
+    },
+    {
+      "type": "text",
+      "data": "Bit like ternary. Operator is <i>??</i>.<div>If unwrapped value of the Optionial exists, return left hand Type, otherwise right hand.&nbsp;</div>"
     }
   ]
 }
