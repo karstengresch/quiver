@@ -26,7 +26,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": "extension Notification.Name {\n  static let didFinishPurchaseSetup = Notification.Name(\"NotificationDidFinishPurchaseSetup\")\n  static let didFinishPurchase = Notification.Name(\"NotificationDidFinishPurchase\")\n  static let didFinishRestorePurchases = Notification.Name(\"NotificationDidFinishRestorePurchases\")\n}\n"
+      "data": "extension Notification.Name {\n  static let didFinishPurchaseSetup = Notification.Name(\"NotificationDidFinishPurchaseSetup\")\n  static let didFinishPurchase = Notification.Name(\"NotificationDidFinishPurchase\")\n  static let didFinishRestorePurchases = Notification.Name(\"NotificationDidFinishRestorePurchases\")\n}"
     }
   ]
 }
