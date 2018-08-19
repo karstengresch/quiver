@@ -1,0 +1,32 @@
+{
+  "title": "Basics",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3>Declare Observer</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "NotificationCenter.default.addObserver(self, selector: #selector(PurchaseWaitViewController.onDidFinishPurchase(_:)), name: .didFinishPurchase, object: nil)"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Post (Broadcast) Notification</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "NotificationCenter.default.post(name: .didFinishPurchase, object: nil)"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Organize Notification Names</h3>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "extension Notification.Name {\n  static let didFinishPurchaseSetup = Notification.Name(\"NotificationDidFinishPurchaseSetup\")\n  static let didFinishPurchase = Notification.Name(\"NotificationDidFinishPurchase\")\n  static let didFinishRestorePurchases = Notification.Name(\"NotificationDidFinishRestorePurchases\")\n}\n"
+    }
+  ]
+}
