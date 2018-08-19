@@ -8,6 +8,18 @@
     {
       "type": "text",
       "data": "Means: The library \"AutoInsetter\" which is used by Tabman could not be loaded.<div><br></div><div>When using <b>Carthage</b>, add the lib (3-step approach).</div><div><br></div><div>Further troubleshooting:&nbsp;<a href=\"https://stackoverflow.com/a/43197278/4295602\">https://stackoverflow.com/a/43197278/4295602</a></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h3><span style=\"font-variant-ligatures: no-common-ligatures\">** Terminating app due to uncaught exception 'NSUnknownKeyException', reason: '[&lt;NSObject 0x604000019e70&gt; setValue:forUndefinedKey:]: this class is not key value coding-compliant for the key mySpecialLabel.'</span></h3>"
+    },
+    {
+      "type": "text",
+      "data": "Means: You hooked up a component in the Storyboard or in a XIB editor, but it's not linked."
+    },
+    {
+      "type": "text",
+      "data": "Delete the connection in the Connections Inspector an re-link."
     }
   ]
 }
