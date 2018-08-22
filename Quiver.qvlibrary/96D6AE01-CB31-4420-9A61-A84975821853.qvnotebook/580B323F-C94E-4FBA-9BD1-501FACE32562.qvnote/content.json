@@ -11,7 +11,20 @@
     },
     {
       "type": "text",
-      "data": ""
+      "data": "<img align=\"left\" src=\"quiver-image-url/14791034A12C3370B69EC5031D1992E3.gif\" width=\"268\" height=\"480\">&nbsp;(example)"
+    },
+    {
+      "type": "text",
+      "data": "License: MIT"
+    },
+    {
+      "type": "text",
+      "data": "Example (GH)"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "import PopupDialog\n\n// Prepare the popup assets\nlet title = \"THIS IS THE DIALOG TITLE\"\nlet message = \"This is the message section of the popup dialog default view\"\nlet image = UIImage(named: \"pexels-photo-103290\")\n\n// Create the dialog\nlet popup = PopupDialog(title: title, message: message, image: image)\n\n// Create buttons\nlet buttonOne = CancelButton(title: \"CANCEL\") {\n    print(\"You canceled the car dialog.\")\n}\n\n// This button will not the dismiss the dialog\nlet buttonTwo = DefaultButton(title: \"ADMIRE CAR\", dismissOnTap: false) {\n    print(\"What a beauty!\")\n}\n\nlet buttonThree = DefaultButton(title: \"BUY CAR\", height: 60) {\n    print(\"Ah, maybe next time :)\")\n}\n\n// Add buttons to dialog\n// Alternatively, you can use popup.addButton(buttonOne)\n// to add a single button\npopup.addButtons([buttonOne, buttonTwo, buttonThree])\n\n// Present dialog\nself.present(popup, animated: true, completion: nil)"
     }
   ]
 }
