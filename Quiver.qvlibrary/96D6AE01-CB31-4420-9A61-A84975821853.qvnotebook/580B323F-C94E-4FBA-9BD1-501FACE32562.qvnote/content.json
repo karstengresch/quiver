@@ -33,7 +33,7 @@
     {
       "type": "code",
       "language": "swift",
-      "data": "// Reset purchase button in TableView section header \nheaderView.shoppingResetPurchasesButtonTapAction  = {\n  () in\n  let shoppingResetPurchasesDialogTitle = \"Reset your purchases\"\n  let shoppingResetPurchasesDialogMessage = \"Do you want to reset your purchases *now*\"\n  let popup = PopupDialog(title: shoppingResetPurchasesDialogTitle, message: shoppingResetPurchasesDialogMessage) //  + \"\\nEnjoy it for just \\(product.localizedPrice ?? \"-\").\n  let buttonOne = CancelButton(title: \"CANCEL\") {\n    Log.debug?.message(\"Dialog closed.\")\n  }\n  let buttonTwo = DefaultButton(title: \"YES - RESTORE PURCHASES NOW\") {\n    Log.debug?.message(\"SettingsTableVC~viewForHeaderInSection - Restore purchases\")\n    IAPManager.shared.restorePreviousPurchases()\n  }\n  popup.addButtons([buttonOne, buttonTwo])\n  self.present(popup, animated: true, completion: nil)\n}"
+      "data": "// Reset purchase button in TableView section header \nheaderView.shoppingResetPurchasesButtonTapAction  = {\n  () in\n    let shoppingResetPurchasesDialogTitle = \"Reset your purchases\"\n    let shoppingResetPurchasesDialogMessage = \"Do you want to reset your purchases *now*\"\n    let popup = PopupDialog(title: shoppingResetPurchasesDialogTitle, message: shoppingResetPurchasesDialogMessage) //  + \"\\nEnjoy it for just \\(product.localizedPrice ?? \"-\").\n    let buttonOne = CancelButton(title: \"CANCEL\") { }\n    let buttonTwo = DefaultButton(title: \"YES - RESTORE PURCHASES NOW\") { IAPManager.shared.restorePreviousPurchases() }\n    popup.addButtons([buttonOne, buttonTwo])\n    self.present(popup, animated: true, completion: nil)\n}"
     },
     {
       "type": "text",
