@@ -3,6 +3,14 @@
   "cells": [
     {
       "type": "text",
+      "data": "<h3>Setting Up Entities</h3>"
+    },
+    {
+      "type": "text",
+      "data": "To work w/ data in Graph you need to set it up first. For smaller datasets you could do this offline and programmatlically (i.e. the data in code)."
+    },
+    {
+      "type": "text",
       "data": ""
     }
   ]
