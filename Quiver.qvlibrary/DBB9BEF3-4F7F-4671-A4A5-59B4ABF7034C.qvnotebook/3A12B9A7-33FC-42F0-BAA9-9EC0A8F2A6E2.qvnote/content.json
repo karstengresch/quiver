@@ -30,6 +30,18 @@
       "type": "code",
       "language": "sh",
       "data": "diskutil resetUserPermissions / `id -u`"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": "<h2>Linux</h2>"
     }
   ]
 }
