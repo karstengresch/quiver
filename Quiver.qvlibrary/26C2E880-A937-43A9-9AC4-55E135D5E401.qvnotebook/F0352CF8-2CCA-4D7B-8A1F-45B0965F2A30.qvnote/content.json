@@ -15,7 +15,15 @@
     },
     {
       "type": "text",
-      "data": "<div><img src=\"quiver-image-url/8BD1E8B3DB46E01ADF8A29C47CD84CD0.jpg\" id=\"en-media:image/jpeg:8bd1e8b3db46e01adf8a29c47cd84cd0:none:none\" width=\"192\" height=\"37\"><br></div><div>Be cautious with remotes:</div>"
+      "data": "<div><img src=\"quiver-image-url/8BD1E8B3DB46E01ADF8A29C47CD84CD0.jpg\" id=\"en-media:image/jpeg:8bd1e8b3db46e01adf8a29c47cd84cd0:none:none\" width=\"192\" height=\"37\"><br></div><div><br></div><div><br></div><div>Be cautious with remotes:</div>"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
     },
     {
       "type": "code",
@@ -37,7 +45,7 @@
     },
     {
       "type": "text",
-      "data": "<h3>Revert a single for to a specific version</h3>"
+      "data": "<h3>Revert a single file for to a specific version</h3>"
     },
     {
       "type": "code",
