@@ -7,7 +7,7 @@
     },
     {
       "type": "text",
-      "data": "RW:&nbsp;<a href=\"https://www.raywenderlich.com/5298-reproducing-popular-ios-controls\">https://www.raywenderlich.com/5298-reproducing-popular-ios-controls</a>&nbsp;(Video - Reproducing popular iOS controls)<div><a href=\"https://www.raywenderlich.com/5294-how-to-make-a-custom-control-tutorial-a-reusable-knob\">https://www.raywenderlich.com/5294-how-to-make-a-custom-control-tutorial-a-reusable-knob</a>&nbsp;(Article, custom knob control)<br><div><br></div><div><a href=\"https://cheesecakelabs.com/blog/building-custom-ui-controls-xcodes-interface-builder/\">https://cheesecakelabs.com/blog/building-custom-ui-controls-xcodes-interface-builder/</a>&nbsp;(basic)<br></div></div>"
+      "data": "RW:&nbsp;<a href=\"https://www.raywenderlich.com/5298-reproducing-popular-ios-controls\">https://www.raywenderlich.com/5298-reproducing-popular-ios-controls</a>&nbsp;(Video - Reproducing popular iOS controls)<div><a href=\"https://www.raywenderlich.com/5294-how-to-make-a-custom-control-tutorial-a-reusable-knob\">https://www.raywenderlich.com/5294-how-to-make-a-custom-control-tutorial-a-reusable-knob</a>&nbsp;(Article, custom knob control)</div><div><a href=\"https://www.raywenderlich.com/5109-creating-a-framework-for-ios\">https://www.raywenderlich.com/5109-creating-a-framework-for-ios</a>&nbsp;(Article, explains packaging the custom control in a framework)<br><div><br></div><div><a href=\"https://cheesecakelabs.com/blog/building-custom-ui-controls-xcodes-interface-builder/\">https://cheesecakelabs.com/blog/building-custom-ui-controls-xcodes-interface-builder/</a>&nbsp;(basic)<br></div></div>"
     }
   ]
 }
