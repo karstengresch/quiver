@@ -7,7 +7,7 @@
     },
     {
       "type": "text",
-      "data": "<h3>Creating your own extension</h3>"
+      "data": "<h2>Creating your own extension</h2>"
     },
     {
       "type": "text",
@@ -15,7 +15,7 @@
     },
     {
       "type": "text",
-      "data": "<b>Prerequisites</b>"
+      "data": "<h3><b>Prerequisites</b></h3>"
     },
     {
       "type": "text",
@@ -23,7 +23,7 @@
     },
     {
       "type": "text",
-      "data": "<b>Get started</b>"
+      "data": "<h3><b>Get started</b></h3>"
     },
     {
       "type": "code",
@@ -32,11 +32,36 @@
     },
     {
       "type": "text",
-      "data": "Will open a dialogue where you need to enter some information, most can be left out."
+      "data": "Will open a dialogue where you need to enter some information, most can be left out, you basically need to enter the project==dir name and the language flavor (i.e. JavaScript or TypeScript)."
     },
     {
       "type": "text",
-      "data": "I'd prefer TypeScript always."
+      "data": "I'd prefer TypeScript <i>always</i>."
+    },
+    {
+      "type": "text",
+      "data": "Open VSC and select the button <code>Open Folder</code> to open the newly created directory. You should find this directory structure:"
+    },
+    {
+      "type": "code",
+      "language": "markdown",
+      "data": ".\n├── .gitignore\n├── .vscode                     // VS Code integration\n│   ├── launch.json\n│   ├── settings.json\n│   └── tasks.json\n├── .vscodeignore               // files ignored when publishing extension\n├── README.md\n├── src\n│   └── extension.ts            // the source of the extension entry point\n├── test                        // test folder\n│   ├── extension.test.ts       // extension.test.js, in case of JavaScript extension\n│   └── index.ts                // index.js, in case of JavaScript extension\n├── node_modules\n│   ├── vscode                  // include vscode type definition file for extension development\n│   └── typescript              // compiler for typescript (TypeScript only)\n├── out                         // compilation output (TypeScript only)\n│   ├── extension.js            // the extension entry point\n│   ├── extension.js.map\n│   └── test\n│       ├── extension.test.js\n│       ├── extension.test.js.map\n│       ├── index.js\n│       └── index.js.map\n├── package.json                // extension's manifest\n├── tsconfig.json               // jsconfig.json, in case of JavaScript extension\n└── vsc-extension-quickstart.md // extension development quick start"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Important/Mandatory files</h3>"
+    },
+    {
+      "type": "text",
+      "data": "<b>package.json</b>"
+    },
+    {
+      "type": "text",
+      "data": "Mandatory, extension manifest."
+    },
+    {
+      "type": "text",
+      "data": ""
     }
   ]
 }
