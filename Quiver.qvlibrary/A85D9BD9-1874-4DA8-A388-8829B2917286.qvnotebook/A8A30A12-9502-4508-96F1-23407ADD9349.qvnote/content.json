@@ -19,7 +19,24 @@
     },
     {
       "type": "text",
-      "data": ""
+      "data": "<ul><li>VSCode</li><li>npm<br></li><li>Yeoman (install via&nbsp;<span style=\"font-family: Menlo, Consolas, &quot;Ubuntu Mono&quot;, Monaco, source-code-pro, monospace; background-color: rgba(255, 255, 255, 0.0980392);\"><code>npm install -g yo generator-code</code>​)</span></li></ul>"
+    },
+    {
+      "type": "text",
+      "data": "<b>Get started</b>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "yo code"
+    },
+    {
+      "type": "text",
+      "data": "Will open a dialogue where you need to enter some information, most can be left out."
+    },
+    {
+      "type": "text",
+      "data": "I'd prefer TypeScript always."
     }
   ]
 }
