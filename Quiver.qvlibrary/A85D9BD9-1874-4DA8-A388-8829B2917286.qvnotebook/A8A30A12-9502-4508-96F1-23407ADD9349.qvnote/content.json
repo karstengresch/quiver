@@ -4,6 +4,22 @@
     {
       "type": "text",
       "data": "<a href=\"https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf\">https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf</a>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Creating your own extension</h3>"
+    },
+    {
+      "type": "text",
+      "data": "Base information:&nbsp;<a href=\"https://code.visualstudio.com/docs/extensions/example-hello-world\">https://code.visualstudio.com/docs/extensions/example-hello-world</a>"
+    },
+    {
+      "type": "text",
+      "data": "<b>Prerequisites</b>"
+    },
+    {
+      "type": "text",
+      "data": ""
     }
   ]
 }
