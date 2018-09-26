@@ -120,13 +120,22 @@
       "data": "<h3>Pinch-To-Zoom</h3>"
     },
     {
+      "type": "text",
+      "data": "Nice solution, unfortunately not working when using text attributes (i.e. bold text) - everything'll be stripped down to normal."
+    },
+    {
       "type": "code",
       "language": "sh",
       "data": "  // Source https://gist.github.com/titopalito/fb9b45718a72f9b12c7abd519438d79a via https://stackoverflow.com/a/46508056/4295602\n  // Thanks for sharing!\n  var pinchGestureRecognizer : UIPinchGestureRecognizer!\n  \n  @objc func pinchGesture(gestureRecognizer: UIPinchGestureRecognizer ) {\n    print.message(\"*** Pinch: Scale: \\(gestureRecognizer.scale) Velocity: \\(gestureRecognizer.velocity)\")\n    \n    let font = self.nsattributedStringTextView.font\n    var pointSize = font?.pointSize\n    let fontName = font?.fontName\n    \n    pointSize = ((gestureRecognizer.velocity > 0) ? 1 : -1) * 1 + pointSize!;\n    // Limits\n    if (pointSize! < 13) { pointSize = 13}\n    if (pointSize! > 42) { pointSize = 42}\n    \n    self.myPersonalTextView.font = UIFont(name: fontName!, size: pointSize!)\n    \n  }\n  \n  override func viewDidLoad() {\n    super.viewDidLoad()\n    // Do what you need to do before\n      pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(pinchGesture))\n      self.myPersonalTextView.addGestureRecognizer(pinchGestureRecognizer)\n    }"
     },
     {
       "type": "text",
-      "data": ""
+      "data": "Scale TextView"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "let screenScaleFactor = UIScreen.main.scale\nlet scale: CGFloat = gestureRecognizer.scale\nnsattributedStringTextView.transform = CGAffineTransform(scaleX: scale, y: scale)\nnsattributedStringTextView.contentScaleFactor = screenScaleFactor * scale\nnsattributedStringTextView.sizeToFit()"
     }
   ]
 }
