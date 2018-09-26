@@ -134,8 +134,12 @@
     },
     {
       "type": "code",
-      "language": "sh",
-      "data": "let screenScaleFactor = UIScreen.main.scale\nlet scale: CGFloat = gestureRecognizer.scale\nnsattributedStringTextView.transform = CGAffineTransform(scaleX: scale, y: scale)\nnsattributedStringTextView.contentScaleFactor = screenScaleFactor * scale\nnsattributedStringTextView.sizeToFit()"
+      "language": "swift",
+      "data": "let screenScaleFactor = UIScreen.main.scale\nlet scale: CGFloat = gestureRecognizer.scale\nnsattributedStringTextView.transform = CGAffineTransform(scaleX: scale, y: scale)\nnsattributedStringTextView.contentScaleFactor = screenScaleFactor * scale\nnsattributedStringTextView.sizeToFit()\n// Set when necessary\n// nsattributedStringTextView.isScrollEnabled = false "
+    },
+    {
+      "type": "text",
+      "data": "NB - will scale the entire text view, you might want to disable scrolling..."
     }
   ]
 }
