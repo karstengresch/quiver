@@ -21,6 +21,19 @@
     },
     {
       "type": "text",
+      "data": "<div><br></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h2><span style=\"font-weight: bold;\">Get information</span></h2>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git status\ngit status -s\ngit reflog\n\ngit log\n# => extremely feature rich, e.g.\ngit log --pretty=oneline​\ngit log --pretty=fuller\ngit log --pretty=format:%cd --date=short\ngit log --pretty=format:%cd --date=short | uniq\ngit log --format='%h %an'\ngit shortlog -s | wc -l\n\ngit diff --cached"
+    },
+    {
+      "type": "text",
       "data": ""
     }
   ]
