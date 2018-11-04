@@ -11,7 +11,7 @@
     },
     {
       "type": "text",
-      "data": "<div><span style=\"font-weight: bold;\">Push to remote directory</span></div>"
+      "data": "<h3><span style=\"font-weight: bold;\">Push to remote directory</span></h3>"
     },
     {
       "type": "text",
@@ -19,27 +19,27 @@
     },
     {
       "type": "text",
-      "data": "<div><span style=\"font-weight: bold;\">Pull from remote</span></div>"
+      "data": "<h3><span style=\"font-weight: bold;\">Pull from remote</span></h3>"
     },
     {
       "type": "text",
-      "data": "<div><code style=\"font-size: 11.699999809265137px; background-color: rgba(255, 255, 255, 0.0980392);\">git pull</code></div><div>equals to get fetch &amp;&amp; git merge</div>"
+      "data": "<div><code style=\"font-size: 11.699999809265137px; background-color: rgba(255, 255, 255, 0.0980392);\">git pull</code></div><div><i>equals to get fetch &amp;&amp; git merge</i></div>"
     },
     {
       "type": "text",
-      "data": ""
+      "data": "<h3><span style=\"font-weight: bold;\">Fetch</span></h3>"
     },
     {
       "type": "text",
-      "data": ""
+      "data": "<span style=\"font-family: Menlo, Consolas, &quot;Ubuntu Mono&quot;, Monaco, source-code-pro, monospace; font-size: 11.699999809265137px;\">git fetch&nbsp;</span>"
     },
     {
       "type": "text",
-      "data": ""
+      "data": "<h3><span style=\"font-weight: bold;\">Branch</span></h3>"
     },
     {
       "type": "text",
-      "data": ""
+      "data": "<div><code style=\"font-size: 11.699999809265137px; background-color: rgba(255, 255, 255, 0.0980392);\">git branch</code></div><div><br></div><div><code style=\"font-size: 11.699999809265137px; background-color: rgba(255, 255, 255, 0.0980392);\">git branch -a</code><br></div><div>List all available branches (local AND remote branches).</div><div><br></div><div><code style=\"font-size: 11.699999809265137px; background-color: rgba(255, 255, 255, 0.0980392);\">git branch -r</code><br></div><div>or</div><div><code style=\"font-size: 11.699999809265137px; background-color: rgba(255, 255, 255, 0.0980392);\">git ls-remote --heads &lt;remote-name&gt;</code><br></div><div>List all remote branches.</div>"
     },
     {
       "type": "text",
