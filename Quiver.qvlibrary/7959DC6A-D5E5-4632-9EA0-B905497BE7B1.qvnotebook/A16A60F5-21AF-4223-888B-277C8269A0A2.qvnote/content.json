@@ -17,6 +17,59 @@
       "type": "code",
       "language": "sh",
       "data": "brew link python"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Virtual Environments</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "pip install --user pipenv"
+    },
+    {
+      "type": "text",
+      "data": "Usage (in your project)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "cd myproject\n$ pipenv install requests"
+    },
+    {
+      "type": "text",
+      "data": "Import in your project etc., then execute like"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "pipenv run python main.py"
+    },
+    {
+      "type": "text",
+      "data": "Bring all your commands access to the installed package&nbsp;"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "pipenv shell"
+    },
+    {
+      "type": "text",
+      "data": "(Not sure if working w/ zsh)."
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": "Virtualenv (lower level)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "pip install virtualenv"
     }
   ]
 }

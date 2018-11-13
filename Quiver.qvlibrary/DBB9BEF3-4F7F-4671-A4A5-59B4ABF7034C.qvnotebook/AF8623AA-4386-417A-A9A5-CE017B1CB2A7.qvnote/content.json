@@ -1,0 +1,18 @@
+{
+  "title": "zsh (oh-my-zsh)",
+  "cells": [
+    {
+      "type": "text",
+      "data": "Base information at&nbsp;<a href=\"https://github.com/robbyrussell/oh-my-zsh\">https://github.com/robbyrussell/oh-my-zsh</a>"
+    },
+    {
+      "type": "text",
+      "data": "Install oh-my-zsh"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\""
+    }
+  ]
+}
