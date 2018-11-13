@@ -70,6 +70,27 @@
       "type": "code",
       "language": "sh",
       "data": "pip install virtualenv"
+    },
+    {
+      "type": "text",
+      "data": "Then, on project level:"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "$ cd my_project_folder\n$ virtualenv my_project"
+    },
+    {
+      "type": "text",
+      "data": "=&gt;creates a Python copy to the project folder."
+    },
+    {
+      "type": "markdown",
+      "data": "virtualenv -p /usr/bin/python2.7 my_project"
+    },
+    {
+      "type": "text",
+      "data": "Allows specifying the interpreter."
     }
   ]
 }
