@@ -3,7 +3,27 @@
   "cells": [
     {
       "type": "text",
-      "data": ""
+      "data": "<h2>Introduction</h2>"
+    },
+    {
+      "type": "text",
+      "data": "These notes are for preparing a webinar that introduces OpenShift to participants of a hackathon.<div><br></div><div>The introduction of OpenShift to hackathon members is in some way comparable with app dev conversations at customers, but it difers in several details:</div><div><ul><li>The webinar participants want to see how much effort it takes getting to productive hacking.</li><li>They want to understand how difficult and error prone the underlying stack is.</li><li>They want to know if critical functionality for their product us supported (e.g. push notifications, ML, specific languages/frameworks).</li><li>They want to be able comparing the technical offing to RH competitors.</li></ul></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h2>Team Introduction</h2>"
+    },
+    {
+      "type": "text",
+      "data": "Introduce all team members.<div><ul><li>Onsite: Name and Photo</li><li>Dedicated Offsite: Name and Photo</li><li>Team Offsite: Name of the team, purpose.</li></ul></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h2>OpenShift Introduction</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<h2><br></h2>"
     }
   ]
 }
