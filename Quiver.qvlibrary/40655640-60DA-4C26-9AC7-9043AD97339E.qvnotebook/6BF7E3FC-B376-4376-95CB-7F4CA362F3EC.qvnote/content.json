@@ -23,6 +23,14 @@
     },
     {
       "type": "text",
+      "data": "Short introduction à la \"OpenShift for Developers\" (Dumbleton/Shipley):<div><br></div><div><br></div><div><br></div><div><br></div>"
+    },
+    {
+      "type": "text",
+      "data": "<img xmlns=\"http://www.w3.org/1999/xhtml\" src=\"quiver-image-url/923D402B158B4B58D4922E8290115583.png\" alt=\"Cloud Services\" width=\"502\" height=\"226\">"
+    },
+    {
+      "type": "text",
       "data": "<h2><br></h2>"
     }
   ]
