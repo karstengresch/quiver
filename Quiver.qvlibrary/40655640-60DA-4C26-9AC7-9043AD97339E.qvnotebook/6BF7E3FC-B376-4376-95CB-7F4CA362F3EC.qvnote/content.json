@@ -31,6 +31,35 @@
     },
     {
       "type": "text",
+      "data": "Technical slides here:&nbsp;<a href=\"https://docs.google.com/presentation/d/1nwojcNFjOXiRkBRDIiHyWKxB5nyAk0_BWLhHJK2wc0w/edit?usp=sharing\">https://docs.google.com/presentation/d/1nwojcNFjOXiRkBRDIiHyWKxB5nyAk0_BWLhHJK2wc0w/edit?usp=sharing</a>"
+    },
+    {
+      "type": "text",
+      "data": "<h2>Golden Path Example With a Spring Boot App</h2>"
+    },
+    {
+      "type": "text",
+      "data": "Web Console"
+    },
+    {
+      "type": "text",
+      "data": "<ol><li>Create a project</li><li>Add OpenJDK8 (openjdk18-web-basic-s2i) with&nbsp;<a href=\"https://github.com/karstengresch/sbservicegs.git\">https://github.com/karstengresch/sbservicegs.git</a></li><li>Go to overview, show running build and created pod</li><li>Click on route URL.</li><li>Explain why it's not working: Context URL: Show that it's working w/ /greeting</li><li>Change the route to use /greeting as context, click again: Now it's working.</li><li>Show the webhook.</li><li>Add the webhook to GitHub</li><li>Make a change online (e.g. Change the greeting in&nbsp;<a href=\"https://github.com/karstengresch/sbservicegs/blob/master/src/main/java/hello/GreetingController.java\">src/main/java/hello/GreetingController.java</a>)</li><li>Go to overview and show the newly triggered build and the auto pod instantiation (b.t.w. hickup when shutting down old pod - Spring related - error 143)</li></ol>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>ML Friends</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc create -f https://radanalytics.io/resources.yaml"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
       "data": "<h2><br></h2>"
     }
   ]
