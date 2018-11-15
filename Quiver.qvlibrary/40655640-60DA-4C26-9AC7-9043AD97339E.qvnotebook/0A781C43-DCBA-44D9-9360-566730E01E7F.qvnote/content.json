@@ -1,0 +1,40 @@
+{
+  "title": "JBoss Forge",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2>Installation</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>macOS</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "brew install jboss-forge"
+    },
+    {
+      "type": "text",
+      "data": "then just enter"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "forge"
+    },
+    {
+      "type": "text",
+      "data": "Spring Boot Addon"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "addon-install-from-git --url https://github.com/forge/springboot-addon.git"
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}
