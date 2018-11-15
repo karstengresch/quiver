@@ -56,6 +56,18 @@
     },
     {
       "type": "text",
+      "data": "Then: Add to project -&gt; Oshinko Web UI"
+    },
+    {
+      "type": "text",
+      "data": "(or oshinko CLI)"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
       "data": ""
     },
     {
