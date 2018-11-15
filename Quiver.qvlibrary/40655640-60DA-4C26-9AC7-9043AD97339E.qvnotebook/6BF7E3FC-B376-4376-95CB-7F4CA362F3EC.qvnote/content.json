@@ -39,11 +39,61 @@
     },
     {
       "type": "text",
-      "data": "Web Console"
+      "data": "<h3>Web Console</h3>"
     },
     {
       "type": "text",
       "data": "<ol><li>Create a project</li><li>Add OpenJDK8 (openjdk18-web-basic-s2i) with&nbsp;<a href=\"https://github.com/karstengresch/sbservicegs.git\">https://github.com/karstengresch/sbservicegs.git</a></li><li>Go to overview, show running build and created pod</li><li>Click on route URL.</li><li>Explain why it's not working: Context URL: Show that it's working w/ /greeting</li><li>Change the route to use /greeting as context, click again: Now it's working.</li><li>Show the webhook.</li><li>Add the webhook to GitHub</li><li>Make a change online (e.g. Change the greeting in&nbsp;<a href=\"https://github.com/karstengresch/sbservicegs/blob/master/src/main/java/hello/GreetingController.java\">src/main/java/hello/GreetingController.java</a>)</li><li>Go to overview and show the newly triggered build and the auto pod instantiation (b.t.w. hickup when shutting down old pod - Spring related - error 143)</li></ol>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>oc</h3>"
+    },
+    {
+      "type": "text",
+      "data": "oc new-project springsvc<div><br></div>"
+    },
+    {
+      "type": "text",
+      "data": "odo"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "odo project create hackinar01\nodo create redhat-openjdk18-openshift:1.4 --git https://github.com/karstengresch/sbservicegs.git\nodo url create springservice --port 8080"
+    },
+    {
+      "type": "text",
+      "data": "Route creation a bit strange route name..."
+    },
+    {
+      "type": "text",
+      "data": "Checked w/ simplest curl"
+    },
+    {
+      "type": "text",
+      "data": "curl <a href=\"http://springservice-complete-vlvh-symbinar04.symbioticon.opentry.me/greeting\">http://springservice-complete-vlvh-symbinar04.symbioticon.opentry.me/greeting</a>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Golden Path Example With Node.js App</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "odo project create hackinar05\n"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Eclipse Che</h3>"
+    },
+    {
+      "type": "text",
+      "data": "Show&nbsp;<a href=\"https://che-che.symbioticon.opentry.me/\">https://che-che.symbioticon.opentry.me/</a>"
+    },
+    {
+      "type": "text",
+      "data": ""
     },
     {
       "type": "text",
