@@ -81,7 +81,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "odo project create hackinar05\n"
+      "data": "odo project create hackinar05\nodo app create nodeapp\nodo create nodejs\nodo push"
     },
     {
       "type": "text",
