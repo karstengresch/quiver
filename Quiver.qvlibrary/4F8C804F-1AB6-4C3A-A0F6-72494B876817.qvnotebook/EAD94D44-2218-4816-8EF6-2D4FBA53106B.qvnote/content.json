@@ -7,7 +7,25 @@
     },
     {
       "type": "text",
-      "data": "General: You need<div><ol><li>An @IBAction to call</li><li><br></li></ol></div>"
+      "data": "General: You need<div><ol><li>An @IBAction to call</li><li>An UIButton object. Wrapping it in an inner class gives you control over UI settings.</li></ol></div>"
+    },
+    {
+      "type": "text",
+      "data": "Example"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "class ShoppingSectionHeaderViewResetPurchasesButton: UIButton {\n  override func awakeFromNib() {\n    super.awakeFromNib()\n    self.backgroundColor = LifechangerThemes.current.darkBackgroundContrastColor\n    self.titleLabel?.font = LifechangerThemes.current.subHeadlineFont\n  }\n}"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "  @IBAction func shoppingResetPurchasesButtonTapped(_ sender: ShoppingSectionHeaderViewResetPurchasesButton) {\n    shoppingResetPurchasesButtonTapAction?()\n  }"
+    },
+    {
+      "type": "text",
+      "data": "This example obviously is only good for an 1:1 relation between the action and the button.<div><br></div><div>To make the button class more generic, you need to instantiate the UIButton with providing it with the needed action. E.g.</div>"
     }
   ]
 }
