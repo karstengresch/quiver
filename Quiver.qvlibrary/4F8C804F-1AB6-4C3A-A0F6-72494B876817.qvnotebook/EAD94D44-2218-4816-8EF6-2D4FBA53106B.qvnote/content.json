@@ -26,6 +26,11 @@
     {
       "type": "text",
       "data": "This example obviously is only good for an 1:1 relation between the action and the button.<div><br></div><div>To make the button class more generic, you need to instantiate the UIButton with providing it with the needed action. E.g.</div>"
+    },
+    {
+      "type": "code",
+      "language": "swift",
+      "data": "// TODO"
     }
   ]
 }
