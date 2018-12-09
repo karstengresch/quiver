@@ -3,7 +3,15 @@
   "cells": [
     {
       "type": "text",
-      "data": ""
+      "data": "<h2>Troubleshooting</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>N/A: version \"N/A\" is not yet installed.</h3>"
+    },
+    {
+      "type": "text",
+      "data": "Problem: Some alias is not linked.<div>Solution: Link the alias e.g. <code>nvm alias default v0.10.32</code></div>"
     }
   ]
 }
