@@ -13,6 +13,14 @@
     {
       "type": "text",
       "data": "Hint: Persistent volume creation could not work,&nbsp;<a href=\"https://access.redhat.com/documentation/en-us/red_hat_3scale/2.1/html/infrastructure/onpremises-installation#deployment_script_is_unable_to_create_persistent_storage_volumes\">https://access.redhat.com/documentation/en-us/red_hat_3scale/2.1/html/infrastructure/onpremises-installation#deployment_script_is_unable_to_create_persistent_storage_volumes</a>&nbsp;=&gt; is actually removed, not valid anymore!"
+    },
+    {
+      "type": "text",
+      "data": "OpenShift templates at:&nbsp;<span style=\"caret-color: rgb(36, 41, 46); color: rgb(36, 41, 46); font-family: SFMono-Regular, Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; background-color: rgb(255, 255, 255);\">https://github.com/3scale/3scale-amp-openshift-templates.git</span>"
+    },
+    {
+      "type": "text",
+      "data": ""
     }
   ]
 }
