@@ -16,7 +16,21 @@
     },
     {
       "type": "text",
-      "data": "OpenShift templates at:&nbsp;<span style=\"caret-color: rgb(36, 41, 46); color: rgb(36, 41, 46); font-family: SFMono-Regular, Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; background-color: rgb(255, 255, 255);\">https://github.com/3scale/3scale-amp-openshift-templates.git</span>"
+      "data": "OpenShift templates at:"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "https://github.com/3scale/3scaleFor -amp-openshift-templates.git"
+    },
+    {
+      "type": "text",
+      "data": "For evaluation purposes, use&nbsp;<i>amp-eval-tech-preview.yml</i>:"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "https://raw.githubusercontent.com/3scale/3scale-amp-openshift-templates/master/amp/amp-eval-tech-preview.yml"
     },
     {
       "type": "text",
