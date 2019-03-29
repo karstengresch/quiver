@@ -11,6 +11,15 @@
       "data": "oc login -u developer -p developer\noc new-project apimanagement\noc new-app --file https://raw.githubusercontent.com/3scale/3scale-amp-openshift-templates/master/amp/amp.yml --param WILDCARD_DOMAIN=$(minishift ip).nip.io"
     },
     {
+      "type": "code",
+      "language": "sh",
+      "data": "oc new-app --file /opt/amp/templates/amp.yml --param WILDCARD_DOMAIN=<WILDCARD_DOMAIN> --param WILDCARD_POLICY=Subdomain"
+    },
+    {
+      "type": "text",
+      "data": "(from&nbsp;<a href=\"https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html-single/infrastructure/#threescale_amp_openshift_templates\">https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.4/html-single/infrastructure/#threescale_amp_openshift_templates</a>)"
+    },
+    {
       "type": "text",
       "data": "Hint: Persistent volume creation could not work,&nbsp;<a href=\"https://access.redhat.com/documentation/en-us/red_hat_3scale/2.1/html/infrastructure/onpremises-installation#deployment_script_is_unable_to_create_persistent_storage_volumes\">https://access.redhat.com/documentation/en-us/red_hat_3scale/2.1/html/infrastructure/onpremises-installation#deployment_script_is_unable_to_create_persistent_storage_volumes</a>&nbsp;=&gt; is actually removed, not valid anymore!"
     },
@@ -21,7 +30,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "https://github.com/3scale/3scaleFor -amp-openshift-templates.git"
+      "data": "https://github.com/3scale/3scale-amp-openshift-templates.git"
     },
     {
       "type": "text",
