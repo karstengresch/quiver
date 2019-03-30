@@ -44,6 +44,44 @@
     {
       "type": "text",
       "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": "<h2>Troubleshooting</h2>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "Errors:\n  * route/apicast-wildcard-router was not accepted by router \"router\": wildcard routes are not allowed (RouteNotAdmitted)"
+    },
+    {
+      "type": "text",
+      "data": "after command (local openshift-template-project clone)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc new-app -f ./amp/amp-eval-tech-preview.yml --param WILDCARD_DOMAIN=192.168.65.11 --param WILDCARD_POLICY=Subdomain"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
     }
   ]
 }
