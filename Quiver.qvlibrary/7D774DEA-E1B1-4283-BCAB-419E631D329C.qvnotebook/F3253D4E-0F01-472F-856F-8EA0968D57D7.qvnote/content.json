@@ -77,6 +77,15 @@
     },
     {
       "type": "text",
+      "data": "Subdomain fails b.t.w., at least w/ a local installation. So use:"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc new-app -f ./amp/amp-eval-tech-preview.yml --param WILDCARD_DOMAIN=192.168.65.11"
+    },
+    {
+      "type": "text",
       "data": ""
     },
     {
