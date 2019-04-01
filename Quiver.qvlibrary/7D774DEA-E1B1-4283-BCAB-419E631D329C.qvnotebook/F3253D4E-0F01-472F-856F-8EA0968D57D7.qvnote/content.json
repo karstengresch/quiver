@@ -77,7 +77,7 @@
     },
     {
       "type": "text",
-      "data": "Subdomain fails b.t.w., at least w/ a local installation. So use:"
+      "data": "Subdomain fails b.t.w., at least w/ a local installation. So use at least as a workaround:"
     },
     {
       "type": "code",
