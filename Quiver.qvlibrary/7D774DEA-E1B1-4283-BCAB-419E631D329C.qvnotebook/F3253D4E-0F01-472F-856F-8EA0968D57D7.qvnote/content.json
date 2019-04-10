@@ -47,11 +47,12 @@
     },
     {
       "type": "text",
-      "data": ""
+      "data": "<h3>Setting up the Wildcard Router</h3>"
     },
     {
-      "type": "text",
-      "data": ""
+      "type": "code",
+      "language": "sh",
+      "data": "oc login -u system:admin\noc adm policy add-scc-to-user hostnetwork -z router\noc adm router\noc set env dc/router ROUTER_ALLOW_WILDCARD_ROUTES=true"
     },
     {
       "type": "text",
