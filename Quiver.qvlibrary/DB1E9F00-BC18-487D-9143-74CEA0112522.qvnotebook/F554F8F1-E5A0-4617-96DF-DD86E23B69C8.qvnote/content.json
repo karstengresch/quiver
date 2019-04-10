@@ -17,6 +17,14 @@
     {
       "type": "text",
       "data": "<b>Will, of course, delete the entire .minishift installation!</b>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>-- Downloading OpenShift Container Platform client binary 'oc'</h3><h3>Error starting the cluster: Error attempting to download and cache oc: https://mirror.openshift.com/pub/openshift-v3/clients/3.11.88/macosx/oc.tar.gz url is inaccessible</h3>"
+    },
+    {
+      "type": "text",
+      "data": "Download the oc binary and move it to ~/.minishift/cache/oc/&lt;oc version, e.g. v3.11.88&gt;/"
     }
   ]
 }
