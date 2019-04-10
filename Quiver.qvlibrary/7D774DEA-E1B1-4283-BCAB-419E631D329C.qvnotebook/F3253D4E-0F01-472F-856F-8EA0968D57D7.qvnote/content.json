@@ -56,6 +56,19 @@
     },
     {
       "type": "text",
+      "data": "Here, the router fails because of a blocked port (1936?)."
+    },
+    {
+      "type": "text",
+      "data": "Perhaps this helps out:"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc adm router --replicas=0 --ports='10080:10080,10443:10443' \n$ oc set env dc/router ROUTER_SERVICE_HTTP_PORT=10080  \\\n                   ROUTER_SERVICE_HTTPS_PORT=10443\n$ oc scale dc/router --replicas=1"
+    },
+    {
+      "type": "text",
       "data": ""
     },
     {
@@ -84,6 +97,10 @@
       "type": "code",
       "language": "sh",
       "data": "oc new-app -f ./amp/amp-eval-tech-preview.yml --param WILDCARD_DOMAIN=192.168.65.11"
+    },
+    {
+      "type": "text",
+      "data": ""
     },
     {
       "type": "text",
