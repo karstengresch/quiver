@@ -1,0 +1,32 @@
+{
+  "title": "Troubleshooting",
+  "cells": [
+    {
+      "type": "text",
+      "data": "I get..."
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git@github.com: Permission denied (publickey).\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists."
+    },
+    {
+      "type": "text",
+      "data": "Answer: Beside wrong SSH keys (see&nbsp;<a href=\"https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\">https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a>), this could also be caused by the remote URL, e.g.&nbsp;"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": ">git remote -v\norigin\tgit@github.com:username/reponame.git (fetch)\norigin\tgit@github.com:username/reponame.git (push)"
+    },
+    {
+      "type": "text",
+      "data": "Solution:"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git remote set-url origin https://github.com/username/reponame.git"
+    }
+  ]
+}
