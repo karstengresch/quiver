@@ -21,7 +21,16 @@
     },
     {
       "type": "text",
-      "data": "<div>To get the latest version from the master branch of the originating rep, run:</div>"
+      "data": "<div>If you want to change the origin:&nbsp;</div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git remote set-url origin https://github.com/FORK_OWNER/REPOSITORY_NAME.git"
+    },
+    {
+      "type": "text",
+      "data": "To get the latest version from the master branch of the originating rep, run:"
     },
     {
       "type": "code",

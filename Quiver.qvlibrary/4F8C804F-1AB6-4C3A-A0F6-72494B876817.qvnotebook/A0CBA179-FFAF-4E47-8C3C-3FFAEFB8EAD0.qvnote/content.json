@@ -128,6 +128,36 @@
       "type": "code",
       "language": "sh",
       "data": "    override func viewDidLoad() {\n        super.viewDidLoad()\n        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: \"<your cell identifier>\")\n    }"
+    },
+    {
+      "type": "text",
+      "data": "<h2>Encountered an error communicating with IBAgent-iOS.<br></h2>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "osascript -e 'tell application \"iOS Simulator\" to quit'\nosascript -e 'tell application \"Simulator\" to quit'\nxcrun simctl erase all"
+    },
+    {
+      "type": "text",
+      "data": "(Source:&nbsp;<a href=\"https://gist.github.com/ZevEisenberg/5a172662cb576872d1ab\">https://gist.github.com/ZevEisenberg/5a172662cb576872d1ab</a>)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "cd /Applications/Xcode.app\ncd Contents/Developer/Platforms/iPhoneSimulator.platform  \ncd Developer/SDKs/iPhoneSimulator.sdk/usr/lib  \nsudo mv dyld_sim dyld_sim.orig  "
+    },
+    {
+      "type": "text",
+      "data": "(Source:&nbsp;<a href=\"https://stackoverflow.com/a/31946217\">https://stackoverflow.com/a/31946217</a>)"
+    },
+    {
+      "type": "text",
+      "data": "KG: Reset NVRAM (Alt-Cmd-P-R after shutdown + start)"
+    },
+    {
+      "type": "text",
+      "data": ""
     }
   ]
 }

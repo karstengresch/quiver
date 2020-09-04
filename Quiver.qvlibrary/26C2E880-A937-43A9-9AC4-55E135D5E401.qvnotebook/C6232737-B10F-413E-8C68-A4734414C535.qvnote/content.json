@@ -1,0 +1,18 @@
+{
+  "title": "Branching + Merging",
+  "cells": [
+    {
+      "type": "text",
+      "data": "Base documentation:&nbsp;<a href=\"https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging\">https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging</a>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git checkout -b mybranch\n# same as:\n# git branch mybranch && git checkout mybranch"
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}
