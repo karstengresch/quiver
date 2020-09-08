@@ -22,6 +22,145 @@
       "data": "curl http://localhost:8080/api/inventory | jq"
     },
     {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn -q quarkus:add-extension -Dextensions=\"jdbc-postgresql\" -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/inventory-service"
+    },
+    {
+      "type": "text",
+      "data": "<div class=\"paragraph\">\n<p>Click on <strong>Instantiate Template</strong> and fill in the following fields, leaving the others as their default values:</p>\n</div>\n<div class=\"ulist\">\n<ul>\n<li>\n<p><strong>Namespace</strong>: <em>choose <code>user1-cloudnativeapps</code> for the first Namespace. Leave the second one as `openshift`</em></p>\n</li>\n<li>\n<p><strong>Database Service Name</strong>: <code>inventory-database</code></p>\n</li>\n<li>\n<p><strong>PostgreSQL Connection Username</strong>: <code>inventory</code></p>\n</li>\n<li>\n<p><strong>PostgreSQL Connection Password</strong>: <code>mysecretpassword</code></p>\n</li>\n<li>\n<p><strong>PostgreSQL Database Name</strong>: <code>inventory</code></p>\n</li>\n</ul></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc project user1-cloudnativeapps && \\\nmvn clean compile package -DskipTests -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/inventory-service"
+    },
+    {
+      "type": "text",
+      "data": "(After BUILD SUCCESS)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc rollout status -w dc/inventory"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc label dc/inventory app.kubernetes.io/part-of=inventory --overwrite && \\\noc label dc/inventory-database app.kubernetes.io/part-of=inventory app.openshift.io/runtime=postgresql --overwrite && \\\noc annotate dc/inventory app.openshift.io/connects-to=inventory-database --overwrite && \\\noc annotate dc/inventory app.openshift.io/vcs-ref=ocp-4.5 --overwrite"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn clean package spring-boot:repackage -DskipTests -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/catalog-service"
+    },
+    {
+      "type": "text",
+      "data": "<div class=\"paragraph\">\n<p>Click on <strong>Instantiate Template</strong> and fill in the following fields, leaving the others as their default values:</p>\n</div>\n<div class=\"ulist\">\n<ul>\n<li>\n<p><strong>Namespace</strong>: <em>choose <code>user1-cloudnativeapps</code> for the first Namespace. Leave the second one as `openshift`</em></p>\n</li>\n<li>\n<p><strong>Database Service Name</strong>: <code>catalog-database</code></p>\n</li>\n<li>\n<p><strong>PostgreSQL Connection Username</strong>: <code>catalog</code></p>\n</li>\n<li>\n<p><strong>PostgreSQL Connection Password</strong>: <code>mysecretpassword</code></p>\n</li>\n<li>\n<p><strong>PostgreSQL Database Name</strong>: <code>catalog</code></p>\n</li>\n</ul></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc new-build registry.access.redhat.com/ubi8/openjdk-11 --binary --name=catalog -l app=catalog"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc start-build catalog --from-file=$CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/catalog-service/target/catalog-1.0.0-SNAPSHOT.jar --follow"
+    },
+    {
+      "type": "text",
+      "data": "Catalog Service"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc new-app catalog --as-deployment-config -e JAVA_OPTS_APPEND='-Dspring.profiles.active=openshift' && oc expose service catalog && \\\noc label dc/catalog app.kubernetes.io/part-of=catalog app.openshift.io/runtime=spring --overwrite && \\\noc label dc/catalog-database app.kubernetes.io/part-of=catalog app.openshift.io/runtime=postgresql --overwrite && \\\noc annotate dc/catalog app.openshift.io/connects-to=inventory,catalog-database --overwrite && \\\noc annotate dc/catalog app.openshift.io/vcs-uri=https://github.com/RedHat-Middleware-Workshops/cloud-native-workshop-v2m4-labs.git --overwrite && \\\noc annotate dc/catalog app.openshift.io/vcs-ref=ocp-4.5 --overwrite"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc new-app --as-deployment-config jboss/infinispan-server:10.0.0.Beta3 --name=datagrid-service"
+    },
+    {
+      "type": "text",
+      "data": "(Code changes)"
+    },
+    {
+      "type": "text",
+      "data": "Cart Service"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn -q quarkus:add-extension -Dextensions=\"openshift\" -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/cart-service"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn clean package -DskipTests -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/cart-service"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc rollout status -w dc/cart"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc label dc/cart app.kubernetes.io/part-of=cart app.openshift.io/runtime=quarkus --overwrite && \\\noc label dc/datagrid-service app.kubernetes.io/part-of=cart app.openshift.io/runtime=datagrid --overwrite && \\\noc annotate dc/cart app.openshift.io/connects-to=catalog,datagrid-service --overwrite && \\\noc annotate dc/cart app.openshift.io/vcs-ref=ocp-4.5 --overwrite"
+    },
+    {
+      "type": "text",
+      "data": "Order Service"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn -q quarkus:add-extension -Dextensions=\"resteasy-jsonb,mongodb-client\" -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/order-service"
+    },
+    {
+      "type": "text",
+      "data": "(Code changes)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc new-app --as-deployment-config -n user1-cloudnativeapps --docker-image mongo:4.0 --name=order-database"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn clean package -DskipTests -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/order-service"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc rollout status -w dc/order"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc label dc/order app.kubernetes.io/part-of=order --overwrite && \\\noc label dc/order-database app.kubernetes.io/part-of=order app.openshift.io/runtime=mongodb --overwrite && \\\noc annotate dc/order app.openshift.io/connects-to=order-database --overwrite && \\\noc annotate dc/order app.openshift.io/vcs-ref=ocp-4.5 --overwrite"
+    },
+    {
+      "type": "text",
+      "data": "(Check empty result)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "curl -s http://order-user1-cloudnativeapps.apps.cluster-e202.e202.sandbox674.opentlc.com/api/orders | jq"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
       "type": "text",
       "data": ""
     },
