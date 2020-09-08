@@ -1,0 +1,33 @@
+{
+  "title": "Module 4",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git clone https://github.com/karstengresch/cloud-native-workshop-v2m4-labs.git"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "cd $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs && git checkout ocp-4.5"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn quarkus:dev -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/inventory-service"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "curl http://localhost:8080/api/inventory | jq"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}
