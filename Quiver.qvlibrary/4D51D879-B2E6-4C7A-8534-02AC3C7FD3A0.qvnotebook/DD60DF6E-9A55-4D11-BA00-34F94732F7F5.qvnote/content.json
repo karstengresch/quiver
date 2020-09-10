@@ -101,6 +101,10 @@
       "data": "mvn clean package -DskipTests -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/cart-service"
     },
     {
+      "type": "text",
+      "data": "(if push hangs, Ctrl+C and re-run command)"
+    },
+    {
       "type": "code",
       "language": "sh",
       "data": "oc rollout status -w dc/cart"
@@ -134,6 +138,10 @@
       "data": "mvn clean package -DskipTests -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/order-service"
     },
     {
+      "type": "text",
+      "data": "(if push hangs, Ctrl+C and re-run command)"
+    },
+    {
       "type": "code",
       "language": "sh",
       "data": "oc rollout status -w dc/order"
@@ -151,6 +159,168 @@
       "type": "code",
       "language": "sh",
       "data": "curl -s http://order-user1-cloudnativeapps.apps.cluster-e202.e202.sandbox674.opentlc.com/api/orders | jq"
+    },
+    {
+      "type": "text",
+      "data": "UI"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "cd $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/coolstore-ui && npm install --save-dev nodeshift"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "npm run nodeshift && oc expose svc/coolstore-ui && \\\noc label dc/coolstore-ui app.kubernetes.io/part-of=coolstore --overwrite && \\\noc annotate dc/coolstore-ui app.openshift.io/connects-to=order-cart,catalog,inventory,order --overwrite && \\\noc annotate dc/coolstore-ui app.openshift.io/vcs-uri=https://github.com/RedHat-Middleware-Workshops/cloud-native-workshop-v2m4-labs.git --overwrite && \\\noc annotate dc/coolstore-ui app.openshift.io/vcs-ref=ocp-4.5 --overwrite"
+    },
+    {
+      "type": "text",
+      "data": "(Add messaging)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn -q quarkus:add-extension -Dextensions=\"kafka\" -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/payment-service"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn clean package -DskipTests -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/payment-service"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc rollout status -w dc/payment"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc label dc/payment app.kubernetes.io/part-of=payment --overwrite && \\\noc annotate dc/payment app.openshift.io/connects-to=my-cluster --overwrite && \\\noc annotate dc/payment app.openshift.io/vcs-ref=ocp-4.5 --overwrite"
+    },
+    {
+      "type": "text",
+      "data": "(Kafka Client)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn -q quarkus:add-extension -Dextensions=\"kafka\" -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/cart-service"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn clean package -DskipTests -DskipTests -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/cart-service && \\\noc label dc/cart app.kubernetes.io/part-of=cart --overwrite &&  \\\noc annotate dc/cart app.openshift.io/connects-to=my-cluster,datagrid-service --overwrite"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn -q quarkus:add-extension -Dextensions=\"kafka\" -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/order-service"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn clean package -DskipTests -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/order-service && \\\noc label dc/order app.kubernetes.io/part-of=order --overwrite &&  \\\noc annotate dc/order app.openshift.io/connects-to=my-cluster,order-database --overwrite"
+    },
+    {
+      "type": "text",
+      "data": "Serverless"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "echo $GRAALVM_HOME"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mkdir /tmp/hello && cd /tmp/hello && \\\nmvn io.quarkus:quarkus-maven-plugin:1.3.4.Final-redhat-00001:create \\\n    -DprojectGroupId=org.acme \\\n    -DprojectArtifactId=getting-started \\\n    -DplatformGroupId=com.redhat.quarkus \\\n    -DplatformVersion=1.3.4.Final-redhat-00001 \\\n    -DclassName=\"org.acme.quickstart.GreetingResource\" \\\n    -Dpath=\"/hello\""
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn -f /tmp/hello/getting-started/pom.xml clean package -Pnative -DskipTests"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "readelf -h /tmp/hello/getting-started/target/*-runner"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "/tmp/hello/getting-started/target/*-runner"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "ps -o pid,rss,command -p $(pgrep -f runner)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "curl -i http://localhost:8080/hello"
+    },
+    {
+      "type": "text",
+      "data": "Remove old services"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc delete bc/payment imagestream.image.openshift.io/payment"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc delete dc/payment route/payment svc/payment"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn clean package -Pnative -DskipTests -f $CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/payment-service"
+    },
+    {
+      "type": "text",
+      "data": "(&lt;- will take a while!)"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc new-build quay.io/quarkus/ubi-quarkus-native-binary-s2i:1.0 --binary --name=payment -l app=payment"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc start-build payment --from-file=$CHE_PROJECTS_ROOT/cloud-native-workshop-v2m4-labs/payment-service/target/payment-1.0-SNAPSHOT-runner --follow"
+    },
+    {
+      "type": "text",
+      "data": "<div class=\"paragraph\">\n<p>Fill out the following variables to deploy <em>Payment Image</em> that you just built then click on <strong>Create</strong>:</p>\n</div>\n<div class=\"ulist\">\n<ul>\n<li>\n<p>Image stream tag from internal registry: <strong>Checked</strong></p>\n</li>\n<li>\n<p>Projects: <strong>user1-cloudnativeapps</strong></p>\n</li>\n<li>\n<p>ImageStreams: <strong>payment</strong></p>\n</li>\n<li>\n<p>Tag: <strong>latest</strong></p>\n</li>\n<li>\n<p>Application: <strong>Create Application</strong></p>\n</li>\n<li>\n<p>Application Name: <strong>payment</strong></p>\n</li>\n<li>\n<p>Name: <strong>payment</strong></p>\n</li>\n<li>\n<p>Knative Service: <strong>Checked</strong></p>\n</li>\n</ul></div>"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
     },
     {
       "type": "text",
