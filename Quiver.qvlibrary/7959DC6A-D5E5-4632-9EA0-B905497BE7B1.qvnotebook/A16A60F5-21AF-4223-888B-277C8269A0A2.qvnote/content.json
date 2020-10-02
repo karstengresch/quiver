@@ -1,5 +1,5 @@
 {
-  "title": "Setup (incl. installation and environments)",
+  "title": "Setup (installation, environments)",
   "cells": [
     {
       "type": "text",
@@ -7,7 +7,7 @@
     },
     {
       "type": "text",
-      "data": "<h3>macOS Setup</h3>"
+      "data": "<h2>macOS Setup</h2>"
     },
     {
       "type": "text",
@@ -20,7 +20,11 @@
     },
     {
       "type": "text",
-      "data": "<h3>Virtual Environments</h3>"
+      "data": "<h2>Virtual Environments</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>pip</h3>"
     },
     {
       "type": "code",
@@ -64,7 +68,7 @@
     },
     {
       "type": "text",
-      "data": "Virtualenv (lower level)"
+      "data": "<h3>Virtualenv (lower level)</h3>"
     },
     {
       "type": "code",
