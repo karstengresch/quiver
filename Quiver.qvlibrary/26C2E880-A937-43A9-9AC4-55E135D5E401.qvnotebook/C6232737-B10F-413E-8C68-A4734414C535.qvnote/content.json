@@ -12,6 +12,33 @@
     },
     {
       "type": "text",
+      "data": "<b>List all branches</b>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git branch -a"
+    },
+    {
+      "type": "text",
+      "data": "<b>List remote branches</b>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git branch -r"
+    },
+    {
+      "type": "text",
+      "data": "<b>Detailed branch information</b>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "git show-branch (-r|-all)"
+    },
+    {
+      "type": "text",
       "data": ""
     }
   ]

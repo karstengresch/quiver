@@ -47,6 +47,23 @@
     },
     {
       "type": "text",
+      "data": "<h3>Username/PW Persistence</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "# Completely insecure:\n# git config --global user.name \"your username\"\n# git config --global user.password \"your password\"\n# Insecure - saves plaintext PW:\n# git config --global credential.helper store\n# Redo when creating/changing:\n# git pull \n# With timeout - more secure: \ngit config credential.helper cache <timeout>\n# =>use SSH keys whenever possible!"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
       "data": ""
     },
     {
