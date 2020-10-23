@@ -1,5 +1,5 @@
 {
-  "title": "Troubleshooting",
+  "title": "OpenShift Troubleshooting",
   "cells": [
     {
       "type": "text",
@@ -36,6 +36,18 @@
       "type": "code",
       "language": "sh",
       "data": "export ENABLE_MINISHIFT_EXPERIMENTAL=y"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Project deleted, but stays in terminating state</h3>"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
     },
     {
       "type": "text",
