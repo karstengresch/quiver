@@ -43,6 +43,28 @@
     },
     {
       "type": "text",
+      "data": "<a href=\"https://www.redhat.com/sysadmin/openshift-terminating-state\">https://www.redhat.com/sysadmin/openshift-terminating-state</a><div><a href=\"https://access.redhat.com/solutions/4165791\">https://access.redhat.com/solutions/4165791</a></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc delete project <project name> --force --grace-period=0\n# check\noc get project <project name> -o yaml\n# if result hast finalizers: - kubernetes and status->phase: Terminating, start troubleshooting\n# list all items in namespace:\noc api-resources --verbs=list --namespaced -o name | xargs -n 1 oc get --show-kind --ignore-not-found -n $PROJECT_NAME\n# use this when failing:\noc api-resources --verbs=list --cached --namespaced -o name | xargs -n 1 oc get --show-kind --ignore-not-found -n $PROJECT_NAME\n# try deleting every resource and troubleshoot failures"
+    },
+    {
+      "type": "text",
+      "data": "For Che/CRW:"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc delete checluster codeready-workspaces --namespace=$PROJECT_NAME"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
       "data": ""
     },
     {
