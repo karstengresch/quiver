@@ -61,6 +61,15 @@
     },
     {
       "type": "text",
+      "data": "Hardcore"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc get project <project name> -o yaml > delete.yaml\n# Remove all lines under \"finalizers\", normally \"  - kubernetes\"\noc proxy &\ncurl -k -H \"Content-Type: application/yaml\" -X PUT --data-binary @delete.yaml http://127.0.0.1:8001/api/v1/namespaces/PROJECT-NAMESPACE/finalize\n# Same terminal!\nkill -9 %%"
+    },
+    {
+      "type": "text",
       "data": ""
     },
     {

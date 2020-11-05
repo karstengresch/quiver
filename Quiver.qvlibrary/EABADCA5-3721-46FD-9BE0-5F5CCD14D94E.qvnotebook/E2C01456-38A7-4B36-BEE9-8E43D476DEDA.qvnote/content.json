@@ -8,6 +8,18 @@
     {
       "type": "text",
       "data": "Via REST API!"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Certificate Problem</h3>"
+    },
+    {
+      "type": "text",
+      "data": "When trying to access the dashboard, an error \"Authorization token is missing. Click here to reload page.\" is displayed.<div>This is due to a self-signed cert.</div><div><br></div><div>Solution for FF as per:&nbsp;<a href=\"https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.4/html-single/end-user_guide/index#adding_certificates_to_firefox\">https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.4/html-single/end-user_guide/index#adding_certificates_to_firefox</a></div>"
+    },
+    {
+      "type": "text",
+      "data": "Save cert.<div>about:preferences</div><div>search for \"certificates\"</div><div>View Certificates</div><div>Authorities =&gt; Import</div>"
     }
   ]
 }
