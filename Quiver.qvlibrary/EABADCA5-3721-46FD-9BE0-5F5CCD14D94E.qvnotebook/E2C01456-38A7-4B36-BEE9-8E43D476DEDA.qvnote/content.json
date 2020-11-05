@@ -20,6 +20,15 @@
     {
       "type": "text",
       "data": "Save cert.<div>about:preferences</div><div>search for \"certificates\"</div><div>View Certificates</div><div>Authorities =&gt; Import</div>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>gradlew not working</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "# general check\ngradle\n# when working\ngradle wrapper\n# when successful, this should now work:\n./gradlew"
     }
   ]
 }
