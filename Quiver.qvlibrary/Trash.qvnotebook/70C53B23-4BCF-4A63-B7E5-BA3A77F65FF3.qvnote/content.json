@@ -1,0 +1,31 @@
+{
+  "title": "iPaaS / Syndesis",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<b>Developer Setup</b>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc create -f https://raw.githubusercontent.com/syndesisio/syndesis-openshift-templates/master/syndesis-dev-restricted.yml\noc create -f https://raw.githubusercontent.com/syndesisio/syndesis-openshift-templates/master/support/serviceaccount-as-oauthclient-restricted.yml\noc new-app syndesis-dev-restricted \\\n    -p ROUTE_HOSTNAME=syndesis.$(minishift ip).nip.io \\\n    -p OPENSHIFT_MASTER=$(oc whoami --show-server) \\\n    -p OPENSHIFT_PROJECT=$(oc project -q) \\\n    -p OPENSHIFT_OAUTH_CLIENT_SECRET=$(oc sa get-token syndesis-oauth-client)"
+    },
+    {
+      "type": "text",
+      "data": "<b>Pure User Setup</b>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "oc create -f https://raw.githubusercontent.com/syndesisio/syndesis-openshift-templates/master/syndesis-restricted.yml\noc create -f https://raw.githubusercontent.com/syndesisio/syndesis-openshift-templates/master/support/serviceaccount-as-oauthclient-restricted.yml\noc new-app syndesis-restricted \\\n    -p ROUTE_HOSTNAME=syndesis.$(minishift ip).nip.io \\\n    -p OPENSHIFT_MASTER=$(oc whoami --show-server) \\\n    -p OPENSHIFT_PROJECT=$(oc project -q) \\\n    -p OPENSHIFT_OAUTH_CLIENT_SECRET=$(oc sa get-token syndesis-oauth-client)"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}
