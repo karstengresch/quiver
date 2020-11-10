@@ -1,0 +1,17 @@
+{
+  "title": "General Setup for Native Compilation",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2>Local</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<div># should point to&nbsp;</div>echo $JAVA_HOME<div><br></div>"
+    },
+    {
+      "type": "text",
+      "data": "<br>"
+    }
+  ]
+}

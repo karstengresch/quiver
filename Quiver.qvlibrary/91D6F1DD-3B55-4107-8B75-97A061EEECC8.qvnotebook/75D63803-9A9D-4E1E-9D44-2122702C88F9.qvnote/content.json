@@ -1,0 +1,9 @@
+{
+  "title": "General",
+  "cells": [
+    {
+      "type": "text",
+      "data": "Good article from fellow IBMer&nbsp;<a href=\"http://heidloff.net/article/deploying-quarkus-applications-on-openshift-without-local-setup/\" style=\"color: rgb(128, 187, 255);\">http://heidloff.net/article/deploying-quarkus-applications-on-openshift-without-local-setup/</a>"
+    }
+  ]
+}
