@@ -1,0 +1,26 @@
+{
+  "title": "Unlocking Guide (macOS)",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<a href=\"https://doc.e.foundation/devices/FP3/install\">https://doc.e.foundation/devices/FP3/install</a>"
+    },
+    {
+      "type": "text",
+      "data": "<a href=\"https://www.fairphone.com/en/bootloader-unlocking-code-for-fairphone-3/\">https://www.fairphone.com/en/bootloader-unlocking-code-for-fairphone-3/</a>"
+    },
+    {
+      "type": "text",
+      "data": "<a href=\"https://support.fairphone.com/hc/en-us/articles/360048646311-Manage-the-bootloader-of-your-FP3-FP3-\">https://support.fairphone.com/hc/en-us/articles/360048646311-Manage-the-bootloader-of-your-FP3-FP3-</a>"
+    },
+    {
+      "type": "text",
+      "data": "<a href=\"https://stackoverflow.com/questions/23081263/adb-android-device-unauthorized\">https://stackoverflow.com/questions/23081263/adb-android-device-unauthorized</a>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "adb reboot bootloader\n\nfastboot flashing unlock\n\nfastboot -w\nfastboot flash system_a system.img -S 522239K\nfastboot flash boot_a boot.img\nfastboot flash vendor_a vendor.img -S 522239K\nfastboot flash dtbo_a dtbo.img\nfastboot flash vbmeta_a vbmeta.img\n\nfastboot flash system_b system.img -S 522239K\nfastboot flash boot_b boot.img\nfastboot flash vendor_b vendor.img -S 522239K\nfastboot flash dtbo_b dtbo.img\nfastboot flash vbmeta_b vbmeta.img\n\nfastboot flashing lock"
+    }
+  ]
+}
