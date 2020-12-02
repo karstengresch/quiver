@@ -1,0 +1,70 @@
+{
+  "title": "JDK on macOS",
+  "cells": [
+    {
+      "type": "text",
+      "data": "Use<div><br></div><div><ul><li>SDKMAN,&nbsp;<a href=\"https://sdkman.io/\">https://sdkman.io/</a>&nbsp;and</li><li>jEnv,&nbsp;<a href=\"https://www.jenv.be/\">https://www.jenv.be/</a>.</li></ul></div>"
+    },
+    {
+      "type": "text",
+      "data": "Check which SDKs are avalable"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "$>sdk list java\n================================================================================\nAvailable Java Versions\n================================================================================\n Vendor        | Use | Version      | Dist    | Status     | Identifier\n--------------------------------------------------------------------------------\n AdoptOpenJDK  |     | 15.0.1.j9    | adpt    |            | 15.0.1.j9-adpt\n               |     | 15.0.1.hs    | adpt    |            | 15.0.1.hs-adpt\n               |     | 14.0.2.j9    | adpt    |            | 14.0.2.j9-adpt\n               |     | 14.0.2.hs    | adpt    |            | 14.0.2.hs-adpt\n               |     | 13.0.2.j9    | adpt    |            | 13.0.2.j9-adpt\n               |     | 13.0.2.hs    | adpt    |            | 13.0.2.hs-adpt\n               |     | 12.0.2.j9    | adpt    |            | 12.0.2.j9-adpt\n               |     | 12.0.2.hs    | adpt    |            | 12.0.2.hs-adpt\n               |     | 11.0.9.j9    | adpt    |            | 11.0.9.j9-adpt\n               |     | 11.0.9.hs    | adpt    |            | 11.0.9.hs-adpt\n               |     | 8.0.275.j9   | adpt    |            | 8.0.275.j9-adpt\n               |     | 8.0.275.hs   | adpt    |            | 8.0.275.hs-adpt\n               |     | 8.0.272.hs   | adpt    |            | 8.0.272.hs-adpt\n Amazon        |     | 15.0.1       | amzn    |            | 15.0.1-amzn\n               |     | 11.0.9       | amzn    |            | 11.0.9-amzn\n               |     | 8.0.275      | amzn    |            | 8.0.275-amzn\n Azul Zulu     |     | 15.0.1       | zulu    |            | 15.0.1-zulu\n               |     | 15.0.1.fx    | zulu    |            | 15.0.1.fx-zulu\n               |     | 14.0.2       | zulu    |            | 14.0.2-zulu\n               |     | 14.0.2.fx    | zulu    |            | 14.0.2.fx-zulu\n               |     | 13.0.5       | zulu    |            | 13.0.5-zulu\n               |     | 13.0.5.fx    | zulu    |            | 13.0.5.fx-zulu\n               |     | 12.0.2       | zulu    |            | 12.0.2-zulu\n               |     | 11.0.9       | zulu    |            | 11.0.9-zulu\n               |     | 11.0.9.fx    | zulu    |            | 11.0.9.fx-zulu\n               |     | 10.0.2       | zulu    |            | 10.0.2-zulu\n               |     | 9.0.7        | zulu    |            | 9.0.7-zulu\n               |     | 8.0.272      | zulu    |            | 8.0.272-zulu\n               |     | 8.0.272.fx   | zulu    |            | 8.0.272.fx-zulu\n               |     | 8.0.202      | zulu    |            | 8.0.202-zulu\n               |     | 7.0.282      | zulu    |            | 7.0.282-zulu\n               |     | 7.0.181      | zulu    |            | 7.0.181-zulu\n BellSoft      |     | 15.0.1.fx    | librca  |            | 15.0.1.fx-librca\n               |     | 15.0.1       | librca  |            | 15.0.1-librca\n               |     | 14.0.2.fx    | librca  |            | 14.0.2.fx-librca\n               |     | 14.0.2       | librca  |            | 14.0.2-librca\n               |     | 13.0.2.fx    | librca  |            | 13.0.2.fx-librca\n               |     | 13.0.2       | librca  |            | 13.0.2-librca\n               |     | 12.0.2       | librca  |            | 12.0.2-librca\n               |     | 11.0.9.fx    | librca  |            | 11.0.9.fx-librca\n               |     | 11.0.9       | librca  |            | 11.0.9-librca\n               |     | 8.0.275.fx   | librca  |            | 8.0.275.fx-librca\n               |     | 8.0.275      | librca  |            | 8.0.275-librca\n               |     | 8.0.265.fx   | librca  |            | 8.0.265.fx-librca\n GraalVM       |     | 20.3.0.r11   | grl     |            | 20.3.0.r11-grl\n               |     | 20.3.0.r8    | grl     |            | 20.3.0.r8-grl\n               |     | 20.2.0.r11   | grl     | installed  | 20.2.0.r11-grl\n               |     | 20.2.0.r8    | grl     |            | 20.2.0.r8-grl\n               |     | 20.1.0.r11   | grl     |            | 20.1.0.r11-grl\n               |     | 20.1.0.r8    | grl     |            | 20.1.0.r8-grl\n               |     | 20.0.0.r11   | grl     |            | 20.0.0.r11-grl\n               |     | 20.0.0.r8    | grl     |            | 20.0.0.r8-grl\n               |     | 19.3.4.r11   | grl     | installed  | 19.3.4.r11-grl\n               |     | 19.3.4.r8    | grl     |            | 19.3.4.r8-grl\n               |     | 19.3.1.r11   | grl     | installed  | 19.3.1.r11-grl\n               |     | 19.3.1.r8    | grl     |            | 19.3.1.r8-grl\n               |     | 19.2.1       | grl     | local only | 19.2.1-grl\n               |     | 1.0.0        | grl     | local only | 1.0.0-rc-15-grl\n Java.net      |     | 16.ea.26     | open    |            | 16.ea.26-open\n               |     | 16.ea.7.lm   | open    |            | 16.ea.7.lm-open\n               |     | 16.ea.2.pma  | open    |            | 16.ea.2.pma-open\n               |     | 15.0.1       | open    |            | 15.0.1-open\n               |     | 14.0.2       | open    |            | 14.0.2-open\n               |     | 13.0.2       | open    |            | 13.0.2-open\n               |     | 12.0.2       | open    |            | 12.0.2-open\n               | >>> | 11.0.2       | open    | installed  | 11.0.2-open\n               |     | 10.0.2       | open    |            | 10.0.2-open\n               |     | 9.0.4        | open    |            | 9.0.4-open\n SAP           |     | 15.0.1       | sapmchn |            | 15.0.1-sapmchn\n               |     | 14.0.2       | sapmchn |            | 14.0.2-sapmchn\n               |     | 13.0.2       | sapmchn |            | 13.0.2-sapmchn\n               |     | 12.0.2       | sapmchn |            | 12.0.2-sapmchn\n               |     | 11.0.9       | sapmchn |            | 11.0.9-sapmchn\n TravaOpenJDK  |     | 11.0.9       | trava   |            | 11.0.9-trava\n               |     | 8.0.232      | trava   |            | 8.0.232-trava\n================================================================================\nUse the Identifier for installation:\n\n    $ sdk install java 11.0.3.hs-adpt\n================================================================================"
+    },
+    {
+      "type": "text",
+      "data": "Install JDK with SDKMAN:"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "# Usage: \n# sdk install java <version>-<flavor>\n# e.g. AdoptOpenJDK w/ J9, use \"hs\" for HotSpot\nsdk install java 11.0.9.j9-adpt"
+    },
+    {
+      "type": "text",
+      "data": "Unfortunately, there's no macOS <i>Red Hat Build of OpenJDK</i> (<a href=\"https://developers.redhat.com/products/openjdk/overview\">https://developers.redhat.com/products/openjdk/overview</a>) and, thus, not available on SDKman (I assume)."
+    },
+    {
+      "type": "text",
+      "data": "Make the installed JDK default:"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "# Usage:\n# sdk default java <version>-<flavor>\n# e.g. Oracle build of OpenJDK\nsdk default java 11.0.2-open"
+    },
+    {
+      "type": "text",
+      "data": "When using jEnv"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "# get installation path ls -al ~/.sdkman/candidates/java/current\n# e.g.\n#  /Users/user/.sdkman/candidates/java/11.0.2-open\n# set jEnv to it\njenv add  /Users/karsten/.sdkman/candidates/java/11.0.2-open"
+    },
+    {
+      "type": "text",
+      "data": "OR"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "# set SDK link to it\njenv add  /Users/karsten/.sdkman/candidates/java/current\n# do this whenever config has changed\njenv rehash"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}
