@@ -1,0 +1,29 @@
+{
+  "title": "Homebrew (brew)",
+  "cells": [
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "# fix/review problems\n>brew doctor\n# => carefully read the warnings here!"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "# aka `brew prune` before\n>brew cleanup"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "# latest version of Homebrew itself:\n>brew update"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "# Update installed software\nbrew upgrade\n# =>check the warnings and instructions here!"
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}

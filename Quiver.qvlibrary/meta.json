@@ -110,6 +110,14 @@
       "uuid" : "40655640-60DA-4C26-9AC7-9043AD97339E"
     },
     {
+      "children" : [
+        {
+          "uuid" : "05FC86EB-540D-4FB5-AF1C-9643B0DCD444"
+        },
+        {
+          "uuid" : "A5B41C10-574C-4530-AAC2-D5FC3FA12154"
+        }
+      ],
       "uuid" : "DBB9BEF3-4F7F-4671-A4A5-59B4ABF7034C"
     },
     {

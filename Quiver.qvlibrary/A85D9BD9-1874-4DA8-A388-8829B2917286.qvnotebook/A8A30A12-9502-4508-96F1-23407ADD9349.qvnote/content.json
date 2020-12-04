@@ -1,9 +1,42 @@
 {
-  "title": "Visual Studio Code",
+  "title": "VSCodium (Visual Studio Code)",
   "cells": [
     {
       "type": "text",
+      "data": "<h2>VSCodium specific</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<a href=\"https://www.chrisatmachine.com/Neovim/22-vscodium-neovim/\">https://www.chrisatmachine.com/Neovim/22-vscodium-neovim/</a>"
+    },
+    {
+      "type": "text",
+      "data": "Especially when wanting to not use open-vsx.org only:"
+    },
+    {
+      "type": "text",
+      "data": "Change the&nbsp;extensionsGallery key in <i>product.json</i> (on macOS under&nbsp;<i>/Applications/VSCodium.app/Contents/Resources/app/</i>)"
+    },
+    {
+      "type": "code",
+      "language": "javascript",
+      "data": "    \"serviceUrl\": \"https://marketplace.visualstudio.com/_apis/public/gallery\",\n    \"itemUrl\": \"https://marketplace.visualstudio.com/items\""
+    },
+    {
+      "type": "text",
+      "data": "Restart VSCodium. This approach has the danger to not be legal:&nbsp;<a href=\"https://www.gitpod.io/blog/open-vsx/\">https://www.gitpod.io/blog/open-vsx/</a>"
+    },
+    {
+      "type": "text",
+      "data": "<h2>VSC general</h2>"
+    },
+    {
+      "type": "text",
       "data": "<a href=\"https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf\">https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf</a>"
+    },
+    {
+      "type": "text",
+      "data": ""
     },
     {
       "type": "text",
