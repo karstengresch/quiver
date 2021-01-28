@@ -11,6 +11,23 @@
     },
     {
       "type": "text",
+      "data": "<h3>pyenv: Older versions (3.7-- on&nbsp;2021-01-28) don't compile</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "CFLAGS=\"-I$(brew --prefix openssl)/include -I$(brew --prefix bzip2)/include -I$(brew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include\" LDFLAGS=\"-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib\" pyenv install --patch 3.6.10 < <(curl -sSL https://github.com/python/cpython/commit/8ea6353.patch\\?full_index\\=1)"
+    },
+    {
+      "type": "text",
+      "data": "NB the version number in this command."
+    },
+    {
+      "type": "text",
+      "data": "pyenv issue, see&nbsp;<a href=\"https://github.com/pyenv/pyenv/issues/1737\">https://github.com/pyenv/pyenv/issues/1737</a>"
+    },
+    {
+      "type": "text",
       "data": ""
     }
   ]

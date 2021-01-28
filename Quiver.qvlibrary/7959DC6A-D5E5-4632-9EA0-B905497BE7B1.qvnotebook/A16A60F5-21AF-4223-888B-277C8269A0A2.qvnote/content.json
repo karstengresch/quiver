@@ -11,12 +11,39 @@
     },
     {
       "type": "text",
-      "data": "When installed w/ brew:"
+      "data": "One way: pyenv, see&nbsp;<a href=\"https://opensource.com/article/19/5/python-3-default-mac\">https://opensource.com/article/19/5/python-3-default-mac</a>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "brew install pyenv\npyenv install 3.x.x\npyenv global 3.x.x\n# .zshrc here or .bash_profile\necho -e 'if command -v pyenv 1>/dev/null 2>&1; then\\n  eval \"$(pyenv init -)\"\\nfi' >> ~/.zshrc\necho 'export PYENV_ROOT=\"$HOME/.pyenv\"' >> ~/.zshrc\necho 'export PATH=\"$PYENV_ROOT/bin:$PATH\"' >> ~/.zshrc\n# home clone\ngit clone https://github.com/pyenv/pyenv.git ~/.pyenv\n# fire!\nexec \"$SHELL\"\n# Check available versions\npyenv install --list\n# Install pyenv-virtuelenv\nbrew install pyenv-virtualenv"
+    },
+    {
+      "type": "text",
+      "data": "When installed w/ brew (not recommended according to the above article) this might be necessary (run brew doctor for problems):"
     },
     {
       "type": "code",
       "language": "sh",
       "data": "brew link python"
+    },
+    {
+      "type": "text",
+      "data": "Check installations"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "ll /usr/local/opt/python/libexec/bin"
+    },
+    {
+      "type": "text",
+      "data": "... should give something like"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "lrwxr-xr-x  1 karsten  admin   26 Dec 15 10:26 easy_install -> ../../bin/easy_install-3.9\nlrwxr-xr-x  1 karsten  admin   58 Dec 15 10:25 idle -> ../../Frameworks/Python.framework/Versions/3.9/bin/idle3.9\nlrwxr-xr-x  1 karsten  admin   14 Dec 15 10:26 pip -> ../../bin/pip3\nlrwxr-xr-x  1 karsten  admin   59 Dec 15 10:25 pydoc -> ../../Frameworks/Python.framework/Versions/3.9/bin/pydoc3.9\nlrwxr-xr-x  1 karsten  admin   60 Dec 15 10:25 python -> ../../Frameworks/Python.framework/Versions/3.9/bin/python3.9\nlrwxr-xr-x  1 karsten  admin   67 Dec 15 10:25 python-config -> ../../Frameworks/Python.framework/Versions/3.9/bin/python3.9-config\nlrwxr-xr-x  1 karsten  admin   16 Dec 15 10:26 wheel -> ../../bin/wheel3"
     },
     {
       "type": "text",
