@@ -30,12 +30,12 @@
     },
     {
       "type": "text",
-      "data": "To get the latest version from the master branch of the originating rep, run:"
+      "data": "To get the latest version from the master branch of the originating repo, run:"
     },
     {
       "type": "code",
       "language": "sh",
-      "data": "git pull upstream master"
+      "data": "git pull origin master"
     },
     {
       "type": "text",
