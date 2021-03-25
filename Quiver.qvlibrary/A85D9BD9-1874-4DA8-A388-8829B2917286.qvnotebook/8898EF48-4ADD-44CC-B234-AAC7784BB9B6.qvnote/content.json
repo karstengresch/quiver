@@ -23,6 +23,10 @@
     },
     {
       "type": "text",
+      "data": "<h3>zsh fonts missing/ugly</h3><div>Tedious:&nbsp;<a href=\"https://giorgosgaganis.com/2016/11/25/making-powerline-fonts-work-inside-intellij-idea-terminal/\">https://giorgosgaganis.com/2016/11/25/making-powerline-fonts-work-inside-intellij-idea-terminal/</a><br></div><div>Better:&nbsp;<a href=\"https://blog.cong-li.com/zsh%20with%20intellij%20ides/\">https://blog.cong-li.com/zsh%20with%20intellij%20ides/</a></div><div><br></div><div>Finally: if you already have Powerline installed, just switch to a font for Powerline.</div><div><br></div>"
+    },
+    {
+      "type": "text",
       "data": ""
     }
   ]
