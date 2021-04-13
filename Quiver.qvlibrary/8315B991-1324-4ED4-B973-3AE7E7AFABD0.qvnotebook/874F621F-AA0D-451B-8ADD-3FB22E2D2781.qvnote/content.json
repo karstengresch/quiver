@@ -12,6 +12,14 @@
     {
       "type": "text",
       "data": "Problem: Some alias is not linked.<div>Solution: Link the alias e.g. <code>nvm alias default v0.10.32</code></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>(node:&lt;line-number&gt;) ExperimentalWarning: The fs.promises API is experimental</h3>"
+    },
+    {
+      "type": "text",
+      "data": "Basically as above with version &gt;10, e.g.&nbsp;<span style=\"font-family: Menlo, Consolas, &quot;Ubuntu Mono&quot;, Monaco, source-code-pro, monospace; font-size: 11.699999809265137px; background-color: rgba(255, 255, 255, 0.1);\"><code>nvm alias default 12</code></span>"
     }
   ]
 }
