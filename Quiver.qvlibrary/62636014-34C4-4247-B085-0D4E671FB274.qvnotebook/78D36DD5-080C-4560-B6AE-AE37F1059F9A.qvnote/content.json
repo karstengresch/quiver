@@ -13,6 +13,18 @@
       "type": "code",
       "language": "sh",
       "data": "mvn -N io.takari:maven:0.7.7:wrapper"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": "<h3>Error: [WARNING] Rule 0: org.apache.maven.plugins.enforcer.BannedRepositories failed with message:<br>Current maven session contains banned repository urls, please double check your pom or settings.xml:</h3><div>maven2-main - http://repo1.maven.org/maven2/</div><div>maven2-repository.dev.java.net - http://download.java.net/maven/2/</div><div>redhat-ga-repository - http://maven.repository.redhat.com/ga/</div>"
+    },
+    {
+      "type": "text",
+      "data": "Solution: check <code>settings.xml</code> in use and replace <code>http://</code> w/ <code>https://</code>"
     }
   ]
 }
