@@ -26,7 +26,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "./mvnw quarkus:add-extension -Dextensions=\"\"\n# e.g.\n# ./mvnw quarkus:add-extension -Dextensions=\"quarkus-vertx, quarkus-qute\"\n# remove\n# ./mvnw quarkus:remove-extension -Dextensions=\"\""
+      "data": "./mvnw quarkus:add-extension -Dextensions=\"<extension ref>, <extension ref>\"\n# ref -> see above, e.g.:\n# ./mvnw quarkus:add-extension -Dextensions=\"quarkus-vertx, quarkus-qute\"\n# remove\n# ./mvnw quarkus:remove-extension -Dextensions=\"\""
     },
     {
       "type": "text",
