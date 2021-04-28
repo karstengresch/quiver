@@ -48,7 +48,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "oc delete project <project name> --force --grace-period=0\n# check\noc get project <project name> -o yaml\n# if result hast finalizers: - kubernetes and status->phase: Terminating, start troubleshooting\n# list all items in namespace:\noc api-resources --verbs=list --namespaced -o name | xargs -n 1 oc get --show-kind --ignore-not-found -n $PROJECT_NAME\n# use this when failing:\noc api-resources --verbs=list --cached --namespaced -o name | xargs -n 1 oc get --show-kind --ignore-not-found -n $PROJECT_NAME\n# try deleting every resource and troubleshoot failures"
+      "data": "oc delete project <project name> --force --grace-period=0\n# check\noc get namespace <project name> -o json > tmp.json\n# if result hast finalizers: - kubernetes and status->phase: Terminating, start troubleshooting\n# list all items in namespace:\noc api-resources --verbs=list --namespaced -o name | xargs -n 1 oc get --show-kind --ignore-not-found -n $PROJECT_NAME\n# use this when failing:\noc api-resources --verbs=list --cached --namespaced -o name | xargs -n 1 oc get --show-kind --ignore-not-found -n $PROJECT_NAME\n# try deleting every resource and troubleshoot failures"
     },
     {
       "type": "text",
@@ -66,7 +66,7 @@
     {
       "type": "code",
       "language": "sh",
-      "data": "oc get project <project name> -o yaml > delete.yaml\n# Remove all lines under \"finalizers\", normally \"  - kubernetes\"\noc proxy &\ncurl -k -H \"Content-Type: application/yaml\" -X PUT --data-binary @delete.yaml http://127.0.0.1:8001/api/v1/namespaces/PROJECT-NAMESPACE/finalize\n# Same terminal!\nkill -9 %%"
+      "data": "<project name>\n# IMPORTANT!\n# Remove all lines under \"finalizers\", normally \"  kubernetes\"..-\n# so it looks like\n# },\n#   \"spec\": {\n#       \"finalizers\": []\n#   },\noc proxy &\ncurl -k -H \"Content-Type: application/json\" -X PUT --data-binary @tmp.json http://127.0.0.1:8001/api/v1/namespaces/<project name>/finalize\n# Same terminal!\nkill -9 %%"
     },
     {
       "type": "text",
