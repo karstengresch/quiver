@@ -40,6 +40,40 @@
     },
     {
       "type": "text",
+      "data": "<h3>argocd</h3>"
+    },
+    {
+      "type": "text",
+      "data": "Get it from"
+    },
+    {
+      "type": "text",
+      "data": "<a href=\"https://github.com/argoproj/argo-cd/releases/tag/v2.0.3\">https://github.com/argoproj/argo-cd/releases/</a>"
+    },
+    {
+      "type": "text",
+      "data": "<div>(unclear what the difference between CLI and UTIL is).</div><div><br></div>or"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "brew install argocd"
+    },
+    {
+      "type": "text",
+      "data": "<h2>kustomize</h2>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "brew install kustomize"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
       "data": ""
     },
     {
