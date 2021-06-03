@@ -1,0 +1,22 @@
+{
+  "title": "Basic Proceedings",
+  "cells": [
+    {
+      "type": "text",
+      "data": "LineageOS<div>Basic:&nbsp;<a href=\"https://download.lineageos.org/FP3\">https://download.lineageos.org/FP3</a></div><div><br></div><div>Generall installation guide</div><div><a href=\"https://forum.fairphone.com/t/fp3-fp3-complete-guide-for-installing-lineageos/69239\">https://forum.fairphone.com/t/fp3-fp3-complete-guide-for-installing-lineageos/69239</a><br></div><div><br></div><div>De-googled w/ microG:</div><div><a href=\"https://lineage.microg.org/\">https://lineage.microg.org/</a><br></div><div>Installation documentation:&nbsp;<a href=\"https://wiki.lineageos.org/devices/FP3/install\">https://wiki.lineageos.org/devices/FP3/install</a></div><div><br></div><div>or (less stable IMHO):</div><div><a href=\"https://doc.e.foundation/easy-installer\">https://doc.e.foundation/easy-installer</a><br></div><div><a href=\"https://doc.e.foundation/devices/FP3/\">https://doc.e.foundation/devices/FP3/</a><br></div>"
+    },
+    {
+      "type": "text",
+      "data": "Troubleshooting: LineageOS not booting<div><ol><li>Shutdown/Remove battery</li><li>Volume Down+ Power &nbsp;(Seen frontally from the side, display up: &gt;&gt;&gt;[Volume -]&lt;&lt;&lt; - &nbsp;[Volume +] - [Power]) =&gt; starts recovery mode (here: LineageOS)</li><li>Advanced: ADB on</li><li>Advanced: mount /system/</li><li>On ADB computer:</li></ol></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "adb root\nadb shell\n# do stuff e.g. remove data/system/locations.db"
+    },
+    {
+      "type": "text",
+      "data": "Troubleshooting: adb devices =&gt; unauthorized"
+    }
+  ]
+}

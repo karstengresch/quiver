@@ -1,0 +1,54 @@
+{
+  "title": "OpenShift related CLIs",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2>oc</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>macOS installation</h3>"
+    },
+    {
+      "type": "text",
+      "data": "<div>Get zip from&nbsp;<a href=\"https://access.redhat.com/downloads/content/290/\">https://access.redhat.com/downloads/content/290/</a>&nbsp;(as RH customer), unpack and put to <code>/usr/local/bin</code></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h2>odo</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>macOS installation</h3>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "curl -L https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-darwin-amd64 -o /usr/local/bin/odo\nchmod +x /usr/local/bin/odo"
+    },
+    {
+      "type": "text",
+      "data": "<h2>kubectl</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<h2>kam</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<h2>tkn</h2>"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}
