@@ -25,6 +25,14 @@
     {
       "type": "text",
       "data": "Solution: check <code>settings.xml</code> in use and replace <code>http://</code> w/ <code>https://</code>"
+    },
+    {
+      "type": "text",
+      "data": "<h3>Error: Cannot compile (various reasons, e.g. cannot create filesystem for, ZIP problem, whatnot)</h3>"
+    },
+    {
+      "type": "text",
+      "data": "First to-try solution: <code>rm -Rf ~/.m2/repository/</code><div>This solves a lot of weird sounding problems.</div>"
     }
   ]
 }
